@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+"use client"
+import './App.css'
+import { useEffect } from "react"
+import {Navigation} from "./components/navigation";
+import {Hero} from "./components/hero";
+import {About} from "./components/about";
+import {Skills} from "./components/skills";
+import {Projects} from "./components/projects";
+import {Contact} from "./components/contact";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+export default function App() {
+    useEffect(() => {
+        // Scroll animation observer
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("animated")
+                    }
+                })
+            },
+            { threshold: 0.1 },
+        )
+
+        const animateElements = document.querySelectorAll(".animate-on-scroll")
+        animateElements.forEach((el) => observer.observe(el))
+
+        return () => observer.disconnect()
+    }, [])
+
+    return (
+        <div className="min-h-screen">
+            {/*<Navigation />*/}
+            {/*<Hero />*/}
+            {/*<About />*/}
+            {/*<Skills />*/}
+            {/*<Projects />*/}
+            {/*<Contact />*/}
+            <Navigation />
+            <Hero />
+            <About />
+            <Skills />
+            <Projects />
+            <Contact />
+        </div>
+    )
 }
-
-export default App;
