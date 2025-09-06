@@ -1797,3 +1797,89 @@ body {
     display: flex;
   }
 }
+@media (min-width: 1440px) {
+  .container {
+    padding: 0 3rem; /* Increase padding for larger screens */
+  }
+
+  .hero-content {
+    max-width: 1400px; /* Slightly wider for larger screens */
+    gap: 6rem; /* Increase gap for better spacing */
+  }
+
+  .hero-left {
+    width: 450px;
+  }
+
+  .hero-left h1 {
+    font-size: 4.5rem; /* Slightly larger for big screens */
+  }
+
+  .hero-image {
+    width: 500px;
+    height: 750px;
+
+  }
+  .hero-center{
+    margin-right: -60px;
+  }
+
+  .about-content {
+    max-width: 1400px;
+    gap: 6rem;
+  }
+
+  .skills-grid {
+    max-width: 1400px;
+    grid-template-columns: repeat(5, 1fr); /* Add fifth column for very large screens */
+    gap: 3rem;
+  }
+
+  .skill-card {
+    padding: 2.5rem;
+  }
+}
+
+/* Media Query for Ultra-Wide Screens (1920px and above) */
+@media (min-width: 1920px) {
+  .container {
+    padding: 0 4rem; /* Further increase padding */
+  }
+
+  .hero-content {
+    max-width: 1600px;
+    gap: 8rem;
+  }
+
+  .hero-left {
+    width: 700px;
+  }
+
+  .hero-left h1 {
+    font-size: 5rem;
+  }
+
+  .hero-image {
+    width: 600px;
+    height: 900px;
+  }
+
+  .about-content {
+    max-width: 1600px;
+    gap: 8rem;
+  }
+
+  .stats-grid {
+    gap: 3rem;
+  }
+
+  .skills-grid {
+    max-width: 1600px;
+    grid-template-columns: repeat(6, 1fr); /* Add sixth column for ultra-wide */
+    gap: 4rem;
+  }
+
+  .skill-card {
+    padding: 3rem;
+  }
+}
