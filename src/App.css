@@ -1853,6 +1853,8 @@ body {
 
   .hero-left {
     width: 450px;
+    /*background-color: #ff6b35;*/
+    margin-left: -130px;
   }
 
   .hero-left h1 {
@@ -1862,6 +1864,7 @@ body {
   .hero-image {
     width: 600px;
     height: 900px;
+    margin-bottom: -100px;
   }
   .hero-center{
     margin-right: -60px;
@@ -1878,11 +1881,13 @@ body {
 
   .skills-grid {
     max-width: 1600px;
-    grid-template-columns: repeat(6, 1fr); /* Add sixth column for ultra-wide */
+    /*background-color: white;*/
+    grid-template-columns: repeat(4, 1fr); /* Add sixth column for ultra-wide */
     gap: 4rem;
   }
 
   .skill-card {
-    padding: 3rem;
+    /*padding: 3rem;*/
+    /*width: 250px;*/
   }
 }
