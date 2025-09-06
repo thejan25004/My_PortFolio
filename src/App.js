@@ -31,12 +31,6 @@ export default function App() {
 
     return (
         <div className="min-h-screen">
-            {/*<Navigation />*/}
-            {/*<Hero />*/}
-            {/*<About />*/}
-            {/*<Skills />*/}
-            {/*<Projects />*/}
-            {/*<Contact />*/}
             <Navigation />
             <Hero />
             <About />
