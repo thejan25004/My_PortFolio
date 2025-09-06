@@ -1852,7 +1852,7 @@ body {
   }
 
   .hero-left {
-    width: 700px;
+    width: 450px;
   }
 
   .hero-left h1 {
@@ -1862,6 +1862,9 @@ body {
   .hero-image {
     width: 600px;
     height: 900px;
+  }
+  .hero-center{
+    margin-right: -60px;
   }
 
   .about-content {
