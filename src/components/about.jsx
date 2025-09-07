@@ -1,9 +1,11 @@
 import aboutImg from "../assets/headshotmaster_image_1752300326757.png"
+import cvFile from "../assets/cv/Chamod Thejan CV.pdf";
+
 
 export function About() {
     const stats = [
         { number: "100 +", label: "Find Me In Social Meadia" },
-        { number: "2500 +", label: "Find Me In Social Meadia" },
+        { number: "250 +", label: "Find Me In Social Meadia" },
         { number: "155 +", label: "Find Me In Social Meadia" },
     ]
 
@@ -39,9 +41,11 @@ export function About() {
 
                         <div style={{ display: "flex", gap: "2rem", marginTop: "2rem" }}>
                             <button className="btn btn-primary">Hire Me</button>
-                            <a href="#" className="download-cv">
-                                Download CV ↓
+                            <a href={cvFile} target="_blank" rel="noopener noreferrer" className="download-cv">
+                                View CV ↓
                             </a>
+
+
                         </div>
                     </div>
                 </div>

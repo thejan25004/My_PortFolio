@@ -1,7 +1,10 @@
 "use client"
 import homePage from "../assets/ChatGPT Image Jul 12, 2025, 12_40_30 PM.png"
 
+
+
 import { useEffect, useState } from "react"
+import cvFile from "../assets/cv/Chamod Thejan CV.pdf";
 
 export function Hero() {
     const [scrollY, setScrollY] = useState(0)
@@ -88,9 +91,10 @@ export function Hero() {
                         <p className="description-text">
                             I'm Chamod Thejan, a passionate Full Stack Developer and UI Designer with a keen eye for detail and a drive to craft seamless, responsive, and user-friendly web experiences.end technologies.
                         </p>
-                        <a href="#" className="download-cv">
-                            Download cv →
+                        <a href={cvFile} download="Chamod_Thejan_CV.pdf" className="download-cv">
+                            Download CV ↓
                         </a>
+
                     </div>
                 </div>
             </div>
