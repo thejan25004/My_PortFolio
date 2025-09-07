@@ -5,14 +5,44 @@ import hybridHub from "../assets/433119029-3103938b-e057-46fe-a308-fac459433728.
 import mobileBank from "../assets/title img.png";
 import ai from "../assets/460792874-ae33b35b-f722-444a-ab7e-1b46febfe9f6.png";
 import futureStore from "../assets/406632562-b9d1776f-6fa4-40b9-8408-9ceb22efc029.png";
+import SDP from "../assets/Screenshot 2025-09-06 at 7.33.41 PM.png"
+import library from "../assets/library.png"
+import nodeBack from "../assets/nodeBack.png"
+import seoul from "../assets/433119029-3103938b-e057-46fe-a308-fac459433728.png"
+import reactLesson from "../assets/reactLesson.jpeg"
+import parking from "../assets/parking.png"
+import chat from "../assets/chat.png"
+import orm from "../assets/orm.png"
+import a1 from "../assets/a1.jpg"
+import pos from "../assets/pos.jpg"
+import cal from "../assets/cal.png"
+import nightRider from "../assets/_TrpwgDQDjh.jpeg"
+import a2 from "../assets/a2.jpg"
+import a3 from "../assets/a3.jpg"
+import a4 from "../assets/a4.jpg"
+import layered from "../assets/1_outAFjNGSLzi98PEER_b8g.png"
+import assignment from "../assets/a5.jpg"
+
+
+
+
 
 export function Projects() {
     const [activeFilter, setActiveFilter] = useState('all');
     const [visibleProjects, setVisibleProjects] = useState([]);
-
     const projects = [
         {
             id: 1,
+            title: "SDP",
+            description: "Software Development Project with backend and frontend implementation.",
+            image: SDP,
+            category: "enterprise",
+            technologies: ["Spring Boot", "React", "MySQL", "Docker"],
+            featured: true,
+            color: "from-blue-600 to-indigo-700"
+        },
+        {
+            id: 2,
             title: "FRESHBITE RESTURANTS",
             description: "Modern car rental platform with real-time availability, GPS tracking, and seamless booking experience.",
             image: freshBite,
@@ -22,9 +52,9 @@ export function Projects() {
             color: "from-blue-500 to-purple-600"
         },
         {
-            id: 2,
-            title: "RAMBO GYM ",
-            description: "Gaming community platform connecting players worldwide with advanced matchmaking and real-time chat.",
+            id: 3,
+            title: "RAMBO GYM",
+            description: "Fitness web app for workout tracking, schedules, and member management.",
             image: ramboGym,
             category: "web",
             technologies: ["Vue.js", "Firebase", "WebRTC", "Three.js"],
@@ -32,9 +62,9 @@ export function Projects() {
             color: "from-green-500 to-teal-600"
         },
         {
-            id: 3,
+            id: 4,
             title: "HYBRID HUB",
-            description: "Enterprise solution for inventory management with AI-powered analytics and predictive insights.",
+            description: "Car service management system for appointments, technicians, and service history.",
             image: hybridHub,
             category: "enterprise",
             technologies: ["Angular", "Spring Boot", "PostgreSQL", "Docker"],
@@ -42,9 +72,9 @@ export function Projects() {
             color: "from-orange-500 to-red-600"
         },
         {
-            id: 4,
+            id: 5,
             title: "Mobile Banking App",
-            description: "Secure banking application with biometric authentication and real-time transaction monitoring.",
+            description: "Secure banking app with biometric authentication and live transaction monitoring.",
             image: mobileBank,
             category: "mobile",
             technologies: ["React Native", "Node.js", "MongoDB", "Stripe"],
@@ -52,9 +82,9 @@ export function Projects() {
             color: "from-purple-500 to-pink-600"
         },
         {
-            id: 5,
+            id: 6,
             title: "LOGICAL LOOP AI",
-            description: "Next-generation shopping experience with AR product visualization and AI recommendations.",
+            description: "AI-powered shopping experience with AR visualization and recommendations.",
             image: ai,
             category: "web",
             technologies: ["Next.js", "Shopify", "GraphQL", "Tailwind"],
@@ -62,16 +92,187 @@ export function Projects() {
             color: "from-indigo-500 to-blue-600"
         },
         {
-            id: 6,
+            id: 7,
             title: "FUTURE STORE",
-            description: "Comprehensive patient management system with real-time health monitoring and analytics.",
+            description: "E-commerce store with analytics and product management.",
             image: futureStore,
             category: "enterprise",
             technologies: ["React", "Express", "MySQL", "Chart.js"],
             featured: false,
             color: "from-teal-500 to-green-600"
+        },
+        {
+            id: 8,
+            title: "Library Club FrontEnd",
+            description: "Library management frontend for book lending and reader tracking.",
+            image: library,
+            category: "web",
+            technologies: ["React", "TypeScript", "Tailwind"],
+            featured: false,
+            color: "from-pink-500 to-rose-600"
+        },
+        {
+            id: 9,
+            title: "Backend Node",
+            description: "Coursework backend built with Node.js and Express.",
+            image: nodeBack,
+            category: "backend",
+            technologies: ["Node.js", "Express", "MongoDB"],
+            featured: false,
+            color: "from-yellow-500 to-orange-600"
+        },
+        {
+            id: 10,
+            title: "React Lessons",
+            description: "Practice repository for React concepts and examples.",
+            image: reactLesson,
+            category: "learning",
+            technologies: ["React", "JavaScript"],
+            featured: false,
+            color: "from-gray-500 to-slate-600"
+        },
+        {
+            id: 11,
+            title: "Smart Parking Management System",
+            description: "Parking slots monitoring and vehicle entry management system.",
+            image: parking,
+            category: "enterprise",
+            technologies: ["Java", "Spring Boot", "MySQL"],
+            featured: false,
+            color: "from-cyan-500 to-teal-600"
+        },
+        {
+            id: 12,
+            title: "Chat Application",
+            description: "Real-time chat app with WebSocket and authentication.",
+            image: chat,
+            category: "web",
+            technologies: ["React", "Socket.io", "Node.js"],
+            featured: false,
+            color: "from-lime-500 to-emerald-600"
+        },
+        {
+            id: 13,
+            title: "ORM Coursework",
+            description: "Coursework on ORM concepts and Hibernate mapping.",
+            image: orm,
+            category: "learning",
+            technologies: ["Java", "Hibernate", "MySQL"],
+            featured: false,
+            color: "from-red-500 to-rose-600"
+        },
+        {
+            id: 14,
+            title: "IT Assignment 08",
+            description: "JavaScript DOM and events practice assignment.",
+            image: a1,
+            category: "learning",
+            technologies: ["JavaScript", "HTML", "CSS"],
+            featured: false,
+            color: "from-sky-500 to-indigo-600"
+        },
+        {
+            id: 15,
+            title: "POS System",
+            description: "Point of Sale system with Bootstrap UI.",
+            image: pos,
+            category: "web",
+            technologies: ["Bootstrap", "JavaScript"],
+            featured: false,
+            color: "from-amber-500 to-orange-600"
+        },
+        {
+            id: 16,
+            title: "IT Assignment 10",
+            description: "JS-based calculator assignment.",
+            image: cal,
+            category: "learning",
+            technologies: ["JavaScript", "HTML", "CSS"],
+            featured: false,
+            color: "from-green-500 to-teal-700"
+        },
+        {
+            id: 17,
+            title: "IT Assignment 09",
+            description: "Knight Rider effect animation using JS.",
+            image: nightRider,
+            category: "learning",
+            technologies: ["JavaScript", "CSS"],
+            featured: false,
+            color: "from-fuchsia-500 to-purple-600"
+        },
+        {
+            id: 18,
+            title: "POS System Bootstrap",
+            description: "POS app styled fully with Bootstrap.",
+            image: pos,
+            category: "web",
+            technologies: ["Bootstrap", "JS"],
+            featured: false,
+            color: "from-indigo-500 to-purple-700"
+        },
+        {
+            id: 19,
+            title: "IT Assignment 04",
+            description: "Basic Internet Technology coursework.",
+            image: a2,
+            category: "learning",
+            technologies: ["HTML", "CSS"],
+            featured: false,
+            color: "from-orange-500 to-yellow-600"
+        },
+        {
+            id: 20,
+            title: "ORM Assignment 02",
+            description: "Second ORM assignment with Hibernate relations.",
+            image: a3 ,
+            category: "learning",
+            technologies: ["Java", "Hibernate"],
+            featured: false,
+            color: "from-emerald-500 to-green-700"
+        },
+        {
+            id: 21,
+            title: "Assignment 03",
+            description: "IJSE class assignment project.",
+            image: a4,
+            category: "learning",
+            technologies: ["Java"],
+            featured: false,
+            color: "from-violet-500 to-indigo-700"
+        },
+        {
+            id: 22,
+            title: "ORM Assignment",
+            description: "Another ORM coursework repo.",
+            image: assignment,
+            category: "learning",
+            technologies: ["Java", "Hibernate"],
+            featured: false,
+            color: "from-pink-500 to-fuchsia-700"
+        },
+        {
+            id: 23,
+            title: "Seoul Car Rental",
+            description: "Car rental system for vehicle reservations and management.",
+            image: seoul,
+            category: "enterprise",
+            technologies: ["JavaFX", "MySQL"],
+            featured: false,
+            color: "from-slate-500 to-gray-700"
+        },
+        {
+            id: 24,
+            title: "Layered Architecture Project",
+            description: "Java project following layered architecture principles.",
+            image: layered,
+            category: "learning",
+            technologies: ["Java"],
+            featured: false,
+            color: "from-blue-500 to-cyan-700"
         }
     ];
+
 
     const categories = [
         { id: 'all', name: 'All Projects', icon: '🎯' },
