@@ -32,7 +32,48 @@ export function Skills() {
             name: "HTML",
             icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
         },
-    ]
+        {
+            name: "PYTHON",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+        },
+        {
+            name: "SQL",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
+        },
+        {
+            name: "BOOTSTRAP",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+        },
+        {
+            name: "TAILWIND CSS",
+            icon: "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+        },
+        {
+            name: "SPRING BOOT",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
+        },
+        {
+            name: "MYSQL",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+        },
+        {
+            name: "FIGMA",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+        },
+        {
+            name: "ADOBE XD",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg",
+        },
+        {
+            name: "PHOTOSHOP",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg",
+        },
+        {
+            name: "MOCKUPS",
+            icon: "https://cdn-icons-png.flaticon.com/512/1829/1829591.png", // mockup icon
+        },
+    ];
+
 
     return (
         <section id="skills" className="section skills">
