@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LogicLoop AI Chat Helper</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+      background-color: #121212;
+      color: #f5f5f5;
+      height: 100vh;
+      display: flex;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #1a1a1a;
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid #333;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      background-color: #222;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo::before {
+      content: "A";
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      background-color: #ff6b35;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-text {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .menu-item:hover {
+      background-color: #2a2a2a;
+    }
+
+    .menu-item i {
+      margin-right: 12px;
+      font-size: 20px;
+      width: 24px;
+      text-align: center;
+    }
+
+    .pro-tag {
+      background: linear-gradient(45deg, #ff6b35, #ff3e00);
+      color: white;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+      margin-left: auto;
+    }
+    .pro-plans {
+      margin-top: auto;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      margin-left: 20px;
+      background: linear-gradient(45deg, #ff6b35, #ff3e00);
+      border-radius: 10px;
+      padding: 15px;
+    }
+
+
+    .pro-plans-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .pro-plans-text {
+      font-weight: 600;
+      margin-left: 10px;
+    }
+
+    .pro-plans-content {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .get-btn {
+      background-color: white;
+      color: #ff6b35;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .get-btn:hover {
+      background-color: #f0f0f0;
+    }
+
+    .logout {
+      padding: 15px 20px;
+      font-weight: 600;
+      border-top: 1px solid #333;
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logout i {
+      font-size: 20px;
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background-color: #1e1e1e;
+
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      /*background-color: #fff;*/
+      background-color: black;
+      /*border-bottom: 1px solid #ddd;*/
+    }
+
+    .header-title {
+      font-weight: 600;
+      /*color: #333;*/
+      color: white;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      border: 2px solid #ddd;
+
+      border-radius: 20px;
+      padding: 5px 15px;
+      width: 700px;
+    }
+
+    .search-container i {
+      /*color: #888;*/
+      color: white;
+      margin-right: 10px;
+    }
+
+    .search-input {
+      border: none;
+      outline: none;
+      background: transparent;
+      flex: 1;
+      font-size: 14px;
+      /*color: #333;*/
+      color: white;
+    }
+
+    .notification-bell {
+      /*color: #666;*/
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .history-btn {
+      padding: 10px 20px;
+      font-weight: 600;
+      /*color: #333;*/
+      color: white;
+      cursor: pointer;
+    }
+
+    .content-area {
+      flex: 1;
+      display: flex;
+      position: relative;
+    }
+
+    .chat-area {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .ai-response {
+      background: linear-gradient(90deg, rgba(255,107,53,0.1) 0%, rgba(255,107,53,0.05) 100%);
+      border-radius: 15px;
+      padding: 20px;
+      animation: fadeIn 0.5s ease-in-out;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ai-response::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 5px;
+      background: linear-gradient(180deg, #ff6b35, #ff3e00);
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+
+    .response-header {
+      background-color: #ffb399;
+      color: #333;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      display: inline-block;
+    }
+
+    .response-content {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .response-list {
+      padding-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    .response-list li {
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-weight: 600;
+      margin: 15px 0;
+    }
+
+    .chat-input-area {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      background-color: #1e1e1e;
+      border-top: 1px solid #333;
+    }
+
+    .input-actions {
+      display: flex;
+      gap: 10px;
+      margin-right: 10px;
+    }
+
+    .action-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: #2a2a2a;
+      color: #888;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .action-btn:hover {
+      background-color: #333;
+    }
+
+    .chat-input {
+      flex: 1;
+      padding: 10px 15px;
+      border-radius: 5px;
+      background-color: #2a2a2a;
+      border: 1px solid #333;
+      color: #f5f5f5;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .send-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: #ff6b35;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-left: 10px;
+      transition: background-color 0.2s;
+    }
+
+    .send-btn:hover {
+      background-color: #ff3e00;
+    }
+
+    .history-panel {
+      width: 300px;
+      background-color: #fff;
+      border-left: 1px solid #ddd;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .history-item {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .history-checkbox {
+      margin-right: 10px;
+    }
+
+    .history-title {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .history-desc {
+      font-size: 12px;
+      color: #666;
+    }
+
+    .feedback-buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+      margin-top: 10px;
+    }
+
+    .feedback-btn {
+      padding: 5px;
+      background-color: transparent;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #888;
+      transition: all 0.2s;
+    }
+
+    .feedback-btn:hover {
+      background-color: #f0f0f0;
+    }
+
+    .clear-history-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      background-color: #f5f5f5;
+      color: #666;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .clear-history-btn:hover {
+      background-color: #e0e0e0;
+    }
+
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.9);
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      max-width: 500px;
+      width: 90%;
+    }
+
+    .popup.active {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .popup-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .popup-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .close-popup {
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #888;
+    }
+
+    .popup-content {
+      margin-bottom: 20px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .popup-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .popup-btn {
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background-color 0.2s;
+    }
+
+    .popup-btn-cancel {
+      background-color: #f5f5f5;
+      color: #555;
+      border: 1px solid #ddd;
+    }
+
+    .popup-btn-confirm {
+      background-color: #ff6b35;
+      color: white;
+      border: none;
+    }
+
+    .popup-btn-cancel:hover {
+      background-color: #e0e0e0;
+    }
+
+    .popup-btn-confirm:hover {
+      background-color: #ff3e00;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+    }
+
+    .overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .pulse-animation {
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.6;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .typing-indicator {
+      display: flex;
+      gap: 5px;
+      padding: 10px;
+      margin-bottom: 15px;
+      align-items: center;
+      display: none;
+    }
+
+    .typing-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #888;
+      border-radius: 50%;
+    }
+
+    .typing-dot:nth-child(1) {
+      animation: typingDot 1s infinite 0.1s;
+    }
+
+    .typing-dot:nth-child(2) {
+      animation: typingDot 1s infinite 0.3s;
+    }
+
+    .typing-dot:nth-child(3) {
+      animation: typingDot 1s infinite 0.5s;
+    }
+
+    @keyframes typingDot {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+
+    .pro-feature-tooltip {
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #333;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 12px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+    }
+
+    .pro-feature-tooltip::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 5px;
+      border-style: solid;
+      border-color: #333 transparent transparent transparent;
+    }
+
+    .pro-feature {
+      position: relative;
+    }
+
+    .pro-feature:hover .pro-feature-tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<div class="sidebar">
+  <div class="logo-container">
+    <div class="logo"></div>
+    <div class="logo-text">LogicLoop AI</div>
+  </div>
+
+  <div class="menu-item">
+    <i class="fas fa-cog"></i>
+    LogicLoop AI
+    <span class="pro-tag">Pro</span>
+  </div>
+
+  <div class="menu-item">
+    <i class="fas fa-th-large"></i>
+    LogicLoop AI
+    <span class="pro-tag">Pro</span>
+  </div>
+
+  <div class="menu-item">
+    <i class="fas fa-sync"></i>
+    LogicLoop AI
+  </div>
+
+  <div class="menu-item">
+    <i class="fas fa-file"></i>
+    LogicLoop AI
+  </div>
+
+  <div class="menu-item">
+    <i class="fas fa-chart-bar"></i>
+    LogicLoop AI
+  </div>
+
+  <div class="menu-item">
+    <i class="fas fa-user-friends"></i>
+    LogicLoop AI
+  </div>
+
+  <div class="pro-plans">
+    <div class="pro-plans-header">
+      <div class="logo"></div>
+      <div class="pro-plans-text">LogicLoop AI<br>Pro Plans</div>
+    </div>
+    <div class="pro-plans-content">
+      Get Your Pro plan here subscribe this AI Get Your Pro plan here subscribe this AI
+    </div>
+    <button class="get-btn" id="openPopupBtn">Get</button>
+  </div>
+
+  <div class="logout">
+    LogOut
+    <i class="fas fa-sign-out-alt"></i>
+  </div>
+</div>
+
+<div class="main-content">
+  <div class="header">
+    <div class="header-title">LogicLoop AI Chat Helper</div>
+
+    <div class="search-container">
+      <i class="fas fa-search"></i>
+      <input type="text" class="search-input" placeholder="Search">
+    </div>
+
+    <div class="notification-bell">
+      <i class="far fa-bell"></i>
+    </div>
+
+    <div class="history-btn">History</div>
+  </div>
+
+  <div class="content-area">
+    <div class="chat-area">
+      <div class="typing-indicator" id="typingIndicator">
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+      </div>
+
+      <div class="ai-response">
+        <div class="response-header">What Is Connection Pool ?</div>
+        <div class="response-content">
+          A connection pool is a cache of database connections maintained so that connections can be reused when future requests to the database are required. Instead of opening and closing a connection every time a query is made, a pool maintains a number of connections and hands them out as needed.
+        </div>
+        <div class="response-content">Why Use a Connection Pool?</div>
+        <ol class="response-list">
+          <li>Performance Boost: Creating a new connection is expensive. Reusing connections saves time.</li>
+          <li>Resource Management: Limits the number of active connections to the database, avoiding overload.</li>
+          <li>Scalability: Helps applications handle more simultaneous users</li>
+        </ol>
+
+        <div class="section-title">How It Works (Basic Flow):</div>
+        <ol class="response-list">
+          <li>Pool is initialized with a set number of connections.</li>
+          <li>When an app needs to talk to the DB, it requests a connection from the pool.</li>
+          <li>After the query is done, the connection is returned to the pool.</li>
+          <li>If the pool runs out of available connections, new requests wait or error out (depending on config).</li>
+        </ol>
+
+        <div class="response-content">
+          Want help setting one up in a specific language or framework Want help setting one up in a specific language or framework?
+        </div>
+
+        <div class="feedback-buttons">
+          <button class="feedback-btn"><i class="far fa-copy"></i></button>
+          <button class="feedback-btn"><i class="far fa-thumbs-up"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="history-panel">
+      <div class="history-item">
+        <input type="checkbox" class="history-checkbox">
+        <div class="history-title">Java Enterprise Edition (Java EE)</div>
+        <div class="history-desc">Built on top of Java Standard Edition Built on top of Java Standard Edition ...</div>
+      </div>
+
+      <div class="history-item">
+        <input type="checkbox" class="history-checkbox">
+        <div class="history-title">Java Enterprise Edition (Java EE)</div>
+        <div class="history-desc">Built on top of Java Standard Edition Built on top of Java Standard Edition ...</div>
+      </div>
+
+      <div class="history-item">
+        <input type="checkbox" class="history-checkbox">
+        <div class="history-title">Java Enterprise Edition (Java EE)</div>
+        <div class="history-desc">Built on top of Java Standard Edition Built on top of Java Standard Edition ...</div>
+      </div>
+
+      <div class="history-item">
+        <input type="checkbox" class="history-checkbox">
+        <div class="history-title">Java Enterprise Edition (Java EE)</div>
+        <div class="history-desc">Built on top of Java Standard Edition Built on top of Java Standard Edition ...</div>
+      </div>
+
+      <div class="history-item">
+        <input type="checkbox" class="history-checkbox">
+        <div class="history-title">Java Enterprise Edition (Java EE)</div>
+        <div class="history-desc">Built on top of Java Standard Edition Built on top of Java Standard Edition ...</div>
+      </div>
+
+      <button class="clear-history-btn">
+        <i class="fas fa-trash-alt" style="margin-right: 5px;"></i>
+        Clear History
+      </button>
+    </div>
+  </div>
+
+  <div class="chat-input-area">
+    <div class="input-actions">
+      <div class="action-btn pro-feature">
+        <i class="far fa-image"></i>
+        <div class="pro-feature-tooltip">Pro Feature</div>
+      </div>
+      <div class="action-btn">
+        <i class="fas fa-microphone"></i>
+      </div>
+    </div>
+
+    <input type="text" class="chat-input" placeholder="Start Typing" id="chatInput">
+
+    <div class="send-btn" id="sendBtn">
+      <i class="fas fa-paper-plane"></i>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="popup" id="proPopup">
+  <div class="popup-header">
+    <div class="popup-title">Upgrade to Pro</div>
+    <button class="close-popup" id="closePopupBtn">&times;</button>
+  </div>
+  <div class="popup-content">
+    <p>Unlock all premium features with LogicLoop AI Pro:</p>
+    <ul style="margin-left: 20px; margin-top: 10px;">
+      <li>Advanced database management features</li>
+      <li>Priority support</li>
+      <li>Custom connection pool configurations</li>
+      <li>Advanced query optimization</li>
+      <li>Cloud synchronization</li>
+    </ul>
+    <p style="margin-top: 15px;">Start your 14-day free trial today!</p>
+  </div>
+  <div class="popup-footer">
+    <button class="popup-btn popup-btn-cancel" id="cancelPopupBtn">Not now</button>
+    <button class="popup-btn popup-btn-confirm">Start Free Trial</button>
+  </div>
+</div>
+
+<script>
+  // DOM Elements
+  const openPopupBtn = document.getElementById('openPopupBtn');
+  const closePopupBtn = document.getElementById('closePopupBtn');
+  const cancelPopupBtn = document.getElementById('cancelPopupBtn');
+  const overlay = document.getElementById('overlay');
+  const proPopup = document.getElementById('proPopup');
+  const sendBtn = document.getElementById('sendBtn');
+  const chatInput = document.getElementById('chatInput');
+  const chatArea = document.querySelector('.chat-area');
+  const typingIndicator = document.getElementById('typingIndicator');
+
+  // Open Popup
+  openPopupBtn.addEventListener('click', () => {
+    overlay.classList.add('active');
+    proPopup.classList.add('active');
+  });
+
+  // Close Popup
+  function closePopup() {
+    overlay.classList.remove('active');
+    proPopup.classList.remove('active');
+  }
+
+  closePopupBtn.addEventListener('click', closePopup);
+  cancelPopupBtn.addEventListener('click', closePopup);
+  overlay.addEventListener('click', closePopup);
+
+  // Send Message
+  sendBtn.addEventListener('click', sendMessage);
+  chatInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      sendMessage();
+    }
+  });
+
+  function sendMessage() {
+    const messageText = chatInput.value.trim();
+    if (messageText === '') return;
+
+    // Clear input
+    chatInput.value = '';
+
+    // Add user message
+    const userMessage = document.createElement('div');
+    userMessage.className = 'ai-response';
+    userMessage.style.backgroundColor = '#2a2a2a';
+    userMessage.style.marginLeft = 'auto';
+    userMessage.style.maxWidth = '70%';
+    userMessage.innerHTML = `
+        <div class="response-content">${messageText}</div>
+    `;
+    chatArea.appendChild(userMessage);
+
+    // Show typing indicator
+    typingIndicator.style.display = 'flex';
+
+    // Scroll to bottom
+    chatArea.scrollTop = chatArea.scrollHeight;
+
+    // Simulate AI response
+    setTimeout(() => {
+      // Hide typing indicator
+      typingIndicator.style.display = 'none';
+
+      // Create AI response for demonstration
+      createAIResponse(messageText);
+
+      // Scroll to bottom again
+      chatArea.scrollTop = chatArea.scrollHeight;
+    }, 2000);
+  }
+
+  function createAIResponse(query) {
+    const responses = {
+      default: {
+        header: "AI Response",
+        content: "I'm LogicLoop AI, your database assistant. How can I help you today? I can explain concepts, provide code examples, or help troubleshoot database issues.",
+        list: []
+      },
+      connection: {
+        header: "Database Connection Types",
+        content: "There are several ways to connect to databases depending on your requirements:",
+        list: [
+          "Direct Connection: Simple but doesn't scale well",
+          "Connection Pooling: Efficient for multi-user applications",
+          "ORM (Object-Relational Mapping): Abstracts SQL into object-oriented code",
+          "Serverless: For cloud-based applications with variable load"
+        ]
+      },
+      performance: {
+        header: "Database Performance Tips",
+        content: "Here are some ways to optimize your database performance:",
+        list: [
+          "Use proper indexing on frequently queried columns",
+          "Optimize your queries to reduce unnecessary operations",
+          "Implement connection pooling to reuse connections",
+          "Consider caching frequently accessed data",
+          "Regularly maintain and clean your database"
+        ]
+      }
+    };
+
+    // Determine which response to use based on keywords
+    let responseKey = 'default';
+    if (query.toLowerCase().includes('connect') || query.toLowerCase().includes('pool')) {
+      responseKey = 'connection';
+    } else if (query.toLowerCase().includes('performance') || query.toLowerCase().includes('optimize')) {
+      responseKey = 'performance';
+    }
+
+    const response = responses[responseKey];
+
+    // Create response element
+    const aiResponseElement = document.createElement('div');
+    aiResponseElement.className = 'ai-response';
+
+    let listHTML = '';
+    if (response.list.length > 0) {
+      listHTML = '<ol class="response-list">';
+      response.list.forEach(item => {
+        listHTML += `<li>${item}</li>`;
+      });
+      listHTML += '</ol>';
+    }
+
+    aiResponseElement.innerHTML = `
+        <div class="response-header">${response.header}</div>
+        <div class="response-content">${response.content}</div>
+        ${listHTML}
+        <div class="response-content">
+            Would you like more specific information about any of these topics?
+        </div>
+        <div class="feedback-buttons">
+            <button class="feedback-btn"><i class="far fa-copy"></i></button>
+            <button class="feedback-btn"><i class="far fa-thumbs-up"></i></button>
+        </div>
+    `;
+
+    // Add to chat area with animation
+    aiResponseElement.style.opacity = '0';
+    chatArea.appendChild(aiResponseElement);
+
+    // Trigger reflow for animation
+    void aiResponseElement.offsetWidth;
+
+    // Show with animation
+    aiResponseElement.style.opacity = '1';
+    aiResponseElement.style.animation = 'fadeIn 0.5s ease-in-out forwards';
+
+    // Add event listeners to the new feedback buttons
+    const newFeedbackBtns = aiResponseElement.querySelectorAll('.feedback-btn');
+    newFeedbackBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        if (this.querySelector('.fa-thumbs-up')) {
+          this.innerHTML = '<i class="fas fa-thumbs-up"></i>';
+          this.style.color = '#ff6b35';
+
+          // Show a thank you notification
+          const notification = document.createElement('div');
+          notification.style.position = 'fixed';
+          notification.style.bottom = '20px';
+          notification.style.right = '20px';
+          notification.style.backgroundColor = '#4CAF50';
+          notification.style.color = 'white';
+          notification.style.padding = '10px 20px';
+          notification.style.borderRadius = '5px';
+          notification.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+          notification.style.zIndex = '1001';
+          notification.style.animation = 'fadeIn 0.3s';
+          notification.textContent = 'Thanks for your feedback!';
+          document.body.appendChild(notification);
+
+          setTimeout(() => {
+            notification.style.animation = 'fadeOut 0.3s forwards';
+            setTimeout(() => {
+              document.body.removeChild(notification);
+            }, 300);
+          }, 3000);
+        } else if (this.querySelector('.fa-copy')) {
+          // Copy to clipboard functionality
+          const contentToCopy = response.content;
+          navigator.clipboard.writeText(contentToCopy).then(() => {
+            this.innerHTML = '<i class="fas fa-check"></i>';
+            this.style.color = '#4CAF50';
+
+            setTimeout(() => {
+              this.innerHTML = '<i class="far fa-copy"></i>';
+              this.style.color = '';
+            }, 2000);
+          });
+        }
+      });
+    });
+  }
+
+  // Add animations to menu items
+  const menuItems = document.querySelectorAll('.menu-item');
+  menuItems.forEach((item, index) => {
+    item.style.animation = `fadeIn 0.3s ease forwards ${index * 0.1}s`;
+    item.style.opacity = '0';
+  });
+
+  // Make history panel toggleable
+  const historyBtn = document.querySelector('.history-btn');
+  const historyPanel = document.querySelector('.history-panel');
+  let historyVisible = true;
+
+  historyBtn.addEventListener('click', () => {
+    historyVisible = !historyVisible;
+    if (historyVisible) {
+      historyPanel.style.display = 'block';
+      setTimeout(() => {
+        historyPanel.style.transform = 'translateX(0)';
+        historyPanel.style.opacity = '1';
+      }, 10);
+    } else {
+      historyPanel.style.transform = 'translateX(100%)';
+      historyPanel.style.opacity = '0';
+      setTimeout(() => {
+        historyPanel.style.display = 'none';
+      }, 300);
+    }
+  });
+
+  // Add functionality to clear history button
+  const clearHistoryBtn = document.querySelector('.clear-history-btn');
+  clearHistoryBtn.addEventListener('click', () => {
+    // Show confirmation popup
+    overlay.classList.add('active');
+
+    // Create confirmation popup
+    const confirmationPopup = document.createElement('div');
+    confirmationPopup.className = 'popup active';
+    confirmationPopup.innerHTML = `
+        <div class="popup-header">
+            <div class="popup-title">Clear History</div>
+            <button class="close-popup" id="closeConfirmPopupBtn">&times;</button>
+        </div>
+        <div class="popup-content">
+            <p>Are you sure you want to clear all your chat history? This action cannot be undone.</p>
+        </div>
+        <div class="popup-footer">
+            <button class="popup-btn popup-btn-cancel" id="cancelConfirmBtn">Cancel</button>
+            <button class="popup-btn popup-btn-confirm" id="confirmClearBtn">Clear History</button>
+        </div>
+    `;
+    document.body.appendChild(confirmationPopup);
+
+    // Close confirmation popup
+    document.getElementById('closeConfirmPopupBtn').addEventListener('click', () => {
+      document.body.removeChild(confirmationPopup);
+      overlay.classList.remove('active');
+    });
+
+    // Cancel button
+    document.getElementById('cancelConfirmBtn').addEventListener('click', () => {
+      document.body.removeChild(confirmationPopup);
+      overlay.classList.remove('active');
+    });
+
+    // Confirm clear button
+    document.getElementById('confirmClearBtn').addEventListener('click', () => {
+      const historyItems = document.querySelectorAll('.history-item');
+      historyItems.forEach(item => {
+        item.style.animation = 'fadeOut 0.3s forwards';
+      });
+
+      setTimeout(() => {
+        historyItems.forEach(item => {
+          item.remove();
+        });
+        document.body.removeChild(confirmationPopup);
+        overlay.classList.remove('active');
+
+        // Show cleared notification
+        const notification = document.createElement('div');
+        notification.style.position = 'fixed';
+        notification.style.bottom = '20px';
+        notification.style.right = '20px';
+        notification.style.backgroundColor = '#ff6b35';
+        notification.style.color = 'white';
+        notification.style.padding = '10px 20px';
+        notification.style.borderRadius = '5px';
+        notification.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+        notification.style.zIndex = '1001';
+        notification.style.animation = 'fadeIn 0.3s';
+        notification.textContent = 'History cleared successfully!';
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+          notification.style.animation = 'fadeOut 0.3s forwards';
+          setTimeout(() => {
+            document.body.removeChild(notification);
+          }, 300);
+        }, 3000);
+      }, 300);
+    });
+  });
+
+  // Add keyframes for fadeOut animation
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        to {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+    }
+`;
+  document.head.appendChild(style);
+
+  // Add pro feature tooltips functionality
+  const proFeatures = document.querySelectorAll('.pro-feature');
+  proFeatures.forEach(feature => {
+    feature.addEventListener('click', () => {
+      openPopupBtn.click();
+    });
+  });
+
+  // Initialize with a welcome message
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      createAIResponse("welcome");
+    }, 500);
+  });
+
+</script>
+</body>
+</html>

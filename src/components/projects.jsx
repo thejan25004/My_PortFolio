@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import freshBite from "../assets/Screenshot 2025-07-13 at 7.35.12 PM.png";
 import ramboGym from "../assets/460791754-f7a261d9-4ec0-4f9d-8603-db6408ab3122.png";
 import hybridHub from "../assets/433119029-3103938b-e057-46fe-a308-fac459433728.png";
-import mobileBank from "../assets/title img.png";
+import mobileBank from "../assets/travel.jpg";
 import ai from "../assets/460792874-ae33b35b-f722-444a-ab7e-1b46febfe9f6.png";
 import futureStore from "../assets/406632562-b9d1776f-6fa4-40b9-8408-9ceb22efc029.png";
 import SDP from "../assets/Screenshot 2025-09-06 at 7.33.41 PM.png"
@@ -26,20 +26,21 @@ import assignment from "../assets/a5.jpg"
 
 
 
-
 export function Projects() {
     const [activeFilter, setActiveFilter] = useState('all');
     const [visibleProjects, setVisibleProjects] = useState([]);
     const projects = [
         {
             id: 1,
-            title: "SDP",
+            title: "Super Dot Printers",
             description: "Software Development Project with backend and frontend implementation.",
             image: SDP,
             category: "enterprise",
             technologies: ["Spring Boot", "React", "MySQL", "Docker"],
             featured: true,
-            color: "from-blue-600 to-indigo-700"
+            color: "from-blue-600 to-indigo-700",
+            liveUrl: "https://youtu.be/AMgq_DlBJbE?si=u9PF6gHxDKJsxTDN",
+            sourceCode: "https://github.com/thejan25004/Super-Dot-Printers"
         },
         {
             id: 2,
@@ -49,7 +50,9 @@ export function Projects() {
             category: "web",
             technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
             featured: false,
-            color: "from-blue-500 to-purple-600"
+            color: "from-blue-500 to-purple-600",
+            liveUrl: "/pages/freshBite.html",
+            sourceCode: "https://github.com/thejan25004/Fresh_Bite"
         },
         {
             id: 3,
@@ -59,7 +62,9 @@ export function Projects() {
             category: "web",
             technologies: ["Vue.js", "Firebase", "WebRTC", "Three.js"],
             featured: true,
-            color: "from-green-500 to-teal-600"
+            color: "from-green-500 to-teal-600",
+            liveUrl: "https://your-live-project-url.com",
+            sourceCode: "https://github.com/thejan25004/Rambo-Gym"
         },
         {
             id: 4,
@@ -69,17 +74,21 @@ export function Projects() {
             category: "enterprise",
             technologies: ["Angular", "Spring Boot", "PostgreSQL", "Docker"],
             featured: false,
-            color: "from-orange-500 to-red-600"
+            color: "from-orange-500 to-red-600",
+            liveUrl: "https://youtu.be/YzddxlsjSGE?si=CW7KgUVTFyp6bMwD",
+            sourceCode: "https://github.com/thejan25004/HybridHub"
         },
         {
             id: 5,
-            title: "Mobile Banking App",
+            title: "Mobile Application Of Travel Planner ",
             description: "Secure banking app with biometric authentication and live transaction monitoring.",
             image: mobileBank,
             category: "mobile",
             technologies: ["React Native", "Node.js", "MongoDB", "Stripe"],
             featured: false,
-            color: "from-purple-500 to-pink-600"
+            color: "from-purple-500 to-pink-600",
+            liveUrl: "https://youtu.be/dWhyCb51Cm0?si=uFMD_kZ_um2Wyu75",
+            sourceCode: "https://github.com/thejan25004/Simple-Travel-Planner"
         },
         {
             id: 6,
@@ -89,17 +98,21 @@ export function Projects() {
             category: "web",
             technologies: ["Next.js", "Shopify", "GraphQL", "Tailwind"],
             featured: true,
-            color: "from-indigo-500 to-blue-600"
+            color: "from-indigo-500 to-blue-600",
+            liveUrl: "/pages/logicalLoopAI.html",
+            sourceCode: "https://github.com/thejan25004/LogicLoop-AI"
         },
         {
             id: 7,
-            title: "FUTURE STORE",
+            title: "FUTURE STORE Mobile Center",
             description: "E-commerce store with analytics and product management.",
             image: futureStore,
             category: "enterprise",
             technologies: ["React", "Express", "MySQL", "Chart.js"],
             featured: false,
-            color: "from-teal-500 to-green-600"
+            color: "from-teal-500 to-green-600",
+            liveUrl: "https://youtu.be/HApSf4TzHKM?si=oVJV5H3HwjzznuGQ",
+            sourceCode: "https://github.com/thejan25004/FutureStore"
         },
         {
             id: 8,
@@ -109,7 +122,9 @@ export function Projects() {
             category: "web",
             technologies: ["React", "TypeScript", "Tailwind"],
             featured: false,
-            color: "from-pink-500 to-rose-600"
+            color: "from-pink-500 to-rose-600",
+            liveUrl: "https://your-live-project-url.com",
+            sourceCode: "https://github.com/thejan25004/Library-Club-FrontEnd"
         },
         {
             id: 9,
@@ -119,7 +134,9 @@ export function Projects() {
             category: "backend",
             technologies: ["Node.js", "Express", "MongoDB"],
             featured: false,
-            color: "from-yellow-500 to-orange-600"
+            color: "from-yellow-500 to-orange-600",
+            liveUrl: "https://your-live-project-url.com",
+            sourceCode: "https://github.com/thejan25004/Backend-Node"
         },
         {
             id: 10,
@@ -129,7 +146,9 @@ export function Projects() {
             category: "learning",
             technologies: ["React", "JavaScript"],
             featured: false,
-            color: "from-gray-500 to-slate-600"
+            color: "from-gray-500 to-slate-600",
+            liveUrl: "https://your-live-project-url.com",
+            sourceCode: "https://github.com/thejan25004/ReactLessons"
         },
         {
             id: 11,
@@ -139,7 +158,9 @@ export function Projects() {
             category: "enterprise",
             technologies: ["Java", "Spring Boot", "MySQL"],
             featured: false,
-            color: "from-cyan-500 to-teal-600"
+            color: "from-cyan-500 to-teal-600",
+            liveUrl: "https://your-live-project-url.com",
+            sourceCode: "https://github.com/thejan25004/Smart-Parking-Management-System"
         },
         {
             id: 12,
@@ -149,7 +170,9 @@ export function Projects() {
             category: "web",
             technologies: ["React", "Socket.io", "Node.js"],
             featured: false,
-            color: "from-lime-500 to-emerald-600"
+            color: "from-lime-500 to-emerald-600",
+            liveUrl: "https://your-live-project-url.com",
+            sourceCode: "https://github.com/thejan25004/ChatApplication"
         },
         {
             id: 13,
@@ -159,7 +182,9 @@ export function Projects() {
             category: "learning",
             technologies: ["Java", "Hibernate", "MySQL"],
             featured: false,
-            color: "from-red-500 to-rose-600"
+            color: "from-red-500 to-rose-600",
+            liveUrl: "https://your-live-project-url.com",
+            sourceCode: "https://github.com/thejan25004/ORM-CourseWork"
         },
         {
             id: 14,
@@ -169,7 +194,9 @@ export function Projects() {
             category: "learning",
             technologies: ["JavaScript", "HTML", "CSS"],
             featured: false,
-            color: "from-sky-500 to-indigo-600"
+            color: "from-sky-500 to-indigo-600",
+            liveUrl: "https://your-live-project-url.com",
+            sourceCode: "https://github.com/thejan25004/IT-Assignment-08"
         },
         {
             id: 15,
@@ -179,7 +206,9 @@ export function Projects() {
             category: "web",
             technologies: ["Bootstrap", "JavaScript"],
             featured: false,
-            color: "from-amber-500 to-orange-600"
+            color: "from-amber-500 to-orange-600",
+            liveUrl: "https://your-live-project-url.com",
+            sourceCode: "https://github.com/thejan25004/Pos-System"
         },
         {
             id: 16,
@@ -189,7 +218,9 @@ export function Projects() {
             category: "learning",
             technologies: ["JavaScript", "HTML", "CSS"],
             featured: false,
-            color: "from-green-500 to-teal-700"
+            color: "from-green-500 to-teal-700",
+            liveUrl: "https://your-live-project-url.com",
+            sourceCode: "https://github.com/thejan25004/IT-Assignment-10"
         },
         {
             id: 17,
@@ -199,7 +230,9 @@ export function Projects() {
             category: "learning",
             technologies: ["JavaScript", "CSS"],
             featured: false,
-            color: "from-fuchsia-500 to-purple-600"
+            color: "from-fuchsia-500 to-purple-600",
+            liveUrl: "https://your-live-project-url.com",
+            sourceCode: "https://github.com/thejan25004/IT-Assignment-09"
         },
         {
             id: 18,
@@ -209,7 +242,9 @@ export function Projects() {
             category: "web",
             technologies: ["Bootstrap", "JS"],
             featured: false,
-            color: "from-indigo-500 to-purple-700"
+            color: "from-indigo-500 to-purple-700",
+            liveUrl: "https://your-live-project-url.com",
+            sourceCode: "https://github.com/thejan25004/Pos_system_Boostrap"
         },
         {
             id: 19,
@@ -219,7 +254,9 @@ export function Projects() {
             category: "learning",
             technologies: ["HTML", "CSS"],
             featured: false,
-            color: "from-orange-500 to-yellow-600"
+            color: "from-orange-500 to-yellow-600",
+            liveUrl: "https://your-live-project-url.com",
+            sourceCode: "https://github.com/thejan25004/Super-Dot-Printers"
         },
         {
             id: 20,
@@ -229,7 +266,9 @@ export function Projects() {
             category: "learning",
             technologies: ["Java", "Hibernate"],
             featured: false,
-            color: "from-emerald-500 to-green-700"
+            color: "from-emerald-500 to-green-700",
+            liveUrl: "https://your-live-project-url.com",
+            sourceCode: "https://github.com/thejan25004/ORM-Assignment-02"
         },
         {
             id: 21,
@@ -239,7 +278,9 @@ export function Projects() {
             category: "learning",
             technologies: ["Java"],
             featured: false,
-            color: "from-violet-500 to-indigo-700"
+            color: "from-violet-500 to-indigo-700",
+            liveUrl: "https://your-live-project-url.com",
+            sourceCode: "https://github.com/thejan25004/Assignment-03"
         },
         {
             id: 22,
@@ -249,7 +290,9 @@ export function Projects() {
             category: "learning",
             technologies: ["Java", "Hibernate"],
             featured: false,
-            color: "from-pink-500 to-fuchsia-700"
+            color: "from-pink-500 to-fuchsia-700",
+            liveUrl: "https://your-live-project-url.com",
+            sourceCode: "https://github.com/thejan25004/ORM-Assignment"
         },
         {
             id: 23,
@@ -259,7 +302,9 @@ export function Projects() {
             category: "enterprise",
             technologies: ["JavaFX", "MySQL"],
             featured: false,
-            color: "from-slate-500 to-gray-700"
+            color: "from-slate-500 to-gray-700",
+            liveUrl: "https://your-live-project-url.com",
+            sourceCode: "https://github.com/thejan25004/Seuol_car_Rental"
         },
         {
             id: 24,
@@ -269,7 +314,9 @@ export function Projects() {
             category: "learning",
             technologies: ["Java"],
             featured: false,
-            color: "from-blue-500 to-cyan-700"
+            color: "from-blue-500 to-cyan-700",
+            liveUrl: "https://your-live-project-url.com",
+            sourceCode: "https://github.com/thejan25004/Layered-Architecture-Project"
         }
     ];
 
@@ -346,18 +393,26 @@ export function Projects() {
                                         alt={project.title}
                                         className="project-image"
                                     />
+                                    {/* Project Image Overlay Buttons */}
                                     <div className="image-overlay">
                                         <div className="overlay-content">
-                                            <button className="view-btn">
+                                            <button
+                                                className="view-btn"
+                                                onClick={() => window.open(project.liveUrl, "_blank")}
+                                            >
                                                 <span>👁️</span>
                                                 View Live
                                             </button>
-                                            <button className="code-btn">
+                                            <button
+                                                className="code-btn"
+                                                onClick={() => window.open(project.sourceCode, "_blank")}
+                                            >
                                                 <span>💻</span>
                                                 Source Code
                                             </button>
                                         </div>
                                     </div>
+
                                     {project.featured && (
                                         <div className="featured-badge">
                                             <span>⭐</span>
@@ -392,10 +447,14 @@ export function Projects() {
                                                 <span className="stat-value">4.9</span>
                                             </div>
                                         </div>
-                                        <button className="learn-more-btn">
+                                        <button
+                                            className="learn-more-btn"
+                                            onClick={() => window.open("https://github.com/thejan25004", "_blank")}
+                                        >
                                             <span>Learn More</span>
                                             <span className="arrow">→</span>
                                         </button>
+
                                     </div>
                                 </div>
                             </div>

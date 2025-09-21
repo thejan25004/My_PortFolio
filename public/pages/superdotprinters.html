@@ -1,0 +1,4703 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>superDotPrinters - Premium Bulk Printing Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+
+  <!-- Google Fonts Link -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FF6500',
+            secondary: '#1E3E62',
+            dark: '#0B192C',
+            black: '#000000',
+            accent: '#00D4FF',
+            purple: '#8B5CF6'
+          },
+          fontFamily: {
+            opensans: ['"Open Sans"', 'sans-serif'], // ✅ Added font
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'bounce-slow': 'bounce 3s infinite',
+            'spin-slow': 'spin 8s linear infinite',
+            'wiggle': 'wiggle 1s ease-in-out infinite',
+            'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+            'slide-in-right': 'slideInRight 0.8s ease-out forwards',
+            'zoom-in': 'zoomIn 0.6s ease-out forwards',
+            'glow': 'glow 2s ease-in-out infinite alternate',
+            'shimmer': 'shimmer 3s ease-in-out infinite',
+            'ocean-wave': 'oceanWave 8s ease-in-out infinite',
+            'progress-fill': 'progressFill 2s ease-out forwards'
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)', opacity: '0.7' },
+              '50%': { transform: 'translateY(-20px) rotate(180deg)', opacity: '1' }
+            },
+            wiggle: {
+              '0%, 100%': { transform: 'rotate(-3deg)' },
+              '50%': { transform: 'rotate(3deg)' }
+            },
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            slideInRight: {
+              '0%': { opacity: '0', transform: 'translateX(-30px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' }
+            },
+            zoomIn: {
+              '0%': { opacity: '0', transform: 'scale(0.9)' },
+              '100%': { opacity: '1', transform: 'scale(1)' }
+            },
+            glow: {
+              '0%': { boxShadow: '0 8px 25px rgba(14, 165, 233, 0.3)' },
+              '100%': { boxShadow: '0 12px 35px rgba(14, 165, 233, 0.5)' }
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+              '100%': { backgroundPosition: '0% 50%' }
+            },
+            oceanWave: {
+              '0%, 100%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' }
+            },
+            progressFill: {
+              '0%': { width: '0%' },
+              '100%': { width: 'var(--progress-width, 60%)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /*!* Google Fonts Import *!*/
+    /*@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');*/
+
+    /* Custom Color Variables */
+    :root {
+      --color-primary: #FF6500;
+      --color-secondary: #1E3E62;
+      --color-dark: #0B192C;
+      --color-black: #000000;
+      --color-accent: #00D4FF;
+      --color-purple: #8B5CF6;
+      --ocean-50: #eacdb5;
+      --ocean-100: #e0f2fe;
+      --ocean-200: #bae6fd;
+      --ocean-300: #7dd3fc;
+      --ocean-400: #38bdf8;
+      --ocean-500: #0ea5e9;
+      --ocean-600: #0284c7;
+      --ocean-700: #0369a1;
+      --ocean-800: #075985;
+      --ocean-900: #0c4a6e;
+      --coral-400: #fb923c;
+      --coral-500: #f97316;
+      --coral-600: #ea580c;
+      --teal-400: #2dd4bf;
+      --teal-500: #14b8a6;
+      --teal-600: #0d9488;
+      --seafoam-400: #34d399;
+      --seafoam-500: #10b981;
+      --seafoam-600: #059669;
+       --backg: #fef9f4;
+
+      --backtext-primary: #333;
+    }
+
+    /* Theme Variables */
+    :root {
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8fafc;
+      --text-primary: #1f2937;
+      --text-secondary: #6b7280;
+      --border-color: #e5e7eb;
+      --navbar-bg: rgba(232, 219, 219, 0.7);
+      --navbar-border: rgba(241, 228, 228, 0.1);
+      --glass-bg: rgba(255, 255, 255, 0.1);
+      --glass-border: rgba(255, 255, 255, 0.2);
+    }
+
+    .light-theme #bd {
+      /*--bg-primary: #ffffff;*/
+      /*--bg-secondary: #f8fafc;*/
+      /*--text-primary: #1f2937;*/
+      /*--text-secondary: #6b7280;*/
+      /*--border-color: #e5e7eb;*/
+      /*background-color: var(--backg);*/
+    }
+
+    .dark-theme {
+      --bg-primary: #0B192C;
+      --bg-secondary: #1E3E62;
+      --text-primary: #ffffff;
+      --text-secondary: #d1d5db;
+      --border-color: #374151;
+      --navbar-bg: rgba(11, 25, 44, 0.9);
+      --navbar-border: rgba(255, 255, 255, 0.1);
+      --glass-bg: rgba(11, 25, 44, 0.3);
+      --glass-border: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      transition: background-color 0.3s ease, color 0.3s ease;
+      overflow-x: hidden;
+
+    }
+
+    /* Theme Utility Classes */
+    .bg-theme { background-color: var(--bg-primary); transition: background-color 0.3s ease; }
+    .bg-theme-secondary { background-color: var(--bg-secondary); transition: background-color 0.3s ease; }
+    .text-theme { color: var(--text-primary); transition: color 0.3s ease; }
+    .text-theme-secondary { color: var(--text-secondary); transition: color 0.3s ease; }
+    .border-theme { border-color: var(--border-color); transition: border-color 0.3s ease; }
+
+    /* Navbar Styles */
+    .navbar-glass {
+      /*background: var(--navbar-border);*/
+      /*backdrop-filter: blur(20px);*/
+      /*border-bottom: 1px solid var(--navbar-border);*/
+      /*transition: all 0.3s ease;*/
+
+        background: rgba(112, 109, 109, 0.5); /* White with 50% transparency */
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px); /* For Safari support */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Slight border */
+        transition: all 0.3s ease;
+
+
+    }
+
+    .navbar-glass a {
+      color: var(--text-primary);
+      transition: color 0.3s ease;
+    }
+
+    .navbar-glass a:hover {
+      color: var(--color-primary);
+    }
+
+    /*.dark-theme .navbar-glass a {*/
+    /*  color: #000000 !important;*/
+    /*  transition: color 0.3s ease;*/
+    /*}*/
+
+    /* Dark Theme Navbar - Recommended Styling */
+
+    .dark-theme .navbar-glass {
+      /* Primary option: Deep navy with glass effect */
+      background: rgba(11, 25, 44, 0.85); /* --color-dark with transparency */
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(30, 62, 98, 0.3); /* --color-secondary as border */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    /* Alternative option: Semi-transparent black with blue accent */
+    .dark-theme .navbar-glass-alt {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 2px solid rgba(255, 101, 0, 0.2); /* Primary color accent */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Font colors for dark navbar */
+    .dark-theme .navbar-glass a {
+      color: #ffffff !important; /* Pure white for contrast */
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .dark-theme .navbar-glass a:hover {
+      color: #FF6500 !important; /* Primary orange on hover */
+      text-shadow: 0 0 10px rgba(255, 101, 0, 0.3);
+    }
+
+    /* Active/current page link */
+    .dark-theme .navbar-glass a.active {
+      color: #00D4FF !important; /* Accent color for active state */
+      font-weight: 600;
+    }
+
+    /* Logo text styling */
+    .dark-theme .navbar-glass .logo {
+      color: #ffffff;
+      font-weight: 700;
+      text-shadow: 0 2px 10px rgba(255, 101, 0, 0.2);
+    }
+
+    /* Mobile menu button */
+    .dark-theme .navbar-glass .mobile-menu-btn {
+      color: #ffffff;
+      background: rgba(255, 101, 0, 0.1);
+      border: 1px solid rgba(255, 101, 0, 0.2);
+    }
+
+    .dark-theme .navbar-glass .mobile-menu-btn:hover {
+      background: rgba(255, 101, 0, 0.2);
+      color: #FF6500;
+    }
+
+    /* Theme toggle button in navbar */
+    .dark-theme #themeToggle {
+      background: rgba(30, 62, 98, 0.3);
+      border: 1px solid rgba(255, 101, 0, 0.3);
+      color: #ffffff;
+    }
+
+    .dark-theme #themeToggle:hover {
+      background: rgba(255, 101, 0, 0.1);
+      border-color: rgba(255, 101, 0, 0.5);
+      color: #FF6500;
+    }
+
+    /* Dropdown menus in dark theme */
+    .dark-theme .navbar-glass .dropdown-menu {
+      background: rgba(11, 25, 44, 0.95);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(30, 62, 98, 0.3);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .dark-theme .navbar-glass .dropdown-menu a {
+      color: #ffffff;
+      border-bottom: 1px solid rgba(30, 62, 98, 0.2);
+    }
+
+    .dark-theme .navbar-glass .dropdown-menu a:hover {
+      background: rgba(255, 101, 0, 0.1);
+      color: #FF6500;
+    }
+
+    .dark-theme #tracking-section {
+
+      background-color: var(--bg-primary);
+      /*transition: background-color 0.3s ease , color 0.3s ease;*/
+      /*overflow: hidden;*/
+
+
+
+    }
+
+    .dark-theme #premiumQuality {
+      background-color: var(--color-dark);
+
+    }
+
+    #themeToggle {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      transition: all 0.3s ease;
+    }
+
+    #themeToggle i {
+      color: var(--text-primary);
+      transition: color 0.3s ease;
+    }
+
+    #themeToggle:hover i {
+      color: var(--color-primary);
+    }
+
+
+    /* Glass Effect */
+    .glass {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      transition: background 0.3s ease, border 0.3s ease;
+    }
+
+    /* Order Section */
+    .dark-theme #order {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg,
+      var(--ocean-50) 0%,
+      rgba(3, 37, 76, 0.8) 25%,
+      rgba(0, 12, 71, 0.6) 50%,
+      rgba(5, 14, 74, 0.4) 75%,
+      var(--ocean-100) 100%);
+      transition: background 0.3s ease;
+    }
+
+    .light-theme #order  {
+      background: linear-gradient(135deg,
+      var(--ocean-50) 0%,
+      rgba(240, 249, 255, 0.8) 25%,
+      rgba(224, 242, 254, 0.6) 50%,
+      rgba(186, 230, 253, 0.4) 75%,
+      var(--ocean-100) 100%);
+
+    }
+
+    #order::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg,
+      rgba(14, 165, 233, 0.03) 0%,
+      rgba(45, 212, 191, 0.03) 25%,
+      rgba(16, 185, 129, 0.03) 50%,
+      rgba(59, 130, 246, 0.03) 75%,
+      rgba(14, 165, 233, 0.03) 100%);
+      background-size: 400% 400%;
+      animation: oceanWave 8s ease infinite;
+      pointer-events: none;
+    }
+
+    #order .bubble {
+      position: absolute;
+      background: linear-gradient(45deg, rgba(45, 212, 191, 0.2), rgba(14, 165, 233, 0.2));
+      border-radius: 50%;
+      animation: oceanBubbleFloat 6s ease-in-out infinite;
+    }
+
+    #order .bubble:nth-child(1) {
+      width: 20px;
+      height: 20px;
+      left: 10%;
+      top: 20%;
+      animation-delay: 0s;
+    }
+
+    #order .bubble:nth-child(2) {
+      width: 15px;
+      height: 15px;
+      left: 70%;
+      top: 60%;
+      animation-delay: 2s;
+    }
+
+    #order .bubble:nth-child(3) {
+      width: 25px;
+      height: 25px;
+      left: 40%;
+      top: 80%;
+      animation-delay: 4s;
+    }
+
+    #order .bg-white {
+      background: rgba(240, 249, 255, 0.85);
+      backdrop-filter: blur(20px);
+      border: 2px solid rgba(14, 165, 233, 0.15);
+      box-shadow: 0 12px 40px rgba(14, 165, 233, 0.1);
+      transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #order .shimmer-text {
+      background: linear-gradient(
+        90deg,
+        var(--ocean-500) 0%,
+        var(--teal-400) 25%,
+        var(--seafoam-500) 50%,
+        var(--ocean-600) 75%,
+        var(--ocean-500) 100%
+      );
+      background-size: 400% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 3s ease-in-out infinite;
+    }
+
+    #order .step .w-8 {
+      background: linear-gradient(135deg, var(--ocean-500), var(--teal-500));
+      box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    #order .progress-bar {
+      background: linear-gradient(90deg, var(--ocean-500), var(--teal-500));
+      border-radius: 50px;
+      animation: pulse-slow 2s ease-in-out infinite;
+    }
+
+    #order input[type="text"],
+    #order input[type="email"],
+    #order input[type="tel"],
+    #order input[type="number"],
+    #order input[type="date"],
+    #order textarea {
+      background: rgba(240, 249, 255, 0.6);
+      border: 2px solid rgba(14, 165, 233, 0.2);
+      border-radius: 12px;
+      transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+      color: var(--ocean-800);
+    }
+
+    #order input[type="text"]:focus,
+    #order input[type="email"]:focus,
+    #order input[type="tel"]:focus,
+    #order input[type="number"]:focus,
+    #order input[type="date"]:focus,
+    #order textarea:focus {
+      background: rgba(240, 249, 255, 0.9);
+      border-color: var(--ocean-500);
+      box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+      outline: none;
+    }
+
+    #order input::placeholder,
+    #order textarea::placeholder {
+      color: rgba(14, 165, 233, 0.5);
+    }
+
+    #order label {
+      color: var(--ocean-800);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+    }
+
+    #order label::before {
+      content: "🌊";
+      margin-right: 8px;
+      font-size: 14px;
+    }
+
+    #order #product-dropdown {
+      background: rgba(240, 249, 255, 0.6);
+      border: 2px solid rgba(14, 165, 233, 0.2);
+      border-radius: 12px;
+      color: var(--ocean-800);
+      transition: background 0.3s ease, border 0.3s ease;
+    }
+
+    #order #product-dropdown:hover {
+      background: rgba(240, 249, 255, 0.8);
+      border-color: var(--ocean-400);
+    }
+
+    #order #product-options {
+      background: rgba(240, 249, 255, 0.95);
+      backdrop-filter: blur(20px);
+      border: 2px solid rgba(14, 165, 233, 0.2);
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(14, 165, 233, 0.15);
+      transition: background 0.3s ease, border 0.3s ease;
+    }
+
+    #order .product-option {
+      color: var(--ocean-800);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #order .product-option::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent);
+      transition: left 0.5s;
+    }
+
+    #order .product-option:hover::before {
+      left: 100%;
+    }
+
+    #order .product-option:hover {
+      background: rgba(14, 165, 233, 0.1);
+      transform: translateX(5px);
+    }
+
+    #order .upload-zone {
+      background: linear-gradient(135deg, rgba(240, 249, 255, 0.5) 0%, rgba(186, 230, 253, 0.5) 100%);
+      border: 3px dashed rgba(14, 165, 233, 0.4);
+      border-radius: 16px;
+      transition: all 0.3s ease;
+    }
+
+    #order .upload-zone:hover {
+      border-color: var(--ocean-500);
+      background: linear-gradient(135deg, rgba(240, 249, 255, 0.8) 0%, rgba(186, 230, 253, 0.8) 100%);
+      transform: translateY(-2px);
+    }
+
+    #order .upload-zone .bg-gray-100 {
+      background: linear-gradient(135deg, var(--ocean-100), var(--teal-100));
+      animation: oceanFloat 3s ease-in-out infinite;
+    }
+
+    #order .upload-zone .ri-upload-cloud-line {
+      color: var(--ocean-500);
+    }
+
+    #order .upload-zone p {
+      color: var(--ocean-700);
+    }
+
+    #order .upload-zone .text-primary {
+      color: var(--ocean-600);
+      font-weight: 700;
+    }
+
+    #order .upload-zone .text-sm {
+      color: var(--ocean-500);
+    }
+
+    #order button[type="submit"] {
+      background: linear-gradient(135deg, var(--ocean-500) 0%, var(--teal-500) 50%, var(--seafoam-500) 100%);
+      border: none;
+      border-radius: 16px;
+      color: white;
+      font-weight: 700;
+      padding: 16px 32px;
+      box-shadow: 0 8px 25px rgba(14, 165, 233, 0.3);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #order button[type="submit"]::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      transition: width 0.6s, height 0.6s;
+      transform: translate(-50%, -50%);
+    }
+
+    #order button[type="submit"]:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+
+    #order button[type="submit"]:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(14, 165, 233, 0.4);
+    }
+
+    #order .text-sm.text-gray-500 {
+      color: var(--ocean-500);
+      display: flex;
+      align-items: center;
+    }
+
+    #order .text-sm.text-gray-500::before {
+      content: "ℹ️";
+      margin-right: 6px;
+    }
+
+    #order + section {
+      background: rgba(240, 249, 255, 0.4);
+      backdrop-filter: blur(15px);
+      border-top: 1px solid rgba(14, 165, 233, 0.1);
+      transition: background 0.3s ease, border 0.3s ease;
+    }
+
+    /* Tracking Section */
+    #tracking-section {
+      position: relative;
+      overflow: hidden;
+      /*background: linear-gradient(135deg, var(--ocean-50) 0%, rgba(240, 249, 255, 0.8) 25%, rgba(224, 242, 254, 0.6) 50%, rgba(186, 230, 253, 0.4) 75%, var(--ocean-100) 100%);*/
+      transition: background 0.3s ease;
+    }
+
+    .light-theme #tracking-section {
+      /*background: linear-gradient(135deg, var(--ocean-50) 0%, rgba(240, 249, 255, 0.8) 25%, rgba(224, 242, 254, 0.6) 50%, rgba(186, 230, 253, 0.4) 75%, var(--ocean-100) 100%);*/
+      /*background: linear-gradient(135deg,*/
+      /*var(--ocean-50) 0%,*/
+      /*rgba(240, 249, 255, 0.8) 25%,*/
+      /*rgba(224, 242, 254, 0.6) 50%,*/
+      /*rgba(186, 230, 253, 0.4) 75%,*/
+      /*var(--ocean-100) 100%);*/
+    }
+
+    #tracking-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      /*background: linear-gradient(135deg, rgba(14, 165, 233, 0.03) 0%, rgba(45, 212, 191, 0.03) 25%, rgba(16, 185, 129, 0.03) 50%, rgba(59, 130, 246, 0.03) 75%, rgba(14, 165, 233, 0.03) 100%);*/
+      background-size: 400% 400%;
+      animation: oceanWave 8s ease infinite;
+      pointer-events: none;
+    }
+
+    .ocean-bubble {
+      position: absolute;
+      background: linear-gradient(45deg, rgba(45, 212, 191, 0.2), rgba(14, 165, 233, 0.2));
+      border-radius: 50%;
+      animation: oceanBubbleFloat 6s ease-in-out infinite;
+    }
+
+    .ocean-bubble:nth-child(1) { width: 30px; height: 30px; left: 5%; top: 15%; animation-delay: 0s; }
+    .ocean-bubble:nth-child(2) { width: 20px; height: 20px; left: 85%; top: 25%; animation-delay: 2s; }
+    .ocean-bubble:nth-child(3) { width: 40px; height: 40px; left: 70%; top: 70%; animation-delay: 4s; }
+    .ocean-bubble:nth-child(4) { width: 15px; height: 15px; left: 15%; top: 80%; animation-delay: 1s; }
+
+    .tracking-card {
+      background: rgba(240, 249, 255, 0.85);
+      backdrop-filter: blur(20px);
+      border: 2px solid rgba(14, 165, 233, 0.15);
+      box-shadow: 0 12px 40px rgba(14, 165, 233, 0.1);
+      border-radius: 24px;
+      transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .tracking-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 60px rgba(14, 165, 233, 0.15);
+      border-color: rgba(14, 165, 233, 0.3);
+    }
+
+    .progress-container {
+      position: relative;
+      padding: 2rem 0;
+    }
+
+    .progress-line {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: rgba(14, 165, 233, 0.2);
+      border-radius: 50px;
+      transform: translateY(-50%);
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--ocean-500), var(--teal-500));
+      border-radius: 50px;
+      transition: width 2s cubic-bezier(0.4, 0, 0.2, 1);
+      animation: progress-fill 2s ease-out forwards;
+    }
+
+    .step-item {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.4s ease;
+    }
+
+    .step-circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 700;
+      transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .step-circle.completed {
+      background: linear-gradient(135deg, var(--ocean-500), var(--teal-500));
+      color: white;
+      box-shadow: 0 8px 25px rgba(14, 165, 233, 0.3);
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    .step-circle.current {
+      background: linear-gradient(135deg, var(--color-primary), #FF8533);
+      color: white;
+      box-shadow: 0 8px 25px rgba(255, 101, 0, 0.4);
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+
+    .step-circle.pending {
+      background: rgba(240, 249, 255, 0.8);
+      color: var(--ocean-400);
+      border: 3px solid rgba(14, 165, 233, 0.3);
+    }
+
+    .step-label {
+      margin-top: 1rem;
+      font-weight: 600;
+      color: var(--ocean-800);
+      text-align: center;
+      transition: color 0.3s ease;
+    }
+
+    .step-time {
+      font-size: 0.875rem;
+      color: var(--ocean-500);
+      margin-top: 0.5rem;
+    }
+
+    .search-input {
+      background: rgba(240, 249, 255, 0.6);
+      border: 2px solid rgba(14, 165, 233, 0.2);
+      border-radius: 16px;
+      padding: 1rem 1.5rem;
+      font-size: 1.1rem;
+      color: var(--ocean-800);
+      transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+    }
+
+    .search-input:focus {
+      background: rgba(240, 249, 255, 0.9);
+      border-color: var(--ocean-500);
+      box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.1);
+      outline: none;
+      transform: translateY(-2px);
+    }
+
+    .search-input::placeholder {
+      color: rgba(14, 165, 233, 0.5);
+    }
+
+    .track-button {
+      background: linear-gradient(135deg, var(--ocean-500) 0%, var(--teal-500) 50%, var(--seafoam-500) 100%);
+      border: none;
+      border-radius: 16px;
+      color: white;
+      font-weight: 700;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      box-shadow: 0 8px 25px rgba(14, 165, 233, 0.3);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .track-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(14, 165, 233, 0.4);
+    }
+
+    .track-button::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      transition: width 0.6s, height 0.6s;
+      transform: translate(-50%, -50%);
+    }
+
+    .track-button:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+
+    .order-details {
+      background: rgba(240, 249, 255, 0.9);
+      backdrop-filter: blur(25px);
+      border: 2px solid rgba(14, 165, 233, 0.2);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 15px 50px rgba(14, 165, 233, 0.1);
+      transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .detail-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(14, 165, 233, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .detail-item:hover {
+      background: rgba(14, 165, 233, 0.05);
+      border-radius: 12px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .detail-label {
+      font-weight: 600;
+      color: var(--ocean-700);
+      display: flex;
+      align-items: center;
+    }
+
+    .detail-value {
+      color: var(--ocean-800);
+      font-weight: 500;
+    }
+
+    .status-badge {
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .status-processing {
+      background: linear-gradient(135deg, var(--color-primary), #FF8533);
+      color: white;
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+
+    .status-shipped {
+      background: linear-gradient(135deg, var(--ocean-500), var(--teal-500));
+      color: white;
+    }
+
+    .status-delivered {
+      background: linear-gradient(135deg, var(--seafoam-500), #22c55e);
+      color: white;
+    }
+
+    /* Story and Mission Section */
+    .about-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-style: preserve-3d;
+    }
+
+    .about-card:hover {
+      transform: translateY(-10px) rotateX(2deg);
+      box-shadow: 0 25px 50px rgba(255, 101, 0, 0.15);
+    }
+
+    .timeline-item {
+      position: relative;
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 0.8s ease;
+    }
+
+    .timeline-item.revealed {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .timeline-item:nth-child(even) {
+      transform: translateX(50px);
+    }
+
+    .timeline-item:nth-child(even).revealed {
+      transform: translateX(0);
+    }
+
+    .stats-counter {
+      font-size: 3rem;
+      font-weight: 900;
+      background: linear-gradient(45deg, var(--color-primary), var(--color-accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .mission-icon {
+      background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+      border-radius: 50%;
+      padding: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .vision-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .vision-card:hover {
+      transform: scale(1.05);
+      border-color: rgba(255, 101, 0, 0.5);
+      box-shadow: 0 20px 40px rgba(255, 101, 0, 0.2);
+    }
+
+    /* Other UI Elements */
+    .particles-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -2;
+    }
+
+    .wave-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.1;
+    }
+
+    .wave-path {
+      animation: wave 8s ease-in-out infinite;
+    }
+
+    .wave-path-2 {
+      animation: wave 10s ease-in-out infinite reverse;
+    }
+
+    .parallax-element {
+      transition: transform 0.1s ease-out;
+    }
+
+    .service-card {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-style: preserve-3d;
+    }
+
+    .service-card:hover {
+      transform: translateY(-15px) rotateX(5deg);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(255, 101, 0, 0.1), rgba(30, 62, 98, 0.1));
+      border-radius: inherit;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .service-card:hover::before {
+      opacity: 1;
+    }
+
+    .magnetic-btn {
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .magnetic-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(255, 101, 0, 0.3);
+    }
+
+    .magnetic-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, var(--color-primary), #FF8533);
+      border-radius: inherit;
+      z-index: -1;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .magnetic-btn:hover::before {
+      opacity: 1;
+    }
+
+    .magnetic-btn::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .magnetic-btn:hover::after {
+      opacity: 1;
+    }
+
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .scroll-reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-gradient {
+      background: linear-gradient(135deg,
+      rgba(255, 101, 0, 0.1) 0%,
+      rgba(0, 212, 255, 0.1) 25%,
+      rgba(139, 92, 246, 0.1) 50%,
+      rgba(30, 62, 98, 0.1) 75%,
+      rgba(255, 101, 0, 0.1) 100%);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+    }
+
+    .advanced-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      animation: advancedBlob 12s infinite;
+      opacity: 0.6;
+    }
+
+    .company-logo {
+      transition: all 0.3s ease;
+      filter: grayscale(100%);
+    }
+
+    .company-logo:hover {
+      filter: grayscale(0%);
+      transform: scale(1.1);
+    }
+
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .mobile-menu.open {
+      transform: translateX(0);
+    }
+
+    /* Animations */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(-3deg); }
+      50% { transform: rotate(3deg); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInRight {
+      0% { opacity: 0; transform: translateX(-30px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes zoomIn {
+      0% { opacity: 0; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 8px 25px rgba(14, 165, 233, 0.3); }
+      100% { box-shadow: 0 12px 35px rgba(14, 165, 233, 0.5); }
+    }
+
+    @keyframes pulse-slow {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 1; }
+    }
+
+    @keyframes bounce-slow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes spin-slow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes oceanWave {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    @keyframes progress-fill {
+      0% { width: 0%; }
+      100% { width: var(--progress-width, 60%); }
+    }
+
+    @keyframes oceanBubbleFloat {
+      0%, 100% { transform: translateY(0) scale(1); opacity: 0.4; }
+      50% { transform: translateY(-30px) scale(1.1); opacity: 0.8; }
+    }
+
+    @keyframes oceanFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 8px 25px rgba(255, 101, 0, 0.4); transform: scale(1); }
+      50% { box-shadow: 0 12px 35px rgba(255, 101, 0, 0.6); transform: scale(1.05); }
+    }
+
+    @keyframes wave {
+      0%, 100% { d: path('M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z'); }
+      50% { d: path('M0,50 C150,150 350,50 500,150 L500,00 L0,0 Z'); }
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes advancedBlob {
+      0% { transform: translate(0px, 0px) scale(1) rotate(0deg); border-radius: 50% 50% 50% 50%; }
+      25% { transform: translate(100px, -50px) scale(1.2) rotate(90deg); border-radius: 60% 40% 60% 40%; }
+      50% { transform: translate(-50px, 100px) scale(0.8) rotate(180deg); border-radius: 40% 60% 40% 60%; }
+      75% { transform: translate(-100px, -100px) scale(1.1) rotate(270deg); border-radius: 50% 50% 50% 50%; }
+      100% { transform: translate(0px, 0px) scale(1) rotate(360deg); border-radius: 50% 50% 50% 50%; }
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      #order {
+        padding: 60px 0;
+      }
+      #order h2 {
+        font-size: 2.5rem;
+      }
+      #order .shimmer-text {
+        font-size: 2.5rem;
+      }
+      .step-item {
+        margin-bottom: 2rem;
+      }
+      .progress-line {
+        display: none;
+      }
+      .step-circle {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+      }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(5deg); }
+    }
+
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(-3deg); }
+      75% { transform: rotate(3deg); }
+    }
+
+    @keyframes bounce-slow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    @keyframes pulse-slow {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+    }
+
+    /* Utility classes */
+    .animate-float { animation: float 3s ease-in-out infinite; }
+    .animate-wiggle { animation: wiggle 0.5s ease-in-out; }
+    .animate-bounce-slow { animation: bounce-slow 2s ease-in-out infinite; }
+    .animate-pulse-slow { animation: pulse-slow 3s ease-in-out infinite; }
+
+    .shimmer-text {
+      background: linear-gradient(90deg, #FF6500, #00D4FF, #8B5CF6, #FF6500);
+      background-size: 200% auto;
+      animation: shimmer 3s linear infinite;
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+
+    .magnetic-btn {
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .magnetic-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .process-card {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideInUp 0.6s ease-out forwards;
+    }
+
+    @keyframes slideInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    /* Dark mode adjustments */
+    @media (prefers-color-scheme: dark) {
+      .glass {
+        background: rgba(0, 0, 0, 0.2);
+      }
+    }
+
+
+    /*Testimonial Form */
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* Theme Toggle Button */
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--bg-secondary);
+      border: 2px solid var(--border-color);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+      transform: scale(1.1);
+    }
+
+    .theme-toggle i {
+      color: var(--text-primary);
+      font-size: 1.2rem;
+    }
+
+    .dark-theme .theme-toggle i.ri-sun-line {
+      display: none;
+    }
+
+    .light-theme .theme-toggle i.ri-moon-line {
+      display: none;
+    }
+
+    /* Floating Action Button for Feedback */
+    .feedback-fab {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, var(--color-primary), var(--coral-500));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(255, 101, 0, 0.3);
+      cursor: pointer;
+      z-index: 1000;
+      transition: all 0.3s ease;
+      animation: pulse-fab 2s infinite;
+    }
+
+    .feedback-fab:hover {
+      transform: scale(1.1);
+      box-shadow: 0 15px 40px rgba(255, 101, 0, 0.4);
+    }
+
+    .feedback-fab i {
+      color: white;
+      font-size: 1.5rem;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes pulse-fab {
+      0% { box-shadow: 0 0 0 0 rgba(255, 101, 0, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(255, 101, 0, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 101, 0, 0); }
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-5px); }
+      60% { transform: translateY(-3px); }
+    }
+
+    /* Modal Overlay */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--glass-bg);
+      backdrop-filter: blur(10px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    /* Feedback Modal */
+    .feedback-modal {
+      background: var(--bg-primary);
+      border-radius: 25px;
+      padding: 2.5rem;
+      width: 90%;
+      max-width: 600px;
+      position: relative;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+      transform: scale(0.7) translateY(50px);
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .modal-overlay.active .feedback-modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .feedback-modal::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-accent), var(--color-purple), var(--color-secondary));
+      background-size: 400% 400%;
+      animation: gradientShift 3s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .close-modal:hover {
+      background: var(--color-primary);
+      color: white;
+      transform: rotate(90deg);
+    }
+
+    /* Feedback Steps */
+    .feedback-steps {
+      margin-bottom: 2rem;
+    }
+
+    .step-indicator {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+      gap: 1rem;
+    }
+
+    .step {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--border-color);
+      color: var(--text-secondary);
+      font-weight: bold;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .step.active {
+      background: linear-gradient(135deg, var(--color-primary), var(--coral-500));
+      color: white;
+      transform: scale(1.1);
+      box-shadow: 0 5px 15px rgba(255, 101, 0, 0.3);
+    }
+
+    .step.completed {
+      background: linear-gradient(135deg, var(--seafoam-500), var(--teal-500));
+      color: white;
+    }
+
+    .step::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      width: 20px;
+      height: 2px;
+      background: var(--border-color);
+      transform: translateY(-50%);
+      transition: all 0.3s ease;
+    }
+
+    .step:last-child::after {
+      display: none;
+    }
+
+    .step.completed::after {
+      background: var(--seafoam-500);
+    }
+
+    /* Form Sections */
+    .form-section {
+      display: none;
+      opacity: 0;
+      transform: translateX(30px);
+      transition: all 0.3s ease;
+    }
+
+    .form-section.active {
+      display: block;
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--color-secondary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-title i {
+      color: var(--color-primary);
+      font-size: 1.2rem;
+    }
+
+    /* Star Rating */
+    .rating-container {
+      margin: 1.5rem 0;
+    }
+
+    .star-rating {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      margin: 1rem 0;
+    }
+
+    .star {
+      font-size: 2.5rem;
+      color: #ddd;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      transform: scale(1);
+    }
+
+    .star:hover,
+    .star.active {
+      color: #ffd700;
+      transform: scale(1.2);
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+
+    .star:hover {
+      animation: starPulse 0.3s ease;
+    }
+
+    @keyframes starPulse {
+      0% { transform: scale(1.2); }
+      50% { transform: scale(1.4); }
+      100% { transform: scale(1.2); }
+    }
+
+    .rating-text {
+      text-align: center;
+      color: var(--color-secondary);
+      font-weight: bold;
+      margin-top: 0.5rem;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    .rating-text.show {
+      opacity: 1;
+      transform: translateY(-5px);
+    }
+
+    /* Form Elements */
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: var(--color-secondary);
+    }
+
+    .form-input, .form-textarea {
+      width: 100%;
+      padding: 1rem;
+      border: 2px solid var(--border-color);
+      border-radius: 15px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+    }
+
+    .form-input:focus, .form-textarea:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(255, 101, 0, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    /* Service Categories */
+    .service-categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .service-category {
+      padding: 1rem;
+      border: 2px solid var(--border-color);
+      border-radius: 15px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+    }
+
+    .service-category:hover {
+      border-color: var(--color-primary);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(255, 101, 0, 0.1);
+    }
+
+    .service-category.selected {
+      border-color: var(--color-primary);
+      background: linear-gradient(135deg, rgba(255, 101, 0, 0.1), rgba(255, 101, 0, 0.05));
+      color: var(--color-primary);
+    }
+
+    .service-category i {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: var(--color-accent);
+      transition: all 0.3s ease;
+    }
+
+    .service-category.selected i {
+      color: var(--color-primary);
+      transform: scale(1.2);
+    }
+
+    /* Navigation Buttons */
+    .form-navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2rem;
+      gap: 1rem;
+    }
+
+    .nav-btn {
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      min-width: 120px;
+      justify-content: center;
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+    }
+
+    .nav-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .btn-back {
+      background: var(--border-color);
+      color: var(--text-secondary);
+    }
+
+    .btn-back:hover:not(:disabled) {
+      background: var(--color-secondary);
+      color: white;
+      transform: translateX(-5px);
+    }
+
+    .btn-next, .btn-submit {
+      background: linear-gradient(135deg, var(--color-primary), var(--coral-500));
+      color: white;
+      box-shadow: 0 5px 15px rgba(255, 101, 0, 0.3);
+    }
+
+    .btn-next:hover:not(:disabled), .btn-submit:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 101, 0, 0.4);
+    }
+
+    /* Success Message */
+    .success-message {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .success-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--seafoam-500), var(--teal-500));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      animation: successPulse 2s ease-in-out infinite;
+    }
+
+    .success-icon i {
+      font-size: 2rem;
+      color: white;
+    }
+
+    @keyframes successPulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .success-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--color-secondary);
+      margin-bottom: 1rem;
+    }
+
+    .success-text {
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .feedback-modal {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+
+      .step-indicator {
+        gap: 0.5rem;
+      }
+
+      .step {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+      }
+
+      .star {
+        font-size: 2rem;
+      }
+
+      .service-categories {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      }
+
+      .form-navigation {
+        flex-direction: column;
+      }
+
+      .nav-btn {
+        width: 100%;
+      }
+    }
+
+    /* Animations for elements */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 0.6s ease;
+    }
+
+    /* Particle Background */
+    .particle-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+
+
+
+
+    .light-theme .modal-backdrop {
+      backdrop-filter: blur(8px);
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .light-theme.shimmer-text {
+      background: linear-gradient(90deg, #FF6500, #00D4FF, #8B5CF6, #FF6500);
+      background-size: 300% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 3s ease-in-out infinite;
+    }
+
+    .light-theme.progress-bar {
+      background: linear-gradient(90deg, #FF6500, #00D4FF);
+      height: 4px;
+      border-radius: 2px;
+      animation: progress-fill 1.5s ease-out forwards;
+    }
+
+    .light-theme.feature-tag {
+      background: linear-gradient(135deg, rgba(255, 101, 0, 0.1), rgba(0, 212, 255, 0.1));
+      border: 1px solid rgba(255, 101, 0, 0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    .light-theme.price-badge {
+      background: linear-gradient(135deg, #FF6500, #00D4FF);
+      background-size: 200% 200%;
+      animation: shimmer 3s ease-in-out infinite;
+    }
+
+
+
+
+
+    .dark-theme .modal-backdrop {
+      background: rgba(0, 0, 0, 0.75);
+    }
+
+    /*.dark-theme .feature-tag{*/
+    /*  background-color: #0B192C;*/
+    /*}*/
+
+    /*.light-theme .feature-tag{*/
+    /*  background-color: #0ea5e9;*/
+    /*}*/
+
+    .light-theme .serviceToogle{
+      background-color: var(--bg-secondary);
+
+    }
+
+    .dark-theme .serviceToogle {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+    }
+
+    .dark-theme .serviceToogletext{
+      color: white;
+    }
+
+    .dark-theme .feature-tag {
+      background: linear-gradient(
+        135deg,
+        rgba(255, 101, 0, 0.2),
+        rgba(0, 212, 255, 0.15)
+      );
+      border: 1px solid rgba(0, 212, 255, 0.25);
+      color: var(--text-primary);
+    }
+
+    .dark-theme .progress-bar {
+      background: linear-gradient(90deg, var(--color-accent), var(--color-purple));
+    }
+
+    .dark-theme .price-badge {
+      background: linear-gradient(135deg, var(--color-accent), var(--color-purple));
+    }
+
+    /* Hide scrollbar but keep scroll */
+    .serviceToogle::-webkit-scrollbar {
+      display: none;
+    }
+
+    .serviceToogle {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;     /* Firefox */
+    }
+
+
+  </style>
+
+</head>
+<body class="light-theme" id="bd">
+<!-- Advanced Particle Canvas -->
+<canvas class="particles-canvas" id="particlesCanvas"></canvas>
+
+<!-- Animated Wave Background -->
+<div class="wave-background">
+  <svg width="100%" height="100%" viewBox="0 0 1000 400" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#FF6500;stop-opacity:0.3" />
+        <stop offset="50%" style="stop-color:#00D4FF;stop-opacity:0.2" />
+        <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0.3" />
+      </linearGradient>
+    </defs>
+    <path class="wave-path" fill="url(#waveGradient)" d="M0,100 C150,200 350,0 500,100 L500,0 L0,0 Z"></path>
+    <path class="wave-path-2" fill="url(#waveGradient)" d="M0,150 C200,250 400,50 600,150 L600,0 L0,0 Z" opacity="0.5"></path>
+  </svg>
+</div>
+
+<!-- Advanced floating blobs -->
+<div class="advanced-blob w-96 h-96 bg-gradient-to-r from-primary to-accent top-20 left-10"></div>
+<div class="advanced-blob w-80 h-80 bg-gradient-to-r from-purple to-secondary top-1/2 right-20" style="animation-delay: -4s;"></div>
+<div class="advanced-blob w-72 h-72 bg-gradient-to-r from-accent to-primary bottom-32 left-1/4" style="animation-delay: -8s;"></div>
+
+<main class="pt-18">
+  <!-- Enhanced Navigation -->
+  <nav class="fixed top-0 left-1/2 -translate-x-1/2 w-[1200px] navbar-glass z-50 transition-all duration-300 rounded-full m-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+
+        <div class="flex items-center">
+          <img id="logo"
+               src="img/logos/white.png"
+               alt="superDotPrinters Logo"
+               class="w-40 h-29 mr-2 transition-all duration-300" />
+
+        </div>
+
+
+
+        <div class="hidden md:flex items-center space-x-8 font-[Open_Sans] font-semibold">
+          <a href="#home" class="text-theme hover:text-primary transition-all duration-300 hover:scale-105">Home</a>
+          <a href="#about" class="text-theme hover:text-primary transition-all duration-300 hover:scale-105">About</a>
+          <a href="#service" class="text-theme hover:text-primary transition-all duration-300 hover:scale-105">Services</a>
+          <a href="#order" class="text-theme hover:text-primary transition-all duration-300 hover:scale-105">Place Order</a>
+          <a href="#tracking-section" class="text-theme hover:text-primary transition-all duration-300 hover:scale-105">Track Order</a>
+          <a href="#contact" class="text-theme hover:text-primary transition-all duration-300 hover:scale-105">Contact</a>
+          <a href="#testimonial" class="text-theme hover:text-primary transition-all duration-300 hover:scale-105">Testimonials</a>
+        </div>
+
+        <div class="flex items-center space-x-4">
+          <button id="themeToggle" class="w-10 h-10 flex items-center justify-center rounded-full glass text-theme hover:text-primary transition-all duration-300 hover:scale-110">
+            <i class="ri-sun-line ri-lg"></i>
+          </button>
+          <a href="login.html" class="magnetic-btn bg-primary text-white px-6 py-2 rounded-full whitespace-nowrap font-semibold">Login</a>
+        </div>
+
+        <button class="md:hidden w-10 h-10 flex items-center justify-center text-theme hover:scale-110 transition-transform">
+          <i class="ri-menu-line ri-lg"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!-- Enhanced Hero Section -->
+  <section class="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden" id="home">
+    <div class="max-w-10xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="grid grid-cols-1 items-center justify-items-center text-center">
+        <div class="parallax-element scroll-reveal">
+          <div class="space-y-6">
+            <div class="inline-block">
+            <span class="bg-gradient-to-r from-primary to-accent text-white px-4 py-2 rounded-full text-sm font-semibold animate-pulse-slow">
+              🚀 Sri Lanka's #1 Printing Solutions
+            </span>
+            </div>
+            <h1 class="text-6xl lg:text-6xl font-black text-theme mb-6 leading-tight font-[Montserrat]">
+              Super <span class="shimmer-text">DOT</span> <span class="text-theme">Printers</span>
+            </h1>
+
+            <p class="text-lg text-theme-secondary mb-8 leading-relaxed max-w-7xl mx-auto">
+              "At superDotPrinters, we specialize in processing and delivering high-quality bulk printing orders for leading companies. From bills, covers, tea bag covers, stickers, books, and calendars to essential printing files, we handle every step with precision, speed, and care. Whether you need thousands of labels or hundreds of books, our streamlined online ordering system makes it easy — simply choose your product, upload your design, set your deadline, and track your order in real time. superDotPrinters is your trusted partner for professional, reliable, and on-time printing solutions."
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="order.html" class="magnetic-btn bg-gradient-to-r from-primary to-accent text-white px-8 py-4 rounded-full whitespace-nowrap font-bold inline-flex items-center group">
+                <i class="ri-rocket-line ri-lg mr-2 group-hover:animate-bounce"></i>
+                Start Your Project
+                <i class="ri-arrow-right-line ri-lg ml-2 group-hover:translate-x-1 transition-transform"></i>
+              </a>
+              <a href="services.html" class="glass border-2 border-primary text-primary px-8 py-4 rounded-full whitespace-nowrap font-bold hover:bg-primary hover:text-white transition-all duration-300 inline-flex items-center group">
+                <i class="ri-grid-line ri-lg mr-2"></i>
+                Explore Services
+              </a>
+            </div>
+            <div class="flex items-center justify-center space-x-8 pt-4">
+              <div class="flex items-center space-x-2">
+                <div class="flex -space-x-2">
+                  <div class="w-8 h-8 rounded-full bg-gradient-to-r from-primary to-accent border-2 border-white"></div>
+                  <div class="w-8 h-8 rounded-full bg-gradient-to-r from-accent to-purple border-2 border-white"></div>
+                  <div class="w-8 h-8 rounded-full bg-gradient-to-r from-purple to-secondary border-2 border-white"></div>
+                </div>
+                <span class="text-sm text-theme-secondary">500+ Happy Clients</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <i class="ri-star-fill text-yellow-400"></i>
+                <i class="ri-star-fill text-yellow-400"></i>
+                <i class="ri-star-fill text-yellow-400"></i>
+                <i class="ri-star-fill text-yellow-400"></i>
+                <i class="ri-star-fill text-yellow-400"></i>
+                <span class="text-sm text-theme-secondary ml-1">4.9/5 Rating</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Enhanced Stats Section -->
+  <section class="py-20 glass relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center scroll-reveal group">
+          <div class="stats-counter group-hover:animate-wiggle" data-target="500">0</div>
+          <div class="text-theme-secondary font-semibold">Happy Clients</div>
+          <div class="w-12 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-2 rounded-full"></div>
+        </div>
+        <div class="text-center scroll-reveal group" style="animation-delay: 0.1s;">
+          <div class="stats-counter group-hover:animate-wiggle" data-target="10000">0</div>
+          <div class="text-theme-secondary font-semibold">Orders Completed</div>
+          <div class="w-12 h-1 bg-gradient-to-r from-accent to-purple mx-auto mt-2 rounded-full"></div>
+        </div>
+        <div class="text-center scroll-reveal group" style="animation-delay: 0.2s;">
+          <div class="stats-counter group-hover:animate-wiggle" data-target="15">0</div>
+          <div class="text-theme-secondary font-semibold">Years Experience</div>
+          <div class="w-12 h-1 bg-gradient-to-r from-purple to-secondary mx-auto mt-2 rounded-full"></div>
+        </div>
+        <div class="text-center scroll-reveal group" style="animation-delay: 0.3s;">
+          <div class="stats-counter group-hover:animate-wiggle" data-target="99">0</div>
+          <div class="text-theme-secondary font-semibold">Success Rate %</div>
+          <div class="w-12 h-1 bg-gradient-to-r from-secondary to-primary mx-auto mt-2 rounded-full"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Services Section -->
+  <section class="py-20 relative" id="service">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 scroll-reveal">
+            <span class="inline-block bg-gradient-to-r from-primary to-accent text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                ⚡ Our Services
+            </span>
+        <h2 class="text-5xl font-black text-theme mb-4">
+          Premium <span class="shimmer-text">Printing Solutions</span>
+        </h2>
+        <p class="text-xl text-theme-secondary max-w-2xl mx-auto">
+          Complete printing ecosystem for your business transformation
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Cards will be inserted here dynamically via JS -->
+      </div>
+      <div class="text-center mt-12 scroll-reveal" style="animation-delay: 0.6s;">
+        <a href="services.html" class="magnetic-btn bg-gradient-to-r from-primary via-accent to-purple text-white px-10 py-4 rounded-full font-bold text-lg inline-flex items-center group hover:shadow-2xl">
+          <i class="ri-service-line ri-lg mr-3 group-hover:animate-spin"></i>
+          Explore All Services
+          <i class="ri-arrow-right-line ri-lg ml-3 group-hover:translate-x-2 transition-transform"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Modal -->
+  <div id="serviceModal" class="fixed inset-0 z-50 hidden modal-backdrop">
+    <div class="flex items-center justify-center min-h-screen px-4 py-8">
+      <div class="serviceToogle rounded-3xl shadow-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto animate-modal-appear bg-theme text-theme border border-theme">
+        <!-- Modal Header -->
+        <div class="serviceToogletext relative p-8 border-b border-theme">
+          <button id="modalCloseBtn" class="absolute top-6 right-6 w-10 h-10 bg-theme-secondary hover:bg-theme rounded-full flex items-center justify-center transition-colors border border-theme">
+            <i class="ri-close-line ri-lg text-theme"></i>
+          </button>
+          <div class="flex items-center space-x-4 mb-4">
+            <div id="modalIcon" class="w-16 h-16 flex items-center justify-center bg-gradient-to-r from-primary to-accent rounded-2xl">
+              <i class="ri-file-text-line ri-2x text-white"></i>
+            </div>
+            <div>
+              <h2 id="modalTitle" class="text-3xl font-bold text-theme">Bills & Invoices</h2>
+              <p class="text-lg text-theme-secondary">Professional printing solutions</p>
+            </div>
+          </div>
+          <div class="progress-bar w-full"></div>
+        </div>
+        <!-- Modal Content -->
+        <div class="p-8">
+          <div class="grid lg:grid-cols-2 gap-8">
+            <!-- Left Column -->
+            <div class="animate-slide-up">
+              <h3 class="text-2xl font-bold text-theme mb-6">Service Details</h3>
+              <div id="modalDescription" class="mb-8">
+                <p class="text-theme-secondary leading-relaxed mb-4">
+                  Transform your business documentation with our premium bill and invoice printing services...
+                </p>
+              </div>
+              <!-- Features -->
+              <div class="mb-8">
+                <h4 class="text-xl font-semibold text-theme mb-4">Key Features</h4>
+                <div id="modalFeatures" class="grid grid-cols-1 gap-3">
+                  <!-- JS fills here -->
+                </div>
+              </div>
+              <!-- Materials -->
+              <div class="mb-8">
+                <h4 class="text-xl font-semibold text-theme mb-4">Materials & Specifications</h4>
+                <div id="modalMaterials" class="space-y-3 text-theme-secondary border-theme">
+                  <!-- JS fills here -->
+                </div>
+              </div>
+            </div>
+            <!-- Right Column -->
+            <div class="animate-slide-up" style="animation-delay: 0.2s;">
+              <!-- Sample Images -->
+              <div class="mb-8">
+                <h4 class="text-xl font-semibold text-theme mb-4">Sample Gallery</h4>
+                <div id="modalGallery" class="grid grid-cols-2 gap-4">
+                  <!-- JS fills here dynamically -->
+                </div>
+              </div>
+              <h4 class="text-xl font-semibold text-theme mb-4">Pricing</h4>
+              <div class="bg-theme-secondary p-6 rounded-2xl border border-theme mb-6">
+                <div class="flex items-center justify-between mb-4">
+                  <h4 class="text-xl font-semibold text-theme">Pricing</h4>
+                  <span class="price-badge text-white px-3 py-1 rounded-full text-sm font-bold">Best Value</span>
+                </div>
+                <div id="modalPricing" class="space-y-3 text-theme-secondary">
+                  <!-- JS fills here -->
+                </div>
+              </div>
+              <!-- Process -->
+              <div class="mb-6">
+                <h4 class="text-xl font-semibold text-theme mb-4">Process Timeline</h4>
+                <div class="space-y-4 text-theme-secondary">
+                  <!-- Timeline content -->
+                </div>
+              </div>
+              <!-- Actions -->
+              <div class="flex space-x-4">
+                <button class="flex-1 bg-gradient-to-r from-primary to-accent text-white py-3 px-6 rounded-xl font-semibold hover:shadow-lg transition-all">
+                  Get Quote
+                </button>
+                <button class="flex-1 border-2 border-primary text-primary py-3 px-6 rounded-xl font-semibold hover:bg-primary hover:text-white transition-all">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--  Business Story Section -->
+  <section class="py-20 bg-theme-secondary relative overflow-hidden" id="about">
+    <div class="advanced-blob w-64 h-64 bg-gradient-to-r from-accent/20 to-primary/20 top-10 right-10"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 scroll-reveal">
+        <h2 class="text-4xl md:text-6xl font-bold text-theme mb-8">
+          Our <span class="shimmer-text">Story</span>
+        </h2>
+        <p class="text-xl text-theme-secondary max-w-3xl mx-auto">
+          From humble beginnings to industry leadership, discover the journey that shaped our commitment to excellence
+        </p>
+      </div>
+      <div class="relative">
+        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary to-accent opacity-30"></div>
+        <div class="space-y-16">
+          <div class="timeline-item scroll-reveal flex items-center">
+            <div class="w-1/2 pr-8 text-right">
+              <div class="about-card glass p-8 rounded-2xl">
+                <h3 class="text-2xl font-bold text-primary mb-4">2009 - The Beginning</h3>
+                <p class="text-theme-secondary leading-relaxed">
+                  Founded in Kalutara with a vision to revolutionize the printing industry in Sri Lanka. Started with traditional printing methods and a small team of passionate professionals dedicated to quality and innovation.
+                </p>
+              </div>
+            </div>
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-white shadow-lg"></div>
+            <div class="w-1/2 pl-8"></div>
+          </div>
+          <div class="timeline-item scroll-reveal flex items-center">
+            <div class="w-1/2 pr-8"></div>
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-accent rounded-full border-4 border-white shadow-lg"></div>
+            <div class="w-1/2 pl-8">
+              <div class="about-card glass p-8 rounded-2xl">
+                <h3 class="text-2xl font-bold text-accent mb-4">2015 - Digital Revolution</h3>
+                <p class="text-theme-secondary leading-relaxed">
+                  Embraced digital printing technologies and introduced large format printing capabilities. Expanded our services to include banner printing, vehicle wrapping, and promotional materials for businesses across Western Province.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item scroll-reveal flex items-center">
+            <div class="w-1/2 pr-8 text-right">
+              <div class="about-card glass p-8 rounded-2xl">
+                <h3 class="text-2xl font-bold text-purple mb-4">2020 - Innovation Leap</h3>
+                <p class="text-theme-secondary leading-relaxed">
+                  Integrated AI-powered design tools and quantum-inspired printing algorithms. Launched our online platform, making professional printing services accessible to clients nationwide with advanced tracking and quality assurance systems.
+                </p>
+              </div>
+            </div>
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-purple rounded-full border-4 border-white shadow-lg"></div>
+            <div class="w-1/2 pl-8"></div>
+          </div>
+          <div class="timeline-item scroll-reveal flex items-center">
+            <div class="w-1/2 pr-8"></div>
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-white shadow-lg animate-glow"></div>
+            <div class="w-1/2 pl-8">
+              <div class="about-card glass p-8 rounded-2xl">
+                <h3 class="text-2xl font-bold text-primary mb-4">2024 - Future Ready</h3>
+                <p class="text-theme-secondary leading-relaxed">
+                  Leading the industry with sustainable printing practices, advanced automation, and cutting-edge technology. Serving thousands of satisfied clients while maintaining our commitment to environmental responsibility and exceptional quality.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  Business Mission Sections-->
+  <section class="py-20 bg-theme relative overflow-hidden">
+    <div class="advanced-blob w-80 h-80 bg-gradient-to-r from-secondary/20 to-purple/20 bottom-10 left-10"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 scroll-reveal">
+        <h2 class="text-4xl md:text-6xl font-bold text-theme mb-8">
+          Our <span class="shimmer-text">Mission</span>
+        </h2>
+      </div>
+      <div class="mb-20 scroll-reveal">
+        <div class="max-w-5xl mx-auto text-center">
+          <div class="mission-icon mb-8 mx-auto">
+            <i class="ri-rocket-line text-4xl text-white"></i>
+          </div>
+          <h3 class="text-3xl font-bold text-theme mb-8">Transforming Ideas into Reality</h3>
+          <p class="text-xl text-theme-secondary leading-relaxed mb-12">
+            Our mission is to deliver exceptional printing solutions that exceed expectations through innovative technology, sustainable practices, and unwavering commitment to quality. We strive to be the bridge between our clients' creative visions and tangible results, fostering business growth and success across Sri Lanka and beyond.
+          </p>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="vision-card p-8 text-center">
+              <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="ri-palette-line text-2xl text-white"></i>
+              </div>
+              <h4 class="text-xl font-bold text-theme mb-4">Creative Excellence</h4>
+              <p class="text-theme-secondary">
+                Pushing boundaries in design and print quality with cutting-edge technology and artistic expertise.
+              </p>
+            </div>
+            <div class="vision-card p-8 text-center">
+              <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="ri-leaf-line text-2xl text-white"></i>
+              </div>
+              <h4 class="text-xl font-bold text-theme mb-4">Sustainability</h4>
+              <p class="text-theme-secondary">
+                Committed to eco-friendly practices and responsible sourcing for a greener future.
+              </p>
+            </div>
+            <div class="vision-card p-8 text-center">
+              <div class="w-16 h-16 bg-purple rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="ri-customer-service-2-line text-2xl text-white"></i>
+              </div>
+              <h4 class="text-xl font-bold text-theme mb-4">Client Partnership</h4>
+              <p class="text-theme-secondary">
+                Building lasting relationships through personalized service and collaborative approach.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-reveal">
+        <div class="max-w-5xl mx-auto text-center">
+          <div class="mission-icon mb-8 mx-auto">
+            <i class="ri-eye-line text-4xl text-white"></i>
+          </div>
+          <h3 class="text-3xl font-bold text-theme mb-8">Vision for Tomorrow</h3>
+          <p class="text-xl text-theme-secondary leading-relaxed mb-12">
+            To be recognized as the most innovative and trusted printing solutions provider in South Asia, pioneering sustainable practices and emerging technologies while maintaining the highest standards of quality and customer satisfaction. We envision a future where every printed material tells a story of excellence, creativity, and environmental consciousness.
+          </p>
+          <div class="grid md:grid-cols-2 gap-12 mt-16">
+            <div class="about-card glass p-8 rounded-2xl">
+              <h4 class="text-2xl font-bold text-primary mb-6">Innovation Leadership</h4>
+              <p class="text-theme-secondary leading-relaxed">
+                Continuously investing in research and development to introduce groundbreaking printing technologies and processes that set industry standards.
+              </p>
+            </div>
+            <div class="about-card glass p-8 rounded-2xl">
+              <h4 class="text-2xl font-bold text-accent mb-6">Global Expansion</h4>
+              <p class="text-theme-secondary leading-relaxed">
+                Expanding our reach beyond Sri Lanka to serve international markets while maintaining our local roots and community commitment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Revolutionary Process Section with 3D Cards -->
+  <section class="py-24 relative overflow-hidden">
+    <!-- Advanced Geometric Background -->
+    <div class="absolute inset-0">
+      <div class="absolute top-0 left-0 w-full h-full opacity-30">
+        <svg width="100%" height="100%" viewBox="0 0 1200 800">
+          <defs>
+            <pattern id="hexPattern" x="0" y="0" width="60" height="52" patternUnits="userSpaceOnUse">
+              <polygon points="30,0 52,15 52,37 30,52 8,37 8,15" fill="none" stroke="url(#hexGradient)" stroke-width="1" opacity="0.3"/>
+            </pattern>
+            <linearGradient id="hexGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#FF6500;stop-opacity:0.5" />
+              <stop offset="50%" style="stop-color:#00D4FF;stop-opacity:0.3" />
+              <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0.5" />
+            </linearGradient>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#hexPattern)"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-20 scroll-reveal">
+        <div class="inline-block mb-6">
+                        <span class="bg-gradient-to-r from-primary to-accent text-white px-6 py-3 rounded-full text-sm font-bold animate-pulse-slow">
+                            🎯 Revolutionary Process
+                        </span>
+        </div>
+        <h2 class="text-6xl font-black text-theme mb-6">
+          <span class="shimmer-text">Powered</span> Printing
+        </h2>
+        <p class="text-xl text-theme-secondary max-w-3xl mx-auto leading-relaxed">
+          Experience the future of printing with our quantum-leap technology that transforms your ideas into reality with unprecedented precision and speed.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-4 gap-8 mb-16">
+        <!-- Step 1 -->
+        <div class="process-card scroll-reveal group" style="animation-delay: 0.1s;">
+          <div class="relative p-8 glass rounded-3xl border-2 border-transparent hover:border-primary/30 transition-all duration-500 transform hover:scale-105 hover:rotate-1">
+            <!-- 3D floating number -->
+            <div class="absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-2xl flex items-center justify-center text-white font-black text-xl shadow-2xl animate-bounce-slow">
+              01
+            </div>
+
+            <!-- Animated icon container -->
+            <div class="w-20 h-20 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl flex items-center justify-center mb-6 group-hover:animate-pulse">
+              <i class="ri-upload-cloud-line ri-3x text-primary group-hover:animate-wiggle"></i>
+            </div>
+
+            <h3 class="text-xl font-bold text-theme mb-4">Smart Upload</h3>
+            <p class="text-theme-secondary text-sm leading-relaxed">
+              Advanced AI analyzes your files instantly, optimizing colors, resolution, and print quality automatically.
+            </p>
+
+            <!-- Progress indicator -->
+            <div class="mt-6 w-full bg-gray-200 rounded-full h-2 dark:bg-gray-700">
+              <div class="bg-gradient-to-r from-primary to-accent h-2 rounded-full transition-all duration-1000 group-hover:w-full w-3/4"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-card scroll-reveal group" style="animation-delay: 0.2s;">
+          <div class="relative p-8 glass rounded-3xl border-2 border-transparent hover:border-accent/30 transition-all duration-500 transform hover:scale-105 hover:-rotate-1">
+            <div class="absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-r from-accent to-purple rounded-2xl flex items-center justify-center text-white font-black text-xl shadow-2xl animate-bounce-slow">
+              02
+            </div>
+
+            <div class="w-20 h-20 bg-gradient-to-r from-accent/20 to-purple/20 rounded-3xl flex items-center justify-center mb-6 group-hover:animate-pulse">
+              <i class="ri-magic-line ri-3x text-accent group-hover:animate-spin"></i>
+            </div>
+
+            <h3 class="text-xl font-bold text-theme mb-4">AI Enhancement</h3>
+            <p class="text-theme-secondary text-sm leading-relaxed">
+              Machine learning algorithms enhance your designs with perfect color matching and layout optimization.
+            </p>
+
+            <div class="mt-6 w-full bg-gray-200 rounded-full h-2 dark:bg-gray-700">
+              <div class="bg-gradient-to-r from-accent to-purple h-2 rounded-full transition-all duration-1000 group-hover:w-full w-2/3"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-card scroll-reveal group" style="animation-delay: 0.3s;">
+          <div class="relative p-8 glass rounded-3xl border-2 border-transparent hover:border-purple/30 transition-all duration-500 transform hover:scale-105 hover:rotate-1">
+            <div class="absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-r from-purple to-secondary rounded-2xl flex items-center justify-center text-white font-black text-xl shadow-2xl animate-bounce-slow">
+              03
+            </div>
+
+            <div class="w-20 h-20 bg-gradient-to-r from-purple/20 to-secondary/20 rounded-3xl flex items-center justify-center mb-6 group-hover:animate-pulse">
+              <i class="ri-printer-fill ri-3x text-purple group-hover:animate-bounce"></i>
+            </div>
+
+            <h3 class="text-xl font-bold text-theme mb-4">Quantum Print</h3>
+            <p class="text-theme-secondary text-sm leading-relaxed">
+              State-of-the-art quantum printers deliver microscopic precision with eco-friendly bio-inks.
+            </p>
+
+            <div class="mt-6 w-full bg-gray-200 rounded-full h-2 dark:bg-gray-700">
+              <div class="bg-gradient-to-r from-purple to-secondary h-2 rounded-full transition-all duration-1000 group-hover:w-full w-4/5"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-card scroll-reveal group" style="animation-delay: 0.4s;">
+          <div class="relative p-8 glass rounded-3xl border-2 border-transparent hover:border-secondary/30 transition-all duration-500 transform hover:scale-105 hover:-rotate-1">
+            <div class="absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-r from-secondary to-primary rounded-2xl flex items-center justify-center text-white font-black text-xl shadow-2xl animate-bounce-slow">
+              04
+            </div>
+
+            <div class="w-20 h-20 bg-gradient-to-r from-secondary/20 to-primary/20 rounded-3xl flex items-center justify-center mb-6 group-hover:animate-pulse">
+              <i class="ri-rocket-2-line ri-3x text-secondary group-hover:animate-float"></i>
+            </div>
+
+            <h3 class="text-xl font-bold text-theme mb-4">Lightning Delivery</h3>
+            <p class="text-theme-secondary text-sm leading-relaxed">
+              Drone delivery network ensures your prints reach you in record time, anywhere in Sri Lanka.
+            </p>
+
+            <div class="mt-6 w-full bg-gray-200 rounded-full h-2 dark:bg-gray-700">
+              <div class="bg-gradient-to-r from-secondary to-primary h-2 rounded-full transition-all duration-1000 group-hover:w-full w-full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Timeline -->
+      <div class="relative scroll-reveal" style="animation-delay: 0.5s;">
+        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary via-accent via-purple to-secondary rounded-full"></div>
+        <div class="flex justify-center">
+          <div class="magnetic-btn bg-gradient-to-r from-primary via-accent via-purple to-secondary text-white px-12 py-4 rounded-full font-bold text-lg inline-flex items-center group hover:shadow-2xl">
+            <i class="ri-time-line ri-lg mr-3 group-hover:animate-spin"></i>
+            Average Delivery: 24-48 Hours
+            <i class="ri-flashlight-line ri-lg ml-3 group-hover:animate-pulse"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Client Success Stories with 3D Testimonials -->
+  <section class="py-24 relative overflow-hidden" id="testimonial">
+    <!-- Dynamic Particle Background for this section -->
+    <div class="absolute inset-0">
+      <canvas id="testimonialParticles" class="w-full h-full opacity-30"></canvas>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-20 scroll-reveal">
+                    <span class="inline-block bg-gradient-to-r from-purple to-secondary text-white px-6 py-3 rounded-full text-sm font-bold mb-6 animate-glow">
+                        💬 Success Stories
+                    </span>
+        <h2 class="text-6xl font-black text-theme mb-6">
+          What Our <span class="shimmer-text">Clients Say</span>
+        </h2>
+        <p class="text-xl text-theme-secondary max-w-3xl mx-auto">Real experiences from businesses that transformed their operations with our revolutionary printing solutions.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8 mb-16">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card scroll-reveal group" style="animation-delay: 0.1s;">
+          <div class="glass p-8 rounded-3xl shadow-xl transform hover:scale-105 hover:rotate-1 transition-all duration-500 relative overflow-hidden">
+            <!-- Animated background gradient -->
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+            <div class="relative z-10">
+              <div class="flex items-center mb-6">
+                <img src="https://as1.ftcdn.net/v2/jpg/03/22/53/38/1000_F_322533850_Lz5JL2K0nVqL48gjCiRLSa2ssxpdfyer.jpg"
+                     alt="Client"
+                     class="w-16 h-16 rounded-full border-4 border-primary/30 mr-4 object-cover">
+                <div>
+                  <h4 class="font-bold text-theme">Priyanka Senanayake</h4>
+                  <p class="text-sm text-theme-secondary">CEO, Lanka Retail Chain</p>
+                </div>
+              </div>
+
+              <div class="flex items-center mb-4">
+                <div class="flex space-x-1">
+                  <i class="ri-star-fill text-yellow-400 ri-lg"></i>
+                  <i class="ri-star-fill text-yellow-400 ri-lg"></i>
+                  <i class="ri-star-fill text-yellow-400 ri-lg"></i>
+                  <i class="ri-star-fill text-yellow-400 ri-lg"></i>
+                  <i class="ri-star-fill text-yellow-400 ri-lg"></i>
+                </div>
+                <span class="ml-2 text-sm text-theme-secondary">5.0</span>
+              </div>
+
+              <p class="text-theme-secondary leading-relaxed mb-6">
+                "The quantum printing technology is absolutely mind-blowing! Our bill printing quality improved by 300%, and delivery times are now lightning-fast."
+              </p>
+
+              <div class="flex items-center justify-between">
+                <div class="text-sm font-bold text-primary">50,000+ Bills Printed</div>
+                <i class="ri-quote-right ri-2x text-primary/30"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card scroll-reveal group" style="animation-delay: 0.2s;">
+          <div class="glass p-8 rounded-3xl shadow-xl transform hover:scale-105 hover:-rotate-1 transition-all duration-500 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-accent/10 to-purple/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+            <div class="relative z-10">
+              <div class="flex items-center mb-6">
+                <img src="https://as1.ftcdn.net/v2/jpg/02/22/85/16/1000_F_222851624_jfoMGbJxwRi5AWGdPgXKSABMnzCQo9RN.jpg"
+                     alt="Client"
+                     class="w-16 h-16 rounded-full border-4 border-accent/30 mr-4 object-cover">
+                <div>
+                  <h4 class="font-bold text-theme">Chaminda Fernando</h4>
+                  <p class="text-sm text-theme-secondary">Founder, Tech Solutions LK</p>
+                </div>
+              </div>
+
+              <div class="flex items-center mb-4">
+                <div class="flex space-x-1">
+                  <i class="ri-star-fill text-yellow-400 ri-lg"></i>
+                  <i class="ri-star-fill text-yellow-400 ri-lg"></i>
+                  <i class="ri-star-fill text-yellow-400 ri-lg"></i>
+                  <i class="ri-star-fill text-yellow-400 ri-lg"></i>
+                  <i class="ri-star-fill text-yellow-400 ri-lg"></i>
+                </div>
+                <span class="ml-2 text-sm text-theme-secondary">5.0</span>
+              </div>
+
+              <p class="text-theme-secondary leading-relaxed mb-6">
+                "AI-enhanced printing transformed our marketing materials completely. The colors are so vivid and precise, our sales increased by 40% immediately!"
+              </p>
+
+              <div class="flex items-center justify-between">
+                <div class="text-sm font-bold text-accent">25,000+ Brochures</div>
+                <i class="ri-quote-right ri-2x text-accent/30"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card scroll-reveal group" style="animation-delay: 0.3s;">
+          <div class="glass p-8 rounded-3xl shadow-xl transform hover:scale-105 hover:rotate-1 transition-all duration-500 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-purple/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+            <div class="relative z-10">
+              <div class="flex items-center mb-6">
+                <img src="https://as1.ftcdn.net/v2/jpg/03/28/19/46/1000_F_328194664_RKSHvMLgHphnD1nwQYb4QKcNeEApJmqa.jpg"
+                     alt="Client"
+                     class="w-16 h-16 rounded-full border-4 border-purple/30 mr-4 object-cover">
+                <div>
+                  <h4 class="font-bold text-theme">Dr. Nimesha Rajapaksa</h4>
+                  <p class="text-sm text-theme-secondary">Director, Education Institute</p>
+                </div>
+              </div>
+
+              <div class="flex items-center mb-4">
+                <div class="flex space-x-1">
+                  <i class="ri-star-fill text-yellow-400 ri-lg"></i>
+                  <i class="ri-star-fill text-yellow-400 ri-lg"></i>
+                  <i class="ri-star-fill text-yellow-400 ri-lg"></i>
+                  <i class="ri-star-fill text-yellow-400 ri-lg"></i>
+                  <i class="ri-star-fill text-yellow-400 ri-lg"></i>
+                </div>
+                <span class="ml-2 text-sm text-theme-secondary">5.0</span>
+              </div>
+
+              <p class="text-theme-secondary leading-relaxed mb-6">
+                "The certificate printing with blockchain verification is revolutionary! Parents and employers can instantly verify authenticity. Game-changing technology!"
+              </p>
+
+              <div class="flex items-center justify-between">
+                <div class="text-sm font-bold text-purple">10,000+ Certificates</div>
+                <i class="ri-quote-right ri-2x text-purple/30"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Client Logos Carousel -->
+      <div class="scroll-reveal" style="animation-delay: 0.4s;">
+        <div class="text-center mb-8">
+          <h3 class="text-2xl font-bold text-theme mb-4">Trusted by Leading Companies</h3>
+          <p class="text-theme-secondary">Join 500+ businesses that chose superDotPrinters for their success</p>
+        </div>
+
+        <div class="flex flex-wrap justify-center items-center gap-8 opacity-60">
+          <div class="company-logo grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="https://as1.ftcdn.net/v2/jpg/11/34/30/68/1000_F_1134306861_kwBAwNygAIeOm6PCyYkJFquiz99AEPfr.jpg" alt="Client Logo" class="h-12 object-contain">
+          </div>
+          <div class="company-logo grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="https://as1.ftcdn.net/v2/jpg/06/99/46/60/1000_F_699466075_DaPTBNlNQTOwwjkOiFEoOvzDV0ByXR9E.jpg" alt="Client Logo" class="h-12 object-contain">
+          </div>
+          <div class="company-logo grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="https://as2.ftcdn.net/v2/jpg/09/93/94/61/1000_F_993946162_L45S154vfbYx4EQbWrUFCRi0WCKUcF7n.jpg" alt="Client Logo" class="h-12 object-contain">
+          </div>
+          <div class="company-logo grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="https://as1.ftcdn.net/v2/jpg/02/78/50/70/1000_F_278507043_4v7kV1QrSgusMDPzhSVpBO01MQwKfraZ.jpg" alt="Client Logo" class="h-12 object-contain">
+          </div>
+          <div class="company-logo grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="https://as2.ftcdn.net/v2/jpg/04/95/15/79/1000_F_495157971_zIhzjfx3yG1AsgYOTQS9Z6VHAsN0OJSI.jpg" alt="Client Logo" class="h-12 object-contain">
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="text-center mt-16 scroll-reveal" style="animation-delay: 0.5s;">
+        <a href="testimonials.html" class="magnetic-btn bg-gradient-to-r from-purple to-secondary text-white px-12 py-4 rounded-full font-bold text-lg inline-flex items-center group hover:shadow-2xl">
+          <i class="ri-chat-quote-line ri-lg mr-3 group-hover:animate-pulse"></i>
+          Read All Success Stories
+          <i class="ri-arrow-right-line ri-lg ml-3 group-hover:translate-x-2 transition-transform"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Particle Background -->
+    <canvas class="particle-bg" id="particleCanvas"></canvas>
+    <!-- Floating Action Button -->
+    <div class="feedback-fab" id="feedbackFab">
+      <i class="ri-chat-quote-line"></i>
+    </div>
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="feedback-modal">
+        <button class="close-modal" id="closeModal">
+          <i class="ri-close-line"></i>
+        </button>
+        <!-- Step Indicator -->
+        <div class="step-indicator">
+          <div class="step active" data-step="1">1</div>
+          <div class="step" data-step="2">2</div>
+          <div class="step" data-step="3">3</div>
+          <div class="step" data-step="4">4</div>
+        </div>
+        <!-- Step 1: Service Category -->
+        <div class="form-section active" data-section="1">
+          <div class="section-title fade-in-up">
+            <i class="ri-settings-3-line"></i>
+            Select Service Category
+          </div>
+          <p class="text-theme-secondary" style="margin-bottom: 1.5rem;">Which service would you like to provide feedback about?</p>
+          <div class="service-categories">
+            <div class="service-category" data-service="quantum-printing">
+              <i class="ri-printer-line"></i>
+              <div>Quantum Printing</div>
+            </div>
+            <div class="service-category" data-service="ai-enhanced">
+              <i class="ri-cpu-line"></i>
+              <div>AI Enhanced</div>
+            </div>
+            <div class="service-category" data-service="blockchain-verify">
+              <i class="ri-shield-check-line"></i>
+              <div>Blockchain Verification</div>
+            </div>
+            <div class="service-category" data-service="express-delivery">
+              <i class="ri-truck-line"></i>
+              <div>Express Delivery</div>
+            </div>
+            <div class="service-category" data-service="customer-support">
+              <i class="ri-customer-service-2-line"></i>
+              <div>Customer Support</div>
+            </div>
+            <div class="service-category" data-service="other">
+              <i class="ri-more-line"></i>
+              <div>Other Services</div>
+            </div>
+          </div>
+        </div>
+        <!-- Step 2: Rating -->
+        <div class="form-section" data-section="2">
+          <div class="section-title fade-in-up">
+            <i class="ri-star-line"></i>
+            Rate Your Experience
+          </div>
+          <p class="text-theme-secondary" style="margin-bottom: 1.5rem; text-align: center;">How satisfied are you with our service?</p>
+          <div class="rating-container">
+            <div class="star-rating">
+              <i class="star ri-star-fill" data-rating="1"></i>
+              <i class="star ri-star-fill" data-rating="2"></i>
+              <i class="star ri-star-fill" data-rating="3"></i>
+              <i class="star ri-star-fill" data-rating="4"></i>
+              <i class="star ri-star-fill" data-rating="5"></i>
+            </div>
+            <div class="rating-text" id="ratingText"></div>
+          </div>
+        </div>
+        <!-- Step 3: Detailed Feedback -->
+        <div class="form-section" data-section="3">
+          <div class="section-title fade-in-up">
+            <i class="ri-chat-3-line"></i>
+            Share Your Experience
+          </div>
+          <div class="form-group">
+            <label class="form-label">Your Name</label>
+            <input type="text" class="form-input" id="customerName" placeholder="Enter your full name">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Company/Organization (Optional)</label>
+            <input type="text" class="form-input" id="customerCompany" placeholder="Your company name">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-input" id="customerEmail" placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tell us about your experience</label>
+            <textarea class="form-textarea" id="feedbackMessage" placeholder="Share your detailed feedback about our service. What did you like? What could we improve?"></textarea>
+          </div>
+        </div>
+        <!-- Step 4: Additional Information -->
+        <div class="form-section" data-section="4">
+          <div class="section-title fade-in-up">
+            <i class="ri-information-line"></i>
+            Additional Details
+          </div>
+          <div class="form-group">
+            <label class="form-label">Order Number (If applicable)</label>
+            <input type="text" class="form-input" id="orderNumber" placeholder="Enter your order number">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Would you recommend us to others?</label>
+            <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <input type="radio" name="recommend" value="yes" style="accent-color: var(--color-primary);">
+                <span>Yes, definitely!</span>
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <input type="radio" name="recommend" value="no" style="accent-color: var(--color-primary);">
+                <span>Not really</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">How did you hear about us?</label>
+            <select class="form-input" id="hearAbout">
+              <option value="">Select an option</option>
+              <option value="google">Google Search</option>
+              <option value="social-media">Social Media</option>
+              <option value="friend">Friend/Colleague Recommendation</option>
+              <option value="advertisement">Advertisement</option>
+              <option value="existing-customer">Existing Customer</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+              <input type="checkbox" id="allowPublic" style="accent-color: var(--color-primary);">
+              <span>I allow this feedback to be used publicly as a testimonial</span>
+            </label>
+          </div>
+        </div>
+        <!-- Success Message -->
+        <div class="form-section" data-section="success">
+          <div class="success-message">
+            <div class="success-icon">
+              <i class="ri-check-line"></i>
+            </div>
+            <div class="success-title">Thank You!</div>
+            <div class="success-text text-theme-secondary">
+              Your feedback has been submitted successfully. We appreciate your time and will use your insights to improve our services.
+            </div>
+            <button class="nav-btn btn-submit" onclick="closeModal()">
+              <i class="ri-home-line"></i>
+              Close
+            </button>
+          </div>
+        </div>
+        <!-- Navigation Buttons -->
+        <div class="form-navigation" id="navigationButtons">
+          <button class="nav-btn btn-back" id="backBtn" disabled>
+            <i class="ri-arrow-left-line"></i>
+            Back
+          </button>
+          <button class="nav-btn btn-next" id="nextBtn" disabled>
+            Next
+            <i class="ri-arrow-right-line"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  order placement section-->
+  <section id="order" class="py-20  theme-transition bg-theme-secondary" >
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 fade-in">
+
+        <div class="text-center mb-20 scroll-reveal">
+
+          <h2 class="text-6xl font-black text-theme mb-6">
+            Place Your <span class="shimmer-text">Order Now</span>
+          </h2>
+          <p class="text-xl text-theme-secondary max-w-3xl mx-auto">Place your bulk printing order quickly and easily.
+            Just upload your design, choose your product and quantity,
+            then set your deadline — we’ll take care of the rest!</p>
+        </div>
+
+<!--        <p class="text-xl text-gray-600 dark:text-gray-300">-->
+<!--          Get started with your bulk printing project in just a few simple steps.-->
+<!--        </p>-->
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-xl p-8 fade-in">
+        <div class="flex items-center justify-between mb-8">
+          <div class="flex items-center space-x-4">
+<!--            <div class="step active flex items-center">-->
+<!--              <div class="w-25 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-semibold">1</div>-->
+<!--              <div class="ml-2 text-sm font-medium text-gray-900 dark:text-white " >Order Details</div>-->
+<!--              <div class="progress-bar h-1 bg-primary ml-4 w-16"></div>-->
+<!--            </div>-->
+          </div>
+        </div>
+
+        <form id="order-form" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Full Name *</label>
+              <input type="text" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white" placeholder="Enter your full name">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email Address *</label>
+              <input type="email" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white" placeholder="Enter your email">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Phone Number *</label>
+              <input type="tel" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white" placeholder="Enter your phone number">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Product Type *</label>
+              <div class="relative">
+                <button type="button" id="product-dropdown" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-left flex items-center justify-between">
+                  <span id="selected-product">Select a product</span>
+                  <i class="ri-arrow-down-s-line"></i>
+                </button>
+                <div id="product-options" class="hidden absolute z-10 w-full mt-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg">
+                  <div class="py-1">
+                    <button type="button" class="product-option w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-900 dark:text-white" data-value="bills">🧾 Bills & Invoices</button>
+                    <button type="button" class="product-option w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-900 dark:text-white" data-value="covers">📦 Product Covers</button>
+                    <button type="button" class="product-option w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-900 dark:text-white" data-value="teabags">🫖 Tea Bag Covers</button>
+                    <button type="button" class="product-option w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-900 dark:text-white" data-value="stickers">🏷️ Custom Stickers</button>
+                    <button type="button" class="product-option w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-900 dark:text-white" data-value="books">📚 Books & Manuals</button>
+                    <button type="button" class="product-option w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-900 dark:text-white" data-value="calendars">📆 Calendars</button>
+                    <button type="button" class="product-option w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-900 dark:text-white" data-value="files">📁 File Folders</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Quantity *</label>
+              <input type="number" required min="1" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white" placeholder="Enter quantity">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Deadline *</label>
+              <input type="date" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Upload Design File</label>
+            <div class="upload-zone border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center">
+              <div class="w-16 h-16 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-full mx-auto mb-4">
+                <i class="ri-upload-cloud-line text-2xl text-gray-500"></i>
+              </div>
+              <p class="text-gray-600 dark:text-gray-400 mb-2">Drag and drop your files here, or <button type="button" class="text-primary font-medium">browse</button></p>
+              <p class="text-sm text-gray-500">Supports: PDF, AI, PSD, JPG, PNG (Max 50MB)</p>
+              <input type="file" class="hidden" accept=".pdf,.ai,.psd,.jpg,.jpeg,.png" multiple>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Special Instructions</label>
+            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white" placeholder="Any special requirements or instructions for your order..."></textarea>
+          </div>
+
+          <div class="flex items-center justify-between pt-6">
+            <div class="text-sm text-gray-500">
+              * Required fields
+            </div>
+            <button type="submit" class="btn-primary text-white px-8 py-3 !rounded-button font-semibold whitespace-nowrap flex items-center gap-2">
+              <i class="ri-send-plane-line"></i>
+              Submit Order
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Premium Quality Guarantee Section -->
+  <section class="py-14 glass relative overflow-hidden " id="premiumQuality">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="scroll-reveal">
+          <div class="space-y-8">
+            <div class="inline-block">
+              <span class="bg-gradient-to-r from-secondary to-primary text-white px-6 py-3 rounded-full text-sm font-bold animate-glow">
+                🛡️ Quality Guarantee
+              </span>
+            </div>
+
+            <h2 class="text-5xl font-black text-theme leading-tight">
+              <span class="shimmer-text">Premium Quality</span> Promise
+            </h2>
+
+            <p class="text-xl text-theme-secondary leading-relaxed">
+              Every print undergoes rigorous AI-powered quality control with quantum-level precision testing. Your satisfaction is guaranteed or we reprint for free.
+            </p>
+
+            <div class="grid grid-cols-2 gap-6">
+              <div class="text-center p-6 glass rounded-2xl group hover:scale-105 transition-transform">
+                <div class="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:animate-spin-slow">
+                  <i class="ri-award-line ri-2x text-white"></i>
+                </div>
+                <h4 class="font-bold text-theme mb-2">ISO Certified</h4>
+                <p class="text-sm text-theme-secondary">International quality standards</p>
+              </div>
+
+              <div class="text-center p-6 glass rounded-2xl group hover:scale-105 transition-transform">
+                <div class="w-16 h-16 bg-gradient-to-r from-accent to-purple rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:animate-pulse">
+                  <i class="ri-shield-check-line ri-2x text-white"></i>
+                </div>
+                <h4 class="font-bold text-theme mb-2">100% Guarantee</h4>
+                <p class="text-sm text-theme-secondary">Satisfaction or full refund</p>
+              </div>
+
+              <div class="text-center p-6 glass rounded-2xl group hover:scale-105 transition-transform">
+                <div class="w-16 h-16 bg-gradient-to-r from-purple to-secondary rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:animate-bounce">
+                  <i class="ri-time-line ri-2x text-white"></i>
+                </div>
+                <h4 class="font-bold text-theme mb-2">24/7 Support</h4>
+                <p class="text-sm text-theme-secondary">Round-the-clock assistance</p>
+              </div>
+
+              <div class="text-center p-6 glass rounded-2xl group hover:scale-105 transition-transform">
+                <div class="w-16 h-16 bg-gradient-to-r from-secondary to-primary rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:animate-wiggle">
+                  <i class="ri-leaf-line ri-2x text-white"></i>
+                </div>
+                <h4 class="font-bold text-theme mb-2">Eco-Friendly</h4>
+                <p class="text-sm text-theme-secondary">Sustainable printing solutions</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="quality.html" class="magnetic-btn bg-gradient-to-r from-secondary to-primary text-white px-8 py-4 rounded-full font-bold inline-flex items-center group">
+                <i class="ri-award-line ri-lg mr-2 group-hover:animate-spin"></i>
+                Quality Standards
+              </a>
+              <a href="warranty.html" class="glass border-2 border-secondary text-secondary px-8 py-4 rounded-full font-bold hover:bg-secondary hover:text-white transition-all duration-300 inline-flex items-center group">
+                <i class="ri-shield-line ri-lg mr-2 group-hover:animate-pulse"></i>
+                Warranty Details
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-reveal floating" style="animation-delay: 0.2s;">
+          <div class="relative">
+            <img src="https://media.istockphoto.com/id/1365037585/photo/male-worker-using-a-printing-machine-in-a-workshop.jpg?s=1024x1024&w=is&k=20&c=Hbs36DUeHistHjcx_jxf9iDjTfM5K4UVAAxqQvnghH8="
+                 alt="Quality Control Laboratory"
+                 class="w-full h-auto rounded-3xl shadow-2xl border-4 border-white/20">
+
+            <!-- Quality metrics overlay -->
+            <div class="absolute top-6 left-6 glass p-4 rounded-2xl animate-pulse-slow">
+              <div class="text-lg font-bold text-primary">99.98%</div>
+              <div class="text-xs text-theme-secondary">Print Accuracy</div>
+            </div>
+
+            <div class="absolute bottom-6 right-6 glass p-4 rounded-2xl animate-glow">
+              <div class="text-lg font-bold text-accent">Zero</div>
+              <div class="text-xs text-theme-secondary">Defect Rate</div>
+            </div>
+
+            <div class="absolute top-1/2 -left-8 glass p-3 rounded-2xl animate-bounce-slow">
+              <i class="ri-microscope-line ri-xl text-purple"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--  Track order  section-->
+  <section id="tracking-section" class="py-20">
+<!--    <div class="ocean-bubble"></div>-->
+<!--    <div class="ocean-bubble"></div>-->
+<!--    <div class="ocean-bubble"></div>-->
+<!--    <div class="ocean-bubble"></div>-->
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 scroll-reveal">
+        <h2 class="text-5xl md:text-6xl font-bold mb-6 shimmer-text">Track Your Order</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Stay updated with real-time tracking information and delivery status for your orders</p>
+      </div>
+      <div class="max-w-2xl mx-auto mb-16 scroll-reveal">
+        <div class="tracking-card p-8">
+          <div class="flex flex-col md:flex-row gap-4">
+            <div class="flex-1">
+              <label class="block text-sm font-semibold text-gray-700 mb-2 flex items-center">
+                <i class="ri-search-line mr-2"></i> Enter Tracking Number
+              </label>
+              <input type="text" id="trackingInput" class="search-input" placeholder="Enter your order tracking number...">
+            </div>
+            <div class="flex items-end">
+              <button onclick="trackOrder()" class="track-button flex items-center gap-2">
+                <i class="ri-search-line"></i> Track Order
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="trackingResults" class="max-w-6xl mx-auto scroll-reveal" style="display: none;">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          <div class="lg:col-span-1">
+            <div class="order-details">
+              <h3 class="text-2xl font-bold mb-6 text-gray-800 flex items-center">
+                <i class="ri-file-list-3-line mr-3 text-blue-500"></i> Order Details
+              </h3>
+              <div class="space-y-1">
+                <div class="detail-item">
+                  <span class="detail-label"><i class="ri-hashtag mr-2"></i> Order ID:</span>
+                  <span class="detail-value">#ORD-2024-001</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label"><i class="ri-calendar-line mr-2"></i> dead line:</span>
+                  <span class="detail-value">Aug 10, 2024</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label"><i class="ri-truck-line mr-2"></i> Carrier:</span>
+                  <span class="detail-value">Express Delivery</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label"><i class="ri-map-pin-line mr-2"></i> Destination:</span>
+                  <span class="detail-value">Negombo, Western Province</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label"><i class="ri-price-tag-3-line mr-2"></i> Status:</span>
+                  <span class="status-badge status-processing">Processing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-2">
+            <div class="tracking-card p-8">
+              <h3 class="text-2xl font-bold mb-8 text-gray-800 flex items-center">
+                <i class="ri-route-line mr-3 text-blue-500"></i> Tracking Progress
+              </h3>
+              <div class="progress-container">
+                <div class="progress-line">
+                  <div class="progress-fill" style="--progress-width: 60%;"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                  <div class="step-item">
+                    <div class="step-circle completed"><i class="ri-shopping-cart-line"></i></div>
+                    <div class="step-label">Order Placed</div>
+                    <div class="step-time">Aug 10, 10:30 AM</div>
+                  </div>
+                  <div class="step-item">
+                    <div class="step-circle current"><i class="ri-settings-4-line"></i></div>
+                    <div class="step-label">Processing</div>
+                    <div class="step-time">Aug 11, 2:15 PM</div>
+                  </div>
+                  <div class="step-item">
+                    <div class="step-circle pending"><i class="ri-truck-line"></i></div>
+                    <div class="step-label">Shipped</div>
+                    <div class="step-time">Estimated: Aug 12</div>
+                  </div>
+                  <div class="step-item">
+                    <div class="step-circle pending"><i class="ri-home-line"></i></div>
+                    <div class="step-label">Delivered</div>
+                    <div class="step-time">Estimated: Aug 14</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tracking-card p-8">
+          <h3 class="text-2xl font-bold mb-8 text-gray-800 flex items-center">
+            <i class="ri-time-line mr-3 text-blue-500"></i> Tracking Timeline
+          </h3>
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4 p-4 rounded-lg hover:bg-blue-50 transition-all duration-300">
+              <div class="flex-shrink-0 w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                <i class="ri-check-line text-white"></i>
+              </div>
+              <div class="flex-1">
+                <div class="flex flex-col md:flex-row md:items-center justify-between">
+                  <div>
+                    <h4 class="font-semibold text-gray-800">Order Confirmed</h4>
+                    <p class="text-gray-600">Your order has been confirmed and is being prepared</p>
+                  </div>
+                  <span class="text-sm text-gray-500 mt-1 md:mt-0">Aug 10, 10:30 AM</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4 p-4 rounded-lg bg-orange-50 border-l-4 border-orange-500">
+              <div class="flex-shrink-0 w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
+                <div class="loading-spinner w-5 h-5 border-2 border-white border-l-transparent"></div>
+              </div>
+              <div class="flex-1">
+                <div class="flex flex-col md:flex-row md:items-center justify-between">
+                  <div>
+                    <h4 class="font-semibold text-gray-800">Processing Order</h4>
+                    <p class="text-gray-600">Your order is currently being processed at our facility</p>
+                  </div>
+                  <span class="text-sm text-gray-500 mt-1 md:mt-0">Aug 11, 2:15 PM</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4 p-4 rounded-lg hover:bg-blue-50 transition-all duration-300">
+              <div class="flex-shrink-0 w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+                <i class="ri-truck-line text-gray-600"></i>
+              </div>
+              <div class="flex-1">
+                <div class="flex flex-col md:flex-row md:items-center justify-between">
+                  <div>
+                    <h4 class="font-semibold text-gray-400">Ready for Shipment</h4>
+                    <p class="text-gray-400">Your order will be shipped soon</p>
+                  </div>
+                  <span class="text-sm text-gray-400 mt-1 md:mt-0">Pending</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="loadingState" class="text-center scroll-reveal" style="display: none;">
+        <div class="tracking-card p-12">
+          <div class="loading-spinner mx-auto mb-4"></div>
+          <p class="text-gray-600 text-lg">Searching for your order...</p>
+        </div>
+      </div>
+      <div id="noResults" class="text-center scroll-reveal" style="display: none;">
+        <div class="tracking-card p-12">
+          <i class="ri-search-line text-6xl text-gray-400 mb-4"></i>
+          <h3 class="text-2xl font-bold text-gray-700 mb-2">No Results Found</h3>
+          <p class="text-gray-600 mb-6">We couldn't find any order with that tracking number. Please check and try again.</p>
+          <button onclick="resetSearch()" class="track-button">
+            <i class="ri-refresh-line mr-2"></i> Try Again
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Modern Call to Action Section -->
+  <section class="py-16 relative overflow-hidden" id="contact">
+    <!-- Advanced Geometric Background Pattern -->
+    <div class="absolute inset-0">
+      <div class="absolute top-0 left-0 w-full h-full opacity-20">
+        <svg width="100%" height="100%" viewBox="0 0 1200 600">
+          <defs>
+            <pattern id="ctaPattern" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+              <circle cx="40" cy="40" r="2" fill="url(#ctaGradient)" opacity="0.4"/>
+              <circle cx="10" cy="10" r="1" fill="url(#ctaGradient)" opacity="0.6"/>
+              <circle cx="70" cy="20" r="1.5" fill="url(#ctaGradient)" opacity="0.5"/>
+            </pattern>
+            <linearGradient id="ctaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#FF6500;stop-opacity:0.8" />
+              <stop offset="33%" style="stop-color:#00D4FF;stop-opacity:0.6" />
+              <stop offset="66%" style="stop-color:#8B5CF6;stop-opacity:0.7" />
+              <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:0.8" />
+            </linearGradient>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#ctaPattern)"/>
+          <rect width="100%" height="100%" fill="url(#ctaGradient)" opacity="0.05"/>
+        </svg>
+      </div>
+
+      <!-- Floating geometric shapes -->
+      <div class="absolute top-10 left-10 w-20 h-20 bg-primary/10 rounded-3xl rotate-12 animate-float"></div>
+      <div class="absolute top-32 right-20 w-16 h-16 bg-accent/10 rounded-2xl -rotate-12 animate-float" style="animation-delay: 1s;"></div>
+      <div class="absolute bottom-20 left-1/4 w-12 h-12 bg-purple/10 rounded-full animate-bounce-slow" style="animation-delay: 2s;"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Main CTA Content -->
+      <div class="text-center mb-12 scroll-reveal">
+        <div class="inline-block mb-6">
+        <span class="bg-gradient-to-r from-primary via-accent to-purple text-white px-8 py-3 rounded-full text-sm font-bold shadow-lg animate-pulse-slow">
+          🚀 Ready to Transform Your Business?
+        </span>
+        </div>
+
+        <h2 class="text-4xl lg:text-5xl font-black text-theme mb-6 leading-tight">
+          Start Your <span class="shimmer-text bg-gradient-to-r from-primary via-accent to-purple bg-clip-text text-transparent">Printing Revolution</span> Today
+        </h2>
+
+        <p class="text-lg text-theme-secondary mb-8 max-w-2xl mx-auto leading-relaxed">
+          Join thousands of satisfied clients who've revolutionized their business with our quantum-powered printing solutions.
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
+          <a href="order.html" class="magnetic-btn bg-gradient-to-r from-primary to-accent text-white px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center group">
+            <i class="ri-rocket-line ri-lg mr-3 group-hover:animate-spin"></i>
+            Start Your Order Now
+            <i class="ri-arrow-right-line ri-lg ml-3 group-hover:translate-x-2 transition-transform"></i>
+          </a>
+
+          <a href="contact.html" class="glass border-2 border-primary/30 text-theme px-10 py-4 rounded-full font-bold text-lg hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 inline-flex items-center group">
+            <i class="ri-phone-line ri-lg mr-3 group-hover:animate-pulse"></i>
+            Get Free Consultation
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact Cards Grid -->
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <!-- Phone Card -->
+        <div class="process-card scroll-reveal group" style="animation-delay: 0.1s;">
+          <div class="relative p-6 glass rounded-2xl border-2 border-transparent hover:border-primary/30 transition-all duration-500 transform hover:scale-105">
+            <div class="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-2xl flex items-center justify-center shadow-lg">
+              <i class="ri-phone-fill ri-lg text-white"></i>
+            </div>
+
+            <div class="w-16 h-16 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center mb-4 group-hover:animate-pulse">
+              <i class="ri-customer-service-2-line ri-2x text-primary group-hover:animate-bounce"></i>
+            </div>
+
+            <h4 class="font-bold text-theme mb-2 text-lg">Call Us</h4>
+            <p class="text-theme-secondary font-medium">+94 714 475 817</p>
+            <p class="text-theme-secondary text-sm mt-1">24/7 Support Available</p>
+
+            <div class="mt-4 w-full bg-gray-200 rounded-full h-1 dark:bg-gray-700">
+              <div class="bg-gradient-to-r from-primary to-accent h-1 rounded-full transition-all duration-1000 group-hover:w-full w-3/4"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email Card -->
+        <div class="process-card scroll-reveal group" style="animation-delay: 0.2s;">
+          <div class="relative p-6 glass rounded-2xl border-2 border-transparent hover:border-accent/30 transition-all duration-500 transform hover:scale-105">
+            <div class="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-r from-accent to-purple rounded-2xl flex items-center justify-center shadow-lg">
+              <i class="ri-mail-fill ri-lg text-white"></i>
+            </div>
+
+            <div class="w-16 h-16 bg-gradient-to-r from-accent/20 to-purple/20 rounded-2xl flex items-center justify-center mb-4 group-hover:animate-pulse">
+              <i class="ri-mail-send-line ri-2x text-accent group-hover:animate-wiggle"></i>
+            </div>
+
+            <h4 class="font-bold text-theme mb-2 text-lg">Email Us</h4>
+            <p class="text-theme-secondary font-medium">superdotprinters@gmail.com</p>
+            <p class="text-theme-secondary text-sm mt-1">Quick Response Guaranteed</p>
+
+            <div class="mt-4 w-full bg-gray-200 rounded-full h-1 dark:bg-gray-700">
+              <div class="bg-gradient-to-r from-accent to-purple h-1 rounded-full transition-all duration-1000 group-hover:w-full w-4/5"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Location Card -->
+        <div class="process-card scroll-reveal group" style="animation-delay: 0.3s;">
+          <div class="relative p-6 glass rounded-2xl border-2 border-transparent hover:border-secondary/30 transition-all duration-500 transform hover:scale-105">
+            <div class="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-r from-purple to-secondary rounded-2xl flex items-center justify-center shadow-lg">
+              <i class="ri-map-pin-fill ri-lg text-white"></i>
+            </div>
+
+            <div class="w-16 h-16 bg-gradient-to-r from-purple/20 to-secondary/20 rounded-2xl flex items-center justify-center mb-4 group-hover:animate-pulse">
+              <i class="ri-building-line ri-2x text-purple group-hover:animate-float"></i>
+            </div>
+
+            <h4 class="font-bold text-theme mb-2 text-lg">Visit Us</h4>
+            <p class="text-theme-secondary font-medium">Colombo 03, Sri Lanka</p>
+            <p class="text-theme-secondary text-sm mt-1">Modern Printing Facility</p>
+
+            <div class="mt-4 w-full bg-gray-200 rounded-full h-1 dark:bg-gray-700">
+              <div class="bg-gradient-to-r from-purple to-secondary h-1 rounded-full transition-all duration-1000 group-hover:w-full w-full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Stats Bar -->
+      <div class="mt-10 flex justify-center scroll-reveal" style="animation-delay: 0.4s;">
+        <div class="magnetic-btn bg-gradient-to-r from-primary/10 via-accent/10 to-purple/10 backdrop-blur-lg border border-primary/20 text-theme px-8 py-3 rounded-full font-medium inline-flex items-center group hover:shadow-xl">
+          <i class="ri-award-line ri-lg mr-3 text-primary group-hover:animate-spin"></i>
+          <span class="font-bold text-primary mr-2">5000+</span>
+          Happy Customers
+          <span class="mx-3">•</span>
+          <span class="font-bold text-accent mr-2">24-48h</span>
+          Delivery Time
+          <i class="ri-time-line ri-lg ml-3 text-accent group-hover:animate-pulse"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+<!-- Enhanced Footer -->
+<footer class="bg-dark text-white relative overflow-hidden">
+  <!-- Animated background elements -->
+  <div class="absolute inset-0">
+    <div class="absolute top-0 left-0 w-full h-full opacity-10">
+      <svg width="100%" height="100%" viewBox="0 0 1200 300">
+        <defs>
+          <pattern id="footerPattern" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+            <circle cx="40" cy="40" r="1" fill="#FF6500" opacity="0.5">
+              <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+            </circle>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#footerPattern)"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="py-16">
+      <div class="grid lg:grid-cols-4 gap-12">
+        <!-- Company Info -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center mb-6">
+            <span class="font-['Pacifico'] text-3xl shimmer-text">superDotPrinters</span>
+          </div>
+          <p class="text-gray-300 mb-8 leading-relaxed max-w-lg">
+            Revolutionizing the printing industry in Sri Lanka with quantum-powered technology, AI-enhanced quality control, and sustainable eco-friendly solutions for over 15 years.
+          </p>
+
+          <!-- Social Links -->
+          <div class="flex space-x-4">
+            <a href="#" class="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center hover:scale-110 transition-transform group">
+              <i class="ri-facebook-fill ri-lg text-white group-hover:animate-pulse"></i>
+            </a>
+            <a href="#" class="w-12 h-12 bg-gradient-to-r from-accent to-purple rounded-full flex items-center justify-center hover:scale-110 transition-transform group">
+              <i class="ri-twitter-fill ri-lg text-white group-hover:animate-bounce"></i>
+            </a>
+            <a href="#" class="w-12 h-12 bg-gradient-to-r from-purple to-secondary rounded-full flex items-center justify-center hover:scale-110 transition-transform group">
+              <i class="ri-instagram-fill ri-lg text-white group-hover:animate-spin"></i>
+            </a>
+            <a href="#" class="w-12 h-12 bg-gradient-to-r from-secondary to-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform group">
+              <i class="ri-linkedin-fill ri-lg text-white group-hover:animate-wiggle"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-xl font-bold mb-6 text-white">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="about.html" class="text-gray-300 hover:text-primary transition-colors hover:translate-x-2 transform inline-block">About Us</a></li>
+            <li><a href="services.html" class="text-gray-300 hover:text-primary transition-colors hover:translate-x-2 transform inline-block">Our Services</a></li>
+            <li><a href="technology.html" class="text-gray-300 hover:text-primary transition-colors hover:translate-x-2 transform inline-block">Technology</a></li>
+            <li><a href="quality.html" class="text-gray-300 hover:text-primary transition-colors hover:translate-x-2 transform inline-block">Quality Standards</a></li>
+            <li><a href="sustainability.html" class="text-gray-300 hover:text-primary transition-colors hover:translate-x-2 transform inline-block">Sustainability</a></li>
+            <li><a href="careers.html" class="text-gray-300 hover:text-primary transition-colors hover:translate-x-2 transform inline-block">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-xl font-bold mb-6 text-white">Contact Info</h4>
+          <div class="space-y-4">
+            <div class="flex items-start space-x-3">
+              <i class="ri-map-pin-line ri-lg text-primary mt-1"></i>
+              <div>
+                <p class="text-gray-300">123 Galle Road</p>
+                <p class="text-gray-300">Colombo 03, Sri Lanka</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="ri-phone-line ri-lg text-accent"></i>
+              <p class="text-gray-300">+94 71 447 5817</p>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="ri-mail-line ri-lg text-purple"></i>
+              <p class="text-gray-300">superdotprinters@gmail.com</p>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="ri-time-line ri-lg text-secondary"></i>
+              <p class="text-gray-300">24/7 Customer Support</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-gray-700 py-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="text-gray-400 text-sm mb-4 md:mb-0">
+          © 2024 superDotPrinters. All rights reserved. | Powered by Quantum Technology
+        </div>
+        <div class="flex space-x-6 text-sm">
+          <a href="privacy.html" class="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a>
+          <a href="terms.html" class="text-gray-400 hover:text-primary transition-colors">Terms of Service</a>
+          <a href="sitemap.html" class="text-gray-400 hover:text-primary transition-colors">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+  // Constants for dynamic rendering
+  const colors = ['primary', 'accent', 'purple', 'secondary'];
+  const iconMap = {
+    "Bills & Invoices": "ri-file-text-line",
+    "Books & Catalogs": "ri-book-line",
+    "Custom Calendars": "ri-calendar-line",
+    "Marketing Materials": "ri-image-line",
+    "Business Cards": "ri-id-card-line",
+    "Certificates & Awards": "ri-trophy-line"
+  };
+
+  // Fetch all testimonials
+  function loadTestimonials() {
+    $.ajax({
+      url: 'http://localhost:8081/api/v1/testimonials',
+      type: 'GET',
+      success: function(data) {
+        const testimonialSection = $('#testimonial .grid.lg\\:grid-cols-3.gap-8');
+        testimonialSection.empty();
+        if (!Array.isArray(data) || data.length === 0) {
+          console.warn('No testimonials received from API.');
+          testimonialSection.append('<p class="text-theme-secondary text-center col-span-3">No testimonials available yet.</p>');
+          return;
+        }
+        data.forEach((t, index) => {
+          if (t.allowPublic) {
+            const stars = Array(t.rating).fill('<i class="ri-star-fill text-yellow-400 ri-lg"></i>').join('');
+            const cardHtml = `
+            <div class="testimonial-card scroll-reveal group" style="animation-delay: ${index * 0.1}s;">
+              <div class="glass p-8 rounded-3xl shadow-xl transform hover:scale-105 hover:rotate-1 transition-all duration-500 relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-${colors[index % colors.length]}/10 to-${colors[(index + 1) % colors.length]}/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="relative z-10">
+                  <div class="flex items-center mb-6">
+                    <img src="${t.authorPhoto || 'https://via.placeholder.com/150'}" alt="${t.userName}" class="w-16 h-16 rounded-full border-4 border-${colors[index % colors.length]}/30 mr-4 object-cover">
+                    <div>
+                      <h4 class="font-bold text-theme">${t.userName}</h4>
+                      <p class="text-sm text-theme-secondary">${t.companyName || 'N/A'}</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center mb-4">
+                    <div class="flex space-x-1">${stars}</div>
+                    <span class="ml-2 text-sm text-theme-secondary">${t.rating}.0</span>
+                  </div>
+                  <p class="text-theme-secondary leading-relaxed mb-6">${t.message}</p>
+                  <div class="flex items-center justify-between">
+                    <div class="text-sm font-bold text-${colors[index % colors.length]}">${t.serviceFeedback || 'General Feedback'}</div>
+                    <i class="ri-quote-right ri-2x text-${colors[index % colors.length]}/30"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+            testimonialSection.append(cardHtml);
+          }
+        });
+        $('.testimonial-card').addClass('revealed');
+      },
+      error: function(xhr, status, error) {
+        console.error('Error fetching testimonials:', { status, error, xhr });
+        let errorMessage = 'Testimonials ලබා ගැනීම අසාර්ථකයි. කරුණාකර පසුව උත්සාහ කරන්න.';
+        if (xhr.status === 0) {
+          errorMessage = 'Backend (http://localhost:8081) එකට සම්බන්ධ විය නොහැක. Server එක run වෙනවද?';
+        } else if (xhr.status === 404) {
+          errorMessage = 'API endpoint (/api/v1/testimonials) හමු වුනේ නැත.';
+        } else if (xhr.status === 500) {
+          errorMessage = 'Server දෝෂයක්. Backend logs check කරන්න.';
+        } else if (xhr.status === 403) {
+          errorMessage = 'CORS ගැටලුවක්. Backend configuration check කරන්න.';
+        }
+        alert(errorMessage);
+        $('#testimonial .grid.lg\\:grid-cols-3.gap-8').empty().append('<p class="text-theme-secondary text-center col-span-3">No testimonials available.</p>');
+      }
+    });
+  }
+
+  // FeedbackSystem class
+  class FeedbackSystem {
+    constructor() {
+      this.currentStep = 1;
+      this.maxStep = 4;
+      this.feedbackData = {};
+      this.init();
+    }
+    init() {
+      this.bindEvents();
+      this.updateUI();
+    }
+    bindEvents() {
+      document.getElementById('feedbackFab')?.addEventListener('click', () => this.openModal());
+      document.getElementById('closeModal')?.addEventListener('click', () => this.closeModal());
+      document.getElementById('modalOverlay')?.addEventListener('click', (e) => {
+        if (e.target === document.getElementById('modalOverlay')) this.closeModal();
+      });
+      document.querySelectorAll('.service-category').forEach(category => {
+        category.addEventListener('click', () => {
+          document.querySelectorAll('.service-category').forEach(c => c.classList.remove('selected'));
+          category.classList.add('selected');
+          this.feedbackData.service = category.dataset.service;
+          this.updateNavigationButtons();
+        });
+      });
+      document.querySelectorAll('.star').forEach(star => {
+        star.addEventListener('click', () => {
+          const rating = parseInt(star.dataset.rating);
+          this.feedbackData.rating = rating;
+          this.updateStars(rating);
+          this.showRatingText(rating);
+          this.updateNavigationButtons();
+        });
+        star.addEventListener('mouseenter', () => {
+          const rating = parseInt(star.dataset.rating);
+          this.updateStars(rating);
+        });
+      });
+      document.querySelector('.star-rating')?.addEventListener('mouseleave', () => {
+        if (this.feedbackData.rating) {
+          this.updateStars(this.feedbackData.rating);
+        } else {
+          this.updateStars(0);
+        }
+      });
+      document.getElementById('customerName')?.addEventListener('input', (e) => {
+        this.feedbackData.name = e.target.value.trim();
+        this.updateNavigationButtons();
+      });
+      document.getElementById('customerEmail')?.addEventListener('input', (e) => {
+        this.feedbackData.email = e.target.value.trim();
+        this.updateNavigationButtons();
+      });
+      document.getElementById('customerCompany')?.addEventListener('input', (e) => {
+        this.feedbackData.company = e.target.value.trim();
+      });
+      document.getElementById('feedbackMessage')?.addEventListener('input', (e) => {
+        this.feedbackData.message = e.target.value.trim();
+        this.updateNavigationButtons();
+      });
+      document.getElementById('orderNumber')?.addEventListener('input', (e) => {
+        this.feedbackData.orderNumber = e.target.value.trim();
+      });
+      document.querySelectorAll('input[name="recommend"]').forEach(radio => {
+        radio.addEventListener('change', (e) => {
+          this.feedbackData.recommend = e.target.value;
+          this.updateNavigationButtons();
+        });
+      });
+      document.getElementById('hearAbout')?.addEventListener('change', (e) => {
+        this.feedbackData.hearAbout = e.target.value;
+        this.updateNavigationButtons();
+      });
+      document.getElementById('allowPublic')?.addEventListener('change', (e) => {
+        this.feedbackData.allowPublic = e.target.checked;
+      });
+      document.getElementById('backBtn')?.addEventListener('click', () => {
+        if (this.currentStep > 1) {
+          this.currentStep--;
+          this.updateUI();
+        }
+      });
+      document.getElementById('nextBtn')?.addEventListener('click', () => {
+        if (this.isStepValid(this.currentStep)) {
+          if (this.currentStep < this.maxStep) {
+            this.currentStep++;
+            this.updateUI();
+          } else if (this.currentStep === this.maxStep) {
+            this.submitFeedback();
+          }
+        }
+      });
+    }
+    openModal() {
+      document.getElementById('modalOverlay')?.classList.add('active');
+      this.currentStep = 1;
+      this.feedbackData = {};
+      this.updateUI();
+    }
+    closeModal() {
+      document.getElementById('modalOverlay')?.classList.remove('active');
+      this.currentStep = 1;
+      this.feedbackData = {};
+      this.resetForm();
+      this.updateUI();
+    }
+    resetForm() {
+      document.querySelectorAll('.service-category').forEach(c => c.classList.remove('selected'));
+      document.querySelectorAll('.star').forEach(s => s.classList.remove('active'));
+      document.getElementById('ratingText').classList.remove('show');
+      document.getElementById('ratingText').textContent = '';
+      document.getElementById('customerName').value = '';
+      document.getElementById('customerCompany').value = '';
+      document.getElementById('customerEmail').value = '';
+      document.getElementById('feedbackMessage').value = '';
+      document.getElementById('orderNumber').value = '';
+      document.querySelectorAll('input[name="recommend"]').forEach(r => r.checked = false);
+      document.getElementById('hearAbout').value = '';
+      document.getElementById('allowPublic').checked = false;
+    }
+    updateStars(rating) {
+      document.querySelectorAll('.star').forEach(star => {
+        star.classList.toggle('active', parseInt(star.dataset.rating) <= rating);
+      });
+    }
+    showRatingText(rating) {
+      const ratingText = document.getElementById('ratingText');
+      const texts = {
+        1: 'Very Dissatisfied',
+        2: 'Dissatisfied',
+        3: 'Neutral',
+        4: 'Satisfied',
+        5: 'Very Satisfied'
+      };
+      ratingText.textContent = texts[rating] || '';
+      ratingText.classList.add('show');
+    }
+    updateNavigationButtons() {
+      const backBtn = document.getElementById('backBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      backBtn.disabled = this.currentStep === 1;
+      nextBtn.disabled = !this.isStepValid(this.currentStep);
+      nextBtn.innerHTML = this.currentStep === this.maxStep ? 'Submit <i class="ri-check-line"></i>' : 'Next <i class="ri-arrow-right-line"></i>';
+      nextBtn.classList.toggle('btn-submit', this.currentStep === this.maxStep);
+      nextBtn.classList.toggle('btn-next', this.currentStep !== this.maxStep);
+    }
+    isStepValid(step) {
+      switch (step) {
+        case 1: return !!this.feedbackData.service;
+        case 2: return !!this.feedbackData.rating;
+        case 3: return this.feedbackData.name && this.feedbackData.email && this.feedbackData.message;
+        case 4: return !!this.feedbackData.recommend && !!this.feedbackData.hearAbout;
+        default: return false;
+      }
+    }
+    updateUI() {
+      document.querySelectorAll('.step').forEach(step => {
+        const stepNum = parseInt(step.dataset.step);
+        step.classList.toggle('active', stepNum === this.currentStep);
+        step.classList.toggle('completed', stepNum < this.currentStep);
+      });
+      document.querySelectorAll('.form-section').forEach(section => {
+        section.classList.toggle('active', parseInt(section.dataset.section) === this.currentStep || section.dataset.section === 'success' && this.currentStep === 'success');
+      });
+      this.updateNavigationButtons();
+      if (this.currentStep === 2 && this.feedbackData.rating) {
+        this.updateStars(this.feedbackData.rating);
+        this.showRatingText(this.feedbackData.rating);
+      } else if (this.currentStep !== 2) {
+        document.getElementById('ratingText').classList.remove('show');
+      }
+    }
+    submitFeedback() {
+      const testimonialData = {
+        userId: 1, // Default userId (replace with auth logic in production)
+        userName: this.feedbackData.name,
+        companyName: this.feedbackData.company || null,
+        rating: this.feedbackData.rating,
+        message: this.feedbackData.message,
+        recommend: this.feedbackData.recommend.toUpperCase(), // Convert to YES/NO
+        heardAbout: this.feedbackData.hearAbout.replace(/-/g, '_').toUpperCase(), // Convert to GOOGLE, SOCIAL_MEDIA, etc.
+        allowPublic: this.feedbackData.allowPublic,
+        serviceFeedback: this.feedbackData.service
+      };
+      $.ajax({
+        url: 'http://localhost:8081/api/v1/testimonials',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify(testimonialData),
+        success: (response) => {
+          console.log('Testimonial submitted:', response);
+          this.currentStep = 'success';
+          this.updateUI();
+          document.getElementById('navigationButtons').style.display = 'none';
+          loadTestimonials(); // Refresh testimonials
+        },
+        error: (xhr, status, error) => {
+          console.error('Error submitting testimonial:', { status, error, xhr });
+          let errorMessage = 'Testimonial යැවීම අසාර්ථකයි. කරුණාකර පසුව උත්සාහ කරන්න.';
+          if (xhr.status === 0) {
+            errorMessage = 'Backend (http://localhost:8081) එකට සම්බන්ධ විය නොහැක. Server එක run වෙනවද?';
+          } else if (xhr.status === 400) {
+            errorMessage = 'Invalid data submitted. Please check your inputs.';
+          } else if (xhr.status === 404) {
+            errorMessage = 'API endpoint (/api/v1/testimonials) හමු වුනේ නැත.';
+          } else if (xhr.status === 500) {
+            errorMessage = 'Server දෝෂයක්. Backend logs check කරන්න.';
+          } else if (xhr.status === 403) {
+            errorMessage = 'CORS ගැටලුවක්. Backend configuration check කරන්න.';
+          }
+          alert(errorMessage);
+        }
+      });
+    }
+  }
+
+  // Initialize feedback system and load testimonials
+  document.addEventListener('DOMContentLoaded', () => {
+    new FeedbackSystem();
+    loadTestimonials();
+  });
+  document.addEventListener('DOMContentLoaded', () => {
+    // Constants for dynamic rendering
+    const colors = ['primary', 'accent', 'purple', 'secondary'];
+    const featureIcons = [
+      'ri-ai-generate', 'ri-speed-line', 'ri-shield-check-line', 'ri-database-line',
+      'ri-scissors-line', 'ri-leaf-line', 'ri-palette-line', 'ri-shield-star-line',
+      'ri-qr-code-line', 'ri-layout-line', 'ri-image-edit-line', 'ri-calendar-event-line',
+      'ri-magic-line', 'ri-file-paper-line', 'ri-contrast-line', 'ri-speaker-line',
+      'ri-honour-line', 'ri-nfc-line', 'ri-cut-line', 'ri-award-line',
+      'ri-file-text-line', 'ri-global-line'
+    ];
+    const iconMap = {
+      "Bills & Invoices": "ri-file-text-line",
+      "Books & Catalogs": "ri-book-line",
+      "Custom Calendars": "ri-calendar-line",
+      "Marketing Materials": "ri-image-line",
+      "Business Cards": "ri-id-card-line",
+      "Certificates & Awards": "ri-trophy-line"
+    };
+    // Fallback data
+    const fallbackData = [
+      {
+        serviceId: 1,
+        productName: "Bills & Invoices",
+        description: "Transform your business documentation with our premium bill and invoice printing services.",
+        minOrderQuantity: 1000,
+        turnaroundTime: "3-5 days",
+        sampleImages: [],
+        keyFeatures: ["AI-Powered Design", "Fast Processing"],
+        materials: ["Premium 80GSM Paper", "High-resolution 1200 DPI"],
+        pricing: ["1000-5000 pieces $0.15 each", "5000+ pieces $0.12 each"]
+      }
+    ];
+    // Service data storage
+    let serviceData = {};
+    // Fetch services from backend
+    function fetchServices() {
+      const grid = $('.grid.md\\:grid-cols-2.lg\\:grid-cols-3.gap-8');
+      if (!grid.length) {
+        console.error('Grid container not found. HTML එකේ <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"> තිබිය යුතුයි.');
+        alert('Grid container not found. HTML එකේ grid div එක check කරන්න.');
+        return;
+      }
+      $.ajax({
+        url: 'http://localhost:8081/api/v1/service/all',
+        method: 'GET',
+        success: function(data) {
+          console.log('API Response:', data);
+          if (!Array.isArray(data) || data.length === 0) {
+            console.warn('API එකෙන් ඩේටා ලැබුනේ නැත, fallback ඩේටා භාවිතා කරමින්.');
+            serviceData = fallbackData.reduce((acc, item) => {
+              acc[item.serviceId] = item;
+              return acc;
+            }, {});
+            renderServiceCards(fallbackData);
+          } else {
+            serviceData = data.reduce((acc, item) => {
+              if (item.serviceId && item.productName) {
+                acc[item.serviceId] = item;
+              } else {
+                console.warn('වලංගු නොවන service ඩේටා:', item);
+              }
+              return acc;
+            }, {});
+            renderServiceCards(data);
+          }
+          applyServiceCardInteractions();
+        },
+        error: function(xhr, status, error) {
+          console.error('API එකෙන් ඩේටා ලබා ගැනීමේ දෝෂය:', { status, error, xhr });
+          let errorMessage = 'සේවා ලබා ගැනීම අසාර්ථකයි. කරුණාකර පසුව උත්සාහ කරන්න.';
+          if (xhr.status === 0) {
+            errorMessage = 'Backend[](http://localhost:8081) එකට සම්බන්ධ විය නොහැක. Server එක run වෙනවද?';
+          } else if (xhr.status === 404) {
+            errorMessage = 'API endpoint (/api/v1/service/all) හමු වුනේ නැත.';
+          } else if (xhr.status === 500) {
+            errorMessage = 'Server දෝෂයක්. Backend logs check කරන්න.';
+          } else if (xhr.status === 403) {
+            errorMessage = 'CORS ගැටලුවක්. Backend configuration check කරන්න.';
+          }
+          alert(errorMessage);
+          serviceData = fallbackData.reduce((acc, item) => {
+            acc[item.serviceId] = item;
+            return acc;
+          }, {});
+          renderServiceCards(fallbackData);
+          applyServiceCardInteractions();
+        }
+      });
+    }
+
+    // Render service cards
+    function renderServiceCards(services) {
+      const grid = $('.grid.md\\:grid-cols-2.lg\\:grid-cols-3.gap-8');
+      grid.empty();
+      console.log('Rendering services:', services);
+      services.forEach((service, index) => {
+        if (!service.serviceId || !service.productName) {
+          console.warn('Skipping invalid service:', service);
+          return;
+        }
+        const colorClass = colors[index % colors.length];
+        const nextColorClass = colors[(index + 1) % colors.length];
+        const gradient = `from-${colorClass} to-${nextColorClass}`;
+        const arrowColor = colorClass;
+        const iconClass = iconMap[service.productName] || 'ri-file-line';
+        const cardHtml = `
+                <div class="service-card glass p-8 rounded-3xl shadow-xl scroll-reveal relative overflow-hidden group" style="animation-delay: ${index * 0.1}s;" onclick="openModal(${service.serviceId})">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-${colorClass}/20 to-transparent rounded-bl-full"></div>
+                    <div class="w-16 h-16 flex items-center justify-center bg-gradient-to-r ${gradient} rounded-2xl mb-6 group-hover:animate-spin-slow">
+                        <i class="${iconClass} ri-2x text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-theme mb-4">${service.productName}</h3>
+                    <p class="text-theme-secondary mb-4">${service.description || 'No description available'}</p>
+                    <div class="flex items-center justify-between">
+                        <div class="text-sm font-bold bg-gradient-to-r ${gradient} bg-clip-text text-transparent">Min Order: ${service.minOrderQuantity || 'N/A'} pieces</div>
+                        <i class="ri-arrow-right-line ri-lg text-${arrowColor} group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+            `;
+        grid.append(cardHtml);
+        console.log('Appended card:', cardHtml);
+      });
+      console.log('Grid HTML after rendering:', grid.html());
+      // Force reveal for debugging
+      $('.service-card').addClass('revealed');
+    }
+    // Modal functions
+    const modalEl = document.getElementById('serviceModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalIcon = document.getElementById('modalIcon');
+    const modalDescription = document.getElementById('modalDescription');
+    const modalFeatures = document.getElementById('modalFeatures');
+    const modalMaterials = document.getElementById('modalMaterials');
+    const modalPricing = document.getElementById('modalPricing');
+    const modalGallery = document.getElementById('modalGallery');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+    function clearChildren(el) {
+      while (el.firstChild) el.removeChild(el.firstChild);
+    }
+    function createFeatureNode(feature) {
+      const div = document.createElement('div');
+      div.className = 'feature-tag px-4 py-3 rounded-lg flex items-center space-x-3';
+      const icon = document.createElement('i');
+      icon.className = `${feature.icon} text-${feature.color} mr-2 ri-lg`;
+      const span = document.createElement('span');
+      span.textContent = feature.text;
+      div.appendChild(icon);
+      div.appendChild(span);
+      return div;
+    }
+    function createMaterialNode(item) {
+      const row = document.createElement('div');
+      row.className = 'flex justify-between items-center py-2 border-b border-theme';
+      const lbl = document.createElement('span');
+      lbl.className = 'font-medium';
+      lbl.textContent = item.label + ':';
+      const val = document.createElement('span');
+      val.className = 'text-theme-secondary';
+      val.textContent = item.value;
+      row.appendChild(lbl);
+      row.appendChild(val);
+      return row;
+    }
+    function createPricingNode(item) {
+      const row = document.createElement('div');
+      row.className = 'flex justify-between items-center';
+      const rng = document.createElement('span');
+      rng.textContent = item.range;
+      const price = document.createElement('span');
+      price.className = 'font-bold text-primary';
+      price.textContent = item.price;
+      row.appendChild(rng);
+      row.appendChild(price);
+      return row;
+    }
+    function formatListItem(item, index, type) {
+      if (type === 'pricing') {
+        const parts = item.split(' ');
+        return {
+          label: parts.slice(0, -1).join(' '),
+          value: parts[parts.length - 1]
+        };
+      } else if (type === 'materials') {
+        return {
+          label: `Spec ${index + 1}`,
+          value: item
+        };
+      }
+      return { label: `Item ${index + 1}`, value: item };
+    }
+    function openModal(id) {
+      const data = serviceData[id];
+      if (!data) {
+        console.warn('Service not found:', id);
+        alert('සේවා විස්තර හමු නොවීය.');
+        return;
+      }
+      modalTitle.textContent = data.productName || '';
+      modalIcon.innerHTML = `<i class="${iconMap[data.productName] || 'ri-file-line'} ri-2x text-white"></i>`;
+      modalDescription.innerHTML = data.description
+              ? `<p class="text-theme-secondary leading-relaxed mb-4">${data.description}</p>`
+              : '';
+      clearChildren(modalFeatures);
+      if (Array.isArray(data.keyFeatures)) {
+        data.keyFeatures.forEach((text, index) => {
+          const feature = {
+            icon: featureIcons[index % featureIcons.length],
+            text: text,
+            color: colors[index % colors.length]
+          };
+          modalFeatures.appendChild(createFeatureNode(feature));
+        });
+      }
+      clearChildren(modalMaterials);
+      if (Array.isArray(data.materials)) {
+        data.materials.forEach((item, index) => {
+          const mat = formatListItem(item, index, 'materials');
+          modalMaterials.appendChild(createMaterialNode(mat));
+        });
+      }
+      if (data.turnaroundTime) {
+        const tat = { label: 'Turnaround Time', value: data.turnaroundTime };
+        modalMaterials.appendChild(createMaterialNode(tat));
+      }
+      clearChildren(modalPricing);
+      if (Array.isArray(data.pricing)) {
+        data.pricing.forEach((item, index) => {
+          const prc = formatListItem(item, index, 'pricing');
+          modalPricing.appendChild(createPricingNode({ range: prc.label, price: prc.value }));
+        });
+      }
+      clearChildren(modalGallery);
+      if (Array.isArray(data.sampleImages) && data.sampleImages.length > 0) {
+        data.sampleImages.forEach((url, index) => {
+          const div = document.createElement('div');
+          div.className = 'rounded-lg overflow-hidden';
+          const img = document.createElement('img');
+          img.src = url;
+          img.alt = `Sample Print ${index + 1}`;
+          img.className = 'w-full h-40 object-cover';
+          div.appendChild(img);
+          modalGallery.appendChild(div);
+        });
+      } else {
+        const fallback = document.createElement('p');
+        fallback.textContent = 'No sample images available.';
+        fallback.className = 'text-theme-secondary';
+        modalGallery.appendChild(fallback);
+      }
+      modalEl.classList.remove('hidden');
+      document.documentElement.style.overflow = 'hidden';
+      setTimeout(() => modalCloseBtn.focus(), 120);
+    }
+    function closeModal() {
+      modalEl.classList.add('hidden');
+      document.documentElement.style.overflow = '';
+    }
+    modalCloseBtn.addEventListener('click', closeModal);
+    modalEl.addEventListener('click', (e) => {
+      if (e.target === modalEl) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modalEl.classList.contains('hidden')) closeModal();
+    });
+    window.openModal = openModal;
+    function applyServiceCardInteractions() {
+      const serviceCards = document.querySelectorAll('.service-card');
+      console.log('Found service cards:', serviceCards.length, 'කාඩ්පත් හමුවුනා');
+      serviceCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          card.style.transform = 'translateY(-15px) rotateX(5deg) scale(1.02)';
+          card.style.boxShadow = '0 30px 60px rgba(0, 0, 0, 0.3)';
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'translateY(0) rotateX(0) scale(1)';
+          card.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.1)';
+        });
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const rotateX = (y - centerY) / 10;
+          const rotateY = (centerX - x) / 10;
+          card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+        });
+      });
+    }
+    // ParticleSystem, FeedbackSystem, FormValidator, AnalyticsTracker, and other features remain unchanged
+    class ParticleSystem {
+      constructor(canvas) {
+        this.canvas = canvas;
+        this.ctx = canvas.getContext('2d');
+        this.particles = [];
+        this.mouse = { x: 0, y: 0 };
+        this.init();
+        this.animate();
+        this.setupEventListeners();
+      }
+      init() {
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
+        for (let i = 0; i < 100; i++) {
+          this.particles.push({
+            x: Math.random() * this.canvas.width,
+            y: Math.random() * this.canvas.height,
+            vx: (Math.random() - 0.5) * 2,
+            vy: (Math.random() - 0.5) * 2,
+            size: Math.random() * 3 + 1,
+            color: ['#FF6500', '#00D4FF', '#8B5CF6'][Math.floor(Math.random() * 3)],
+            opacity: Math.random() * 0.5 + 0.2
+          });
+        }
+      }
+      animate() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.particles.forEach((particle, index) => {
+          particle.x += particle.vx;
+          particle.y += particle.vy;
+          if (particle.x < 0) particle.x = this.canvas.width;
+          if (particle.x > this.canvas.width) particle.x = 0;
+          if (particle.y < 0) particle.y = this.canvas.height;
+          if (particle.y > this.canvas.height) particle.y = 0;
+          const dx = this.mouse.x - particle.x;
+          const dy = this.mouse.y - particle.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          if (distance < 100) {
+            particle.vx += dx * 0.0001;
+            particle.vy += dy * 0.0001;
+          }
+          this.ctx.save();
+          this.ctx.globalAlpha = particle.opacity;
+          this.ctx.fillStyle = particle.color;
+          this.ctx.beginPath();
+          this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+          this.ctx.fill();
+          this.ctx.restore();
+          this.particles.slice(index + 1).forEach(otherParticle => {
+            const dx = particle.x - otherParticle.x;
+            const dy = particle.y - otherParticle.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            if (distance < 100) {
+              this.ctx.save();
+              this.ctx.globalAlpha = (100 - distance) / 100 * 0.2;
+              this.ctx.strokeStyle = particle.color;
+              this.ctx.lineWidth = 1;
+              this.ctx.beginPath();
+              this.ctx.moveTo(particle.x, particle.y);
+              this.ctx.lineTo(otherParticle.x, otherParticle.y);
+              this.ctx.stroke();
+              this.ctx.restore();
+            }
+          });
+        });
+        requestAnimationFrame(() => this.animate());
+      }
+      setupEventListeners() {
+        window.addEventListener('mousemove', (e) => {
+          this.mouse.x = e.clientX;
+          this.mouse.y = e.clientY;
+        });
+        window.addEventListener('resize', () => {
+          this.canvas.width = window.innerWidth;
+          this.canvas.height = window.innerHeight;
+        });
+      }
+    }
+    class FeedbackSystem {
+      constructor() {
+        this.currentStep = 1;
+        this.maxStep = 4;
+        this.feedbackData = {};
+        this.init();
+      }
+      init() {
+        this.bindEvents();
+        this.updateUI();
+      }
+      bindEvents() {
+        document.getElementById('feedbackFab').addEventListener('click', () => {
+          this.openModal();
+        });
+        document.getElementById('closeModal').addEventListener('click', () => {
+          this.closeModal();
+        });
+        document.getElementById('modalOverlay').addEventListener('click', (e) => {
+          if (e.target === document.getElementById('modalOverlay')) {
+            this.closeModal();
+          }
+        });
+        document.querySelectorAll('.service-category').forEach(category => {
+          category.addEventListener('click', () => {
+            document.querySelectorAll('.service-category').forEach(c => c.classList.remove('selected'));
+            category.classList.add('selected');
+            this.feedbackData.service = category.dataset.service;
+            this.updateNavigationButtons();
+          });
+        });
+        document.querySelectorAll('.star').forEach(star => {
+          star.addEventListener('click', () => {
+            const rating = parseInt(star.dataset.rating);
+            this.feedbackData.rating = rating;
+            this.updateStars(rating);
+            this.showRatingText(rating);
+            this.updateNavigationButtons();
+          });
+          star.addEventListener('mouseenter', () => {
+            const rating = parseInt(star.dataset.rating);
+            this.updateStars(rating);
+          });
+        });
+        document.querySelector('.star-rating').addEventListener('mouseleave', () => {
+          if (this.feedbackData.rating) {
+            this.updateStars(this.feedbackData.rating);
+          } else {
+            this.updateStars(0);
+          }
+        });
+        document.getElementById('customerName').addEventListener('input', (e) => {
+          this.feedbackData.name = e.target.value.trim();
+          this.updateNavigationButtons();
+        });
+        document.getElementById('customerEmail').addEventListener('input', (e) => {
+          this.feedbackData.email = e.target.value.trim();
+          this.updateNavigationButtons();
+        });
+        document.getElementById('customerCompany').addEventListener('input', (e) => {
+          this.feedbackData.company = e.target.value.trim();
+        });
+        document.getElementById('feedbackMessage').addEventListener('input', (e) => {
+          this.feedbackData.message = e.target.value.trim();
+          this.updateNavigationButtons();
+        });
+        document.getElementById('orderNumber').addEventListener('input', (e) => {
+          this.feedbackData.orderNumber = e.target.value.trim();
+        });
+        document.querySelectorAll('input[name="recommend"]').forEach(radio => {
+          radio.addEventListener('change', (e) => {
+            this.feedbackData.recommend = e.target.value;
+            this.updateNavigationButtons();
+          });
+        });
+        document.getElementById('hearAbout').addEventListener('change', (e) => {
+          this.feedbackData.hearAbout = e.target.value;
+          this.updateNavigationButtons();
+        });
+        document.getElementById('allowPublic').addEventListener('change', (e) => {
+          this.feedbackData.allowPublic = e.target.checked;
+        });
+        document.getElementById('backBtn').addEventListener('click', () => {
+          if (this.currentStep > 1) {
+            this.currentStep--;
+            this.updateUI();
+          }
+        });
+        document.getElementById('nextBtn').addEventListener('click', () => {
+          if (this.isStepValid(this.currentStep)) {
+            if (this.currentStep < this.maxStep) {
+              this.currentStep++;
+              this.updateUI();
+            } else if (this.currentStep === this.maxStep) {
+              this.submitFeedback();
+            }
+          }
+        });
+        document.getElementById('themeToggle').addEventListener('click', () => {
+          document.body.classList.toggle('dark-theme');
+          document.body.classList.toggle('light-theme');
+          localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+        });
+      }
+      openModal() {
+        document.getElementById('modalOverlay').classList.add('active');
+        this.currentStep = 1;
+        this.feedbackData = {};
+        this.updateUI();
+      }
+      closeModal() {
+        document.getElementById('modalOverlay').classList.remove('active');
+        this.currentStep = 1;
+        this.feedbackData = {};
+        this.resetForm();
+        this.updateUI();
+      }
+      resetForm() {
+        document.querySelectorAll('.service-category').forEach(c => c.classList.remove('selected'));
+        document.querySelectorAll('.star').forEach(s => s.classList.remove('active'));
+        document.getElementById('ratingText').classList.remove('show');
+        document.getElementById('ratingText').textContent = '';
+        document.getElementById('customerName').value = '';
+        document.getElementById('customerCompany').value = '';
+        document.getElementById('customerEmail').value = '';
+        document.getElementById('feedbackMessage').value = '';
+        document.getElementById('orderNumber').value = '';
+        document.querySelectorAll('input[name="recommend"]').forEach(r => r.checked = false);
+        document.getElementById('hearAbout').value = '';
+        document.getElementById('allowPublic').checked = false;
+      }
+      updateStars(rating) {
+        document.querySelectorAll('.star').forEach(star => {
+          star.classList.toggle('active', parseInt(star.dataset.rating) <= rating);
+        });
+      }
+      showRatingText(rating) {
+        const ratingText = document.getElementById('ratingText');
+        const texts = {
+          1: 'Very Dissatisfied',
+          2: 'Dissatisfied',
+          3: 'Neutral',
+          4: 'Satisfied',
+          5: 'Very Satisfied'
+        };
+        ratingText.textContent = texts[rating] || '';
+        ratingText.classList.add('show');
+      }
+      updateNavigationButtons() {
+        const backBtn = document.getElementById('backBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        backBtn.disabled = this.currentStep === 1;
+        nextBtn.disabled = !this.isStepValid(this.currentStep);
+        nextBtn.innerHTML = this.currentStep === this.maxStep ? 'Submit <i class="ri-check-line"></i>' : 'Next <i class="ri-arrow-right-line"></i>';
+        nextBtn.classList.toggle('btn-submit', this.currentStep === this.maxStep);
+        nextBtn.classList.toggle('btn-next', this.currentStep !== this.maxStep);
+      }
+      isStepValid(step) {
+        switch (step) {
+          case 1: return !!this.feedbackData.service;
+          case 2: return !!this.feedbackData.rating;
+          case 3: return this.feedbackData.name && this.feedbackData.email && this.feedbackData.message;
+          case 4: return !!this.feedbackData.recommend && !!this.feedbackData.hearAbout;
+          default: return false;
+        }
+      }
+      updateUI() {
+        document.querySelectorAll('.step').forEach(step => {
+          const stepNum = parseInt(step.dataset.step);
+          step.classList.toggle('active', stepNum === this.currentStep);
+          step.classList.toggle('completed', stepNum < this.currentStep);
+        });
+        document.querySelectorAll('.form-section').forEach(section => {
+          section.classList.toggle('active', parseInt(section.dataset.section) === this.currentStep || section.dataset.section === 'success' && this.currentStep === 'success');
+        });
+        this.updateNavigationButtons();
+        if (this.currentStep === 2 && this.feedbackData.rating) {
+          this.updateStars(this.feedbackData.rating);
+          this.showRatingText(this.feedbackData.rating);
+        } else if (this.currentStep !== 2) {
+          document.getElementById('ratingText').classList.remove('show');
+        }
+      }
+      submitFeedback() {
+        console.log('Submitting feedback:', this.feedbackData);
+        this.currentStep = 'success';
+        this.updateUI();
+        document.getElementById('navigationButtons').style.display = 'none';
+      }
+    }
+    class FormValidator {
+      constructor(form) {
+        this.form = form;
+        this.init();
+      }
+      init() {
+        this.form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          this.validateForm();
+        });
+      }
+      validateForm() {
+        const inputs = this.form.querySelectorAll('input, textarea');
+        let isValid = true;
+        inputs.forEach(input => {
+          if (!this.validateField(input)) {
+            isValid = false;
+          }
+        });
+        if (isValid) {
+          this.submitForm();
+        }
+      }
+      validateField(field) {
+        const value = field.value.trim();
+        const type = field.type;
+        const existingError = field.parentNode.querySelector('.error-message');
+        if (existingError) {
+          existingError.remove();
+        }
+        let isValid = true;
+        let errorMessage = '';
+        if (field.hasAttribute('required') && !value) {
+          isValid = false;
+          errorMessage = 'This field is required';
+        } else if (type === 'email' && !this.isValidEmail(value)) {
+          isValid = false;
+          errorMessage = 'Please enter a valid email address';
+        } else if (type === 'tel' && !this.isValidPhone(value)) {
+          isValid = false;
+          errorMessage = 'Please enter a valid phone number';
+        }
+        if (!isValid) {
+          this.showError(field, errorMessage);
+        }
+        return isValid;
+      }
+      isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+      isValidPhone(phone) {
+        const phoneRegex = /^[\+]?[0-9\s\-\(\)]{10,}$/;
+        return phoneRegex.test(phone);
+      }
+      showError(field, message) {
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'error-message text-red-500 text-sm mt-1';
+        errorDiv.textContent = message;
+        field.parentNode.appendChild(errorDiv);
+        field.classList.add('border-red-500');
+        setTimeout(() => {
+          field.classList.remove('border-red-500');
+        }, 3000);
+      }
+      submitForm() {
+        const submitButton = this.form.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
+        setTimeout(() => {
+          alert('Form submitted successfully!');
+          submitButton.textContent = originalText;
+          submitButton.disabled = false;
+          this.form.reset();
+        }, 2000);
+      }
+    }
+    class AnalyticsTracker {
+      constructor() {
+        this.events = [];
+        this.init();
+      }
+      init() {
+        this.trackPageView();
+        this.setupEventListeners();
+      }
+      trackPageView() {
+        this.track('page_view', { page: window.location.pathname, timestamp: new Date().toISOString() });
+      }
+      trackEvent(eventName, properties = {}) {
+        this.track(eventName, { ...properties, timestamp: new Date().toISOString() });
+      }
+      track(eventName, properties) {
+        this.events.push({ event: eventName, properties });
+        console.log('Analytics Event:', eventName, properties);
+      }
+      setupEventListeners() {
+        document.addEventListener('click', (e) => {
+          if (e.target.matches('a, button')) {
+            this.trackEvent('click', {
+              element: e.target.tagName.toLowerCase(),
+              text: e.target.textContent.trim(),
+              href: e.target.href || null
+            });
+          }
+        });
+        let maxScrollDepth = 0;
+        window.addEventListener('scroll', () => {
+          const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+          if (scrollDepth > maxScrollDepth) {
+            maxScrollDepth = scrollDepth;
+            if (maxScrollDepth % 25 === 0) {
+              this.trackEvent('scroll_depth', { depth: maxScrollDepth });
+            }
+          }
+        });
+      }
+    }
+    // Initialize particle system
+    const particlesCanvas = document.getElementById('particleCanvas');
+    if (particlesCanvas) {
+      new ParticleSystem(particlesCanvas);
+    }
+    // Initialize feedback system
+    const feedbackSystem = new FeedbackSystem();
+    // Global closeModal function for feedback
+    window.closeModal = function() {
+      feedbackSystem.closeModal();
+      document.getElementById('navigationButtons').style.display = 'flex';
+    };
+    // Initialize theme
+    if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.body.classList.remove('light-theme');
+      document.body.classList.add('dark-theme');
+    } else {
+      document.body.classList.add('light-theme');
+    }
+    // Track order functionality
+    const trackingInput = document.getElementById('trackingInput');
+    if (trackingInput) {
+      trackingInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          window.trackOrder();
+        }
+      });
+      trackingInput.addEventListener('focus', () => {
+        const label = trackingInput.parentElement.querySelector('label');
+        if (label) {
+          label.style.transform = 'translateY(-2px)';
+          label.style.color = 'var(--ocean-500)';
+        }
+      });
+      trackingInput.addEventListener('blur', () => {
+        if (!trackingInput.value) {
+          const label = trackingInput.parentElement.querySelector('label');
+          if (label) {
+            label.style.transform = 'translateY(0)';
+            label.style.color = 'var(--ocean-700)';
+          }
+        }
+      });
+    }
+    window.trackOrder = function() {
+      const input = document.getElementById('trackingInput');
+      if (!input) return;
+      const trackingNumber = input.value.trim();
+      if (!trackingNumber) {
+        alert('Please enter a tracking number');
+        return;
+      }
+      const trackingResults = document.getElementById('trackingResults');
+      const noResults = document.getElementById('noResults');
+      const loadingState = document.getElementById('loadingState');
+      if (trackingResults) trackingResults.style.display = 'none';
+      if (noResults) noResults.style.display = 'none';
+      if (loadingState) loadingState.style.display = 'block';
+      setTimeout(() => {
+        if (loadingState) loadingState.style.display = 'none';
+        if (trackingNumber.toLowerCase().includes('test') || trackingNumber === '12345') {
+          if (trackingResults) {
+            trackingResults.style.display = 'block';
+            trackingResults.style.animation = 'fadeInUp 0.8s ease-out';
+            const progressFill = document.querySelector('.progress-fill');
+            if (progressFill) {
+              progressFill.style.width = '0%';
+              setTimeout(() => {
+                progressFill.style.width = '60%';
+              }, 100);
+            }
+          }
+        } else {
+          if (noResults) noResults.style.display = 'block';
+        }
+      }, 2000);
+    };
+    window.resetSearch = function() {
+      const input = document.getElementById('trackingInput');
+      const noResults = document.getElementById('noResults');
+      if (input) input.value = '';
+      if (noResults) noResults.style.display = 'none';
+      if (input) input.focus();
+    };
+    // Mobile menu
+    const mobileMenuButton = document.querySelector('button.md\\:hidden');
+    const mobileMenu = document.createElement('div');
+    mobileMenu.className = 'fixed inset-0 bg-black/50 backdrop-blur-lg z-50 md:hidden hidden';
+    mobileMenu.innerHTML = `
+        <div class="flex flex-col items-center justify-center h-full space-y-8 text-white">
+            <a href="index.html" class="text-2xl font-bold hover:text-primary transition-colors">Home</a>
+            <a href="about.html" class="text-2xl font-bold hover:text-primary transition-colors">About</a>
+            <a href="services.html" class="text-2xl font-bold hover:text-primary transition-colors">Services</a>
+            <a href="order.html" class="text-2xl font-bold hover:text-primary transition-colors">Place Order</a>
+            <a href="tracking.html" class="text-2xl font-bold hover:text-primary transition-colors">Track Order</a>
+            <a href="contact.html" class="text-2xl font-bold hover:text-primary transition-colors">Contact</a>
+            <a href="testimonials.html" class="text-2xl font-bold hover:text-primary transition-colors">Testimonials</a>
+            <button class="absolute top-8 right-8 text-white text-3xl" onclick="this.parentElement.parentElement.classList.add('hidden')">
+                <i class="ri-close-line"></i>
+            </button>
+        </div>
+    `;
+    document.body.appendChild(mobileMenu);
+    if (mobileMenuButton) {
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+    // Scroll reveal animation
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+    const revealOnScroll = () => {
+      revealElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.8) {
+          el.classList.add('revealed');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+    // Parallax effect
+    const parallaxElements = document.querySelectorAll('.parallax-element');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset;
+      parallaxElements.forEach((element, index) => {
+        const speed = 0.5 + (index * 0.1);
+        const yPos = -(scrollTop * speed);
+        element.style.transform = `translateY(${yPos}px)`;
+      });
+    });
+    // Stats counter animation
+    const counters = document.querySelectorAll('.stats-counter');
+    const animateCounter = (counter) => {
+      const target = parseInt(counter.getAttribute('data-target'));
+      let count = 0;
+      const increment = target / 100;
+      const updateCounter = () => {
+        if (count < target) {
+          count += increment;
+          counter.textContent = Math.ceil(count);
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.textContent = target;
+        }
+      };
+      updateCounter();
+    };
+    const observerOptions = {
+      threshold: 0.5,
+      rootMargin: '0px 0px -100px 0px'
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          animateCounter(counter);
+          observer.unobserve(counter);
+        }
+      });
+    }, observerOptions);
+    counters.forEach(counter => observer.observe(counter));
+    // Magnetic button effect
+    const magneticButtons = document.querySelectorAll('.magnetic-btn');
+    magneticButtons.forEach(button => {
+      button.addEventListener('mousemove', (e) => {
+        const rect = button.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        button.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
+      });
+      button.addEventListener('mouseleave', () => {
+        button.style.transform = 'translate(0px, 0px)';
+      });
+    });
+    // Loading animation
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+    });
+    // Smooth scrolling
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+    // Floating animation
+    const floatingElements = document.querySelectorAll('.floating');
+    floatingElements.forEach((element, index) => {
+      element.style.animationDelay = `${index * 0.5}s`;
+      element.style.animationDuration = `${4 + (index % 3)}s`;
+    });
+    // Shimmer text animation
+    const shimmerTexts = document.querySelectorAll('.shimmer-text');
+    shimmerTexts.forEach(text => {
+      text.addEventListener('mouseenter', () => {
+        text.style.animationDuration = '1s';
+      });
+      text.addEventListener('mouseleave', () => {
+        text.style.animationDuration = '3s';
+      });
+    });
+    // Konami code Easter egg
+    const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
+    let userInput = [];
+    document.addEventListener('keydown', (e) => {
+      userInput.push(e.code);
+      if (userInput.length > konamiCode.length) {
+        userInput.shift();
+      }
+      if (JSON.stringify(userInput) === JSON.stringify(konamiCode)) {
+        document.body.style.filter = 'hue-rotate(180deg)';
+        const message = document.createElement('div');
+        message.innerHTML = '🎉 Quantum Mode Activated! 🎉';
+        message.className = 'fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-primary to-accent text-white px-8 py-4 rounded-full font-bold text-xl z-50 animate-bounce';
+        document.body.appendChild(message);
+        setTimeout(() => {
+          document.body.style.filter = '';
+          message.remove();
+        }, 5000);
+        userInput = [];
+      }
+    });
+    // Lazy loading images
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.classList.remove('lazy');
+          observer.unobserve(img);
+        }
+      });
+    });
+    images.forEach(img => imageObserver.observe(img));
+    // Form validators
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => new FormValidator(form));
+    // Initialize analytics
+    window.analytics = new AnalyticsTracker();
+    // Timeline animation
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    const revealTimeline = () => {
+      timelineItems.forEach(item => {
+        const rect = item.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.8) {
+          item.classList.add('revealed');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealTimeline);
+    revealTimeline();
+    // Call fetchServices to load data
+    fetchServices();
+  });
+</script>
+</body>
+</html>
