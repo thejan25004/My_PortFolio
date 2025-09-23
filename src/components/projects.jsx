@@ -51,7 +51,7 @@ export function Projects() {
             technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
             featured: false,
             color: "from-blue-500 to-purple-600",
-            liveUrl: "/pages/freshBite.html",
+            liveUrl: "https://youtu.be/Tc3tkv090Cg?si=t3DpaDRt2BroMmYl",
             sourceCode: "https://github.com/thejan25004/Fresh_Bite"
         },
         {
@@ -63,7 +63,7 @@ export function Projects() {
             technologies: ["Vue.js", "Firebase", "WebRTC", "Three.js"],
             featured: true,
             color: "from-green-500 to-teal-600",
-            liveUrl: "https://your-live-project-url.com",
+            liveUrl: "https://youtu.be/QJhxlJxhFP8?si=QvOxu812m0Gn-0l6",
             sourceCode: "https://github.com/thejan25004/Rambo-Gym"
         },
         {
