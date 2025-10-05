@@ -175,11 +175,12 @@ export function Contact() {
                         <div className="contact-item">
                             <div className="contact-label">Contact Me</div>
                             <div className="contact-value">+94 76 937 85 24</div>
+                            <div className="contact-value">+94 75 087 30 42</div>
                         </div>
 
                         <div className="contact-item">
                             <div className="contact-label">Gmail</div>
-                            <div className="contact-value">thejathejanchamod9@gmail.com</div>
+                            <div className="contact-value">thejanchamod9@gmail.com</div>
                         </div>
 
                         <div className="contact-item">
