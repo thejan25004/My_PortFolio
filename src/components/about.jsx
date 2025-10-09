@@ -4,9 +4,9 @@ import cvFile from "../assets/cv/Chamod Thejan CV.pdf";
 
 export function About() {
     const stats = [
-        { number: "100 +", label: "Find Me In Social Meadia" },
-        { number: "250 +", label: "Find Me In Social Meadia" },
-        { number: "155 +", label: "Find Me In Social Meadia" },
+        { number: "15 +", label: "Completed Projects" },
+        { number: "2 +", label: "Years of Experience" },
+        { number: "15 +", label: "UI Designs Created" },
     ]
 
     return (
@@ -26,8 +26,7 @@ export function About() {
                         </h2>
 
                         <p className="description-text" style={{ marginBottom: "3rem" }}>
-                            I'm Chamod Thejan, a passionate Front-End Developer and UI Designer with a keen eye for detail and a drive to craft seamless, responsive, and user-friendly web experiences. I specialize in building modern web applications using React, Node.js, and the latest front-end technologies. With a strong focus on clean design and performance, I blend technical skills with creative design to deliver engaging digital solutions.
-
+                            I am a passionate Full stack Developer and UI/UX Engineer with strong experience in frontend development and UI/UX design, creating responsive and user-friendly web applications. I am also learning and building backend applications using Spring Boot  and I am eager to expand my full stack skills while contributing to real-world projects.
                         </p>
 
                         <div className="stats-grid">

@@ -853,6 +853,10 @@ body {
   background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
   color: white;
 }
+.nav-link.active {
+  color: #ff6b35;
+  background: rgba(255, 107, 53, 0.1);
+}
 
 .code-btn {
   background: rgba(255, 255, 255, 0.1);
