@@ -26,7 +26,7 @@ export function About() {
                         </h2>
 
                         <p className="description-text" style={{ marginBottom: "3rem" }}>
-                            I am a passionate Full stack Developer and UI/UX Engineer with strong experience in frontend development and UI/UX design, creating responsive and user-friendly web applications. I am also learning and building backend applications using Spring Boot  and I am eager to expand my full stack skills while contributing to real-world projects.
+                            I am a passionate Front End Developer and UI/UX Engineer with strong experience in frontend development and UI/UX design, creating responsive and user-friendly web applications. I am also learning and building backend applications using Spring Boot  and I am eager to expand my full stack skills while contributing to real-world projects.
                         </p>
 
                         <div className="stats-grid">

@@ -71,7 +71,7 @@ export function Hero() {
                             I'm <span className="text-orange">CHAMOD</span>
                         </h1>
                         <p className="subtitle">
-                           Full Stack Developer & <br />
+                           Front End Developer & <br />
                             &emsp;User Interface Designer
                         </p>
 
@@ -95,8 +95,7 @@ export function Hero() {
                             UI / UX designer
                         </div>
                         <p className="description-text">
-                            I'm Chamod Thejan, a passionate Full Stack Developer and UI Designer with a keen eye for detail and a drive to craft seamless, responsive, and user-friendly web experiences.end technologies.
-                        </p>
+                            I am a passionate FrontEnd Developer and UI/UX Engineer with strong experience in frontend development and UI/UX design, creating responsive and user-friendly web applications. I am also learning and building backend applications using Spring Boot , node JS.                        </p>
                         <a href={cvFile} download="Chamod_Thejan_CV.pdf" className="download-cv">
                             Download CV ↓
                         </a>
