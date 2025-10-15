@@ -1,5 +1,5 @@
 import aboutImg from "../assets/headshotmaster_image_1752300326757.png"
-import cvFile from "../assets/cv/Chamod Thejan CV.pdf";
+import cvFile from "../assets/cv/Chamod Thejan CV (1).pdf";
 
 
 export function About() {
