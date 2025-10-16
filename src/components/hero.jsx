@@ -72,7 +72,7 @@ export function Hero() {
                         </h1>
                         <p className="subtitle">
                            Front End Developer & <br />
-                            &emsp;User Interface Designer
+                            &emsp;UI / UX  Designer
                         </p>
 
                         <button className="btn btn-primary">Hire Me</button>
