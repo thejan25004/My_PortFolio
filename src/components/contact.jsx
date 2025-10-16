@@ -303,7 +303,7 @@ export function Contact() {
                 </div>
 
                                  <div className="footer">
-                                     <p>No 174 c 21, Cityterrance BatapolaRoad Thalqasgoda Ambalangoda</p>
+                                     <p>No 174 c 21, Cityterrance BatapolaRoad Thalgasgoda Ambalangoda</p>
                                  </div>
             </div>
         </section>
