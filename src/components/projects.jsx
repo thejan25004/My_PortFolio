@@ -26,14 +26,7 @@ import blueFieldDesign from "../assets/BlueField.png"
 import donelyDesign from "../assets/donelyOpenClaa.png"
 import freshBiteDesign from "../assets/FreshBiteResturant.png"
 
-
-
-
-
-export function Projects() {
-    const [activeFilter, setActiveFilter] = useState('all');
-    const [visibleProjects, setVisibleProjects] = useState([]);
-    const projects = [
+const PROJECTS = [
         {
             id: 1,
             title: "Super Dot Printers",
@@ -361,21 +354,24 @@ export function Projects() {
             sourceCode: "https://www.figma.com",
             isDesign: true,
         },
-    ];
+];
 
-
-    const categories = [
+const CATEGORIES = [
         { id: 'all', name: 'All Projects', icon: '🎯' },
         { id: 'web', name: 'Web Apps', icon: '🌐' },
         { id: 'mobile', name: 'Mobile', icon: '📱' },
         { id: 'enterprise', name: 'Enterprise', icon: '🏢' },
         { id: 'design', name: 'Design', icon: '📱💻' }
-    ];
+];
+
+export function Projects() {
+    const [activeFilter, setActiveFilter] = useState('all');
+    const [visibleProjects, setVisibleProjects] = useState([]);
 
     useEffect(() => {
         const filteredProjects = activeFilter === 'all'
-            ? projects
-            : projects.filter(project => project.category === activeFilter);
+            ? PROJECTS
+            : PROJECTS.filter(project => project.category === activeFilter);
 
         setVisibleProjects(filteredProjects);
     }, [activeFilter]);
@@ -407,7 +403,7 @@ export function Projects() {
 
                 {/* Filter Tabs */}
                 <div className="filter-tabs">
-                    {categories.map((category) => (
+                    {CATEGORIES.map((category) => (
                         <button
                             key={category.id}
                             onClick={() => setActiveFilter(category.id)}
