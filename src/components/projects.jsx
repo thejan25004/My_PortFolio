@@ -344,7 +344,7 @@ export function Projects() {
             technologies: ["Figma", "UI/UX", "POS Design", "Design System"],
             featured: true,
             color: "from-emerald-500 to-teal-600",
-            liveUrl: "#",
+            liveUrl: "",
             sourceCode: "https://www.figma.com",
             isDesign: true,
         },
@@ -357,7 +357,7 @@ export function Projects() {
             technologies: ["Figma", "UI/UX", "Web Design", "Responsive"],
             featured: false,
             color: "from-violet-500 to-indigo-600",
-            liveUrl: "#",
+            liveUrl: "",
             sourceCode: "https://www.figma.com",
             isDesign: true,
         },
@@ -442,11 +442,12 @@ export function Projects() {
                                         <div className="overlay-content">
                                             <button
                                                 className="view-btn"
-                                                onClick={() => {
-                                                    if (project.liveUrl && project.liveUrl !== "#") {
-                                                        window.open(project.liveUrl, "_blank")
-                                                    }
-                                                }}
+                                                // onClick={() => {
+                                                //     if (project.liveUrl && project.liveUrl !== "#") {
+                                                //         window.open(project.liveUrl, "_blank")
+                                                //     }
+                                                // }}
+                                                onClick={() => window.open(project.liveUrl, "_blank")}
                                             >
                                                 <span>{project.isDesign ? "🎨" : "👁️"}</span>
                                                 {project.isDesign ? "View Preview" : "View Live"}
@@ -497,13 +498,13 @@ export function Projects() {
                                         </div>
                                         <button
                                             className="learn-more-btn"
-                                            onClick={() => {
-                                                const url = project.isDesign
-                                                    ? (project.liveUrl !== "#" ? project.liveUrl : project.sourceCode)
-                                                    : "https://github.com/thejan25004"
-                                                window.open(url, "_blank")
-                                            }}
-                                        >
+                                            // onClick={() => {
+                                            //     const url = project.isDesign
+                                            //         ? (project.liveUrl !== "#" ? project.liveUrl : project.sourceCode)
+                                            //         : "https://github.com/thejan25004"
+                                            //     window.open(url, "_blank")
+                                            // }}
+                                            onClick={() => window.open("https://github.com/thejan25004", "_blank")}                                        >
                                             <span>{project.isDesign ? "View Design" : "Learn More"}</span>
                                             <span className="arrow">→</span>
                                         </button>
