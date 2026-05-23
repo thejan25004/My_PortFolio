@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Instagram, ExternalLink } from 'lucide-react';
 
 const Portfolio = () => {
-    const [activeProject, setActiveProject] = useState(0);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -256,16 +255,16 @@ const Portfolio = () => {
                             <div className="mt-8">
                                 <p className="text-gray-400 mb-4">Follow Me</p>
                                 <div className="flex space-x-4">
-                                    <a href="#" className="bg-orange-500 hover:bg-orange-600 p-3 rounded-full transition-colors duration-300">
+                                    <a href="https://github.com/thejan25004" target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 p-3 rounded-full transition-colors duration-300" aria-label="GitHub">
                                         <Github size={20} />
                                     </a>
-                                    <a href="#" className="bg-orange-500 hover:bg-orange-600 p-3 rounded-full transition-colors duration-300">
+                                    <a href="https://www.linkedin.com/in/chamod-thejan-582483319/" target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 p-3 rounded-full transition-colors duration-300" aria-label="LinkedIn">
                                         <Linkedin size={20} />
                                     </a>
-                                    <a href="#" className="bg-orange-500 hover:bg-orange-600 p-3 rounded-full transition-colors duration-300">
+                                    <a href="https://x.com/ChamodThejan" target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 p-3 rounded-full transition-colors duration-300" aria-label="X">
                                         <Twitter size={20} />
                                     </a>
-                                    <a href="#" className="bg-orange-500 hover:bg-orange-600 p-3 rounded-full transition-colors duration-300">
+                                    <a href="https://www.youtube.com/@chamodthejan4692" target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 p-3 rounded-full transition-colors duration-300" aria-label="YouTube">
                                         <Instagram size={20} />
                                     </a>
                                 </div>
