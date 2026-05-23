@@ -1,10 +1,10 @@
 "use client"
-import homePage from "../assets/ChatGPT Image Jul 12, 2025, 12_40_30 PM.png"
+import homePage from "../assets/mymy.png"
 
 
 
 import { useEffect, useState } from "react"
-import cvFile from "../assets/cv/Chamod Thejan CV (1).pdf";
+import cvFile from "../assets/cv/Chamod Thejan (2).pdf";
 
 export function Hero() {
     const [scrollY, setScrollY] = useState(0)
@@ -96,7 +96,7 @@ export function Hero() {
                         </div>
                         <p className="description-text">
                             I am a passionate FrontEnd Developer and UI/UX Engineer with strong experience in frontend development and UI/UX design, creating responsive and user-friendly web applications. I am also learning and building backend applications using Spring Boot , node JS.                        </p>
-                        <a href={cvFile} download="Chamod Thejan CV (1).pdf" className="download-cv">
+                        <a href={cvFile} download="Chamod Thejan (2).pdf" className="download-cv">
                             Download CV ↓
                         </a>
 

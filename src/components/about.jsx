@@ -1,4 +1,4 @@
-import aboutImg from "../assets/headshotmaster_image_1752300326757.png"
+import aboutImg from "../assets/ChatGPT Image May 21, 2026, 03_42_02 PM.png"
 import cvFile from "../assets/cv/Chamod Thejan CV (1).pdf";
 
 

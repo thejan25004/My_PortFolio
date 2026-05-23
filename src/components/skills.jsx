@@ -8,10 +8,10 @@ export function Skills() {
             name: "GITHUB",
             icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg",
         },
-        {
-            name: "MONGO DB",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-        },
+        // {
+        //     name: "MONGO DB",
+        //     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+        // },
         {
             name: "JAVA",
             icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
@@ -32,10 +32,10 @@ export function Skills() {
             name: "HTML",
             icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
         },
-        {
-            name: "PYTHON",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-        },
+        // {
+        //     name: "PYTHON",
+        //     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+        // },
         {
             name: "SQL",
             icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
@@ -48,10 +48,10 @@ export function Skills() {
             name: "TAILWIND CSS",
             icon: "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
         },
-        {
-            name: "SPRING BOOT",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
-        },
+        // {
+        //     name: "SPRING BOOT",
+        //     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
+        // },
         {
             name: "MYSQL",
             icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
@@ -71,6 +71,22 @@ export function Skills() {
         {
             name: "MOCKUPS",
             icon: "https://cdn-icons-png.flaticon.com/512/1829/1829591.png", // mockup icon
+        },
+        {
+            name: "CANVA",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg",
+        },
+        {
+            name: "UIZARD",
+            icon: "https://uizard.io/favicon.ico",
+        },
+        {
+            name: "LOVEABLE AI",
+            icon: "https://lovable.dev/favicon.ico",
+        },
+        {
+            name: "STITCH",
+            icon: "https://pbs.twimg.com/profile_images/2037662082771116032/ZQ1T1io3_400x400.png",
         },
     ];
 

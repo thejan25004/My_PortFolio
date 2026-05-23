@@ -22,6 +22,10 @@ import a3 from "../assets/a3.jpg"
 import a4 from "../assets/a4.jpg"
 import layered from "../assets/1_outAFjNGSLzi98PEER_b8g.png"
 import assignment from "../assets/a5.jpg"
+import blueFieldDesign from "../assets/BlueField.png"
+import donelyDesign from "../assets/donelyOpenClaa.png"
+import freshBiteDesign from "../assets/FreshBiteResturant.png"
+
 
 
 
@@ -33,7 +37,7 @@ export function Projects() {
         {
             id: 1,
             title: "Super Dot Printers",
-            description: "Software Development Project with backend and frontend implementation.",
+            description: " Super Dot Printers is a web application that allows customers to easily place and track bulk printing orders for large companies. The platform streamlines the process of ordering printed materials such as bills, covers, tea bag covers, stickers, books, calendars, and other files. The backend was built with Spring Boot.",
             image: SDP,
             category: "enterprise",
             technologies: ["Spring Boot", "React", "MySQL", "Docker"],
@@ -45,7 +49,7 @@ export function Projects() {
         {
             id: 2,
             title: "FRESHBITE RESTURANTS",
-            description: "Modern car rental platform with real-time availability, GPS tracking, and seamless booking experience.",
+            description: "Developed a fully responsive restaurant website frontend using HTML, CSS, Bootstrap, and JavaScript, featuring modern UI components for menu display, reservations, and customer engagement. Focused on clean design, mobile responsiveness, and enhanced user experience.",
             image: freshBite,
             category: "web",
             technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
@@ -57,7 +61,7 @@ export function Projects() {
         {
             id: 3,
             title: "RAMBO GYM",
-            description: "Fitness web app for workout tracking, schedules, and member management.",
+            description: "Rambo Gym  is a responsive, single-page gym web interface built using HTML, CSS, and JavaScript. The project includes multiple views such as home, trainer profiles, meal plans, workout schedules, and user account pages, featuring intuitive navigation and clean design for an engaging user experience.",
             image: ramboGym,
             category: "web",
             technologies: ["Vue.js", "Firebase", "WebRTC", "Three.js"],
@@ -69,7 +73,7 @@ export function Projects() {
         {
             id: 4,
             title: "HYBRID HUB",
-            description: "Car service management system for appointments, technicians, and service history.",
+            description: "HYBRIDHUB is a Car Service Management System built with Spring Boot to simplify and automate car service center operations. It includes features like service booking, customer and technician management, secure login, payment handling, and real-time dashboards through a user-friendly web interface.",
             image: hybridHub,
             category: "enterprise",
             technologies: ["Angular", "Spring Boot", "PostgreSQL", "Docker"],
@@ -81,7 +85,7 @@ export function Projects() {
         {
             id: 5,
             title: "Mobile Application Of Travel Planner ",
-            description: "Secure banking app with biometric authentication and live transaction monitoring.",
+            description: "A modern, user-friendly travel planning application that allows users to create personalized itineraries, add destinations, set schedules, and organize activities. Built with a responsive and visually appealing interface, the project demonstrates frontend development skills, UI/UX design, and interactive web application features.",
             image: mobileBank,
             category: "mobile",
             technologies: ["React Native", "Node.js", "MongoDB", "Stripe"],
@@ -105,7 +109,7 @@ export function Projects() {
         {
             id: 7,
             title: "FUTURE STORE Mobile Center",
-            description: "E-commerce store with analytics and product management.",
+            description: "FutureStore is a Java Servlet–based e-commerce web application with a clean and responsive frontend. The project is developed using Java Servlets for backend logic, along with HTML, CSS, and JavaScript for the user interface, enabling smooth product browsing and user interaction.",
             image: futureStore,
             category: "enterprise",
             technologies: ["React", "Express", "MySQL", "Chart.js"],
@@ -117,7 +121,7 @@ export function Projects() {
         {
             id: 8,
             title: "Library Club FrontEnd",
-            description: "Library management frontend for book lending and reader tracking.",
+            description: "Library management frontend for book lending and reader tracking.The application allows users to browse, manage, and interact with library resources, including searching for books, managing accounts, and viewing lending history. ",
             image: library,
             category: "web",
             technologies: ["React", "TypeScript", "Tailwind"],
@@ -129,7 +133,7 @@ export function Projects() {
         {
             id: 9,
             title: "Backend Node",
-            description: "Coursework backend built with Node.js and Express.",
+            description: "The backend handles API requests, user authentication, and database interactions using MongoDB, ensuring data integrity and security. The project emphasizes responsive design, modular component architecture, and a smooth user experience, demonstrating skills in both frontend and backend development.",
             image: nodeBack,
             category: "backend",
             technologies: ["Node.js", "Express", "MongoDB"],
@@ -153,7 +157,7 @@ export function Projects() {
         {
             id: 11,
             title: "Smart Parking Management System",
-            description: "Parking slots monitoring and vehicle entry management system.",
+            description: "A microservices-based application built with Spring Boot and a web frontend. Enables users to register, find and book parking spaces, manage payments, and view history, providing a scalable and user-friendly solution for parking management.",
             image: parking,
             category: "enterprise",
             technologies: ["Java", "Spring Boot", "MySQL"],
@@ -317,7 +321,46 @@ export function Projects() {
             color: "from-blue-500 to-cyan-700",
             liveUrl: "https://your-live-project-url.com",
             sourceCode: "https://github.com/thejan25004/Layered-Architecture-Project"
-        }
+        },
+        {
+            id: 25,
+            title: "FreshBite Restaurant Design",
+            description: "Figma UI/UX design for a modern restaurant platform , Developed a fully responsive restaurant website frontend using HTML, CSS, Bootstrap, and JavaScript, featuring modern UI components for menu display, reservations, and customer engagement. Focused on clean design, mobile responsiveness, and enhanced user experience.",
+            image: freshBiteDesign,
+            category: "design",
+            technologies: ["Figma", "UI/UX", "Wireframes", "Prototyping"],
+            featured: true,
+            color: "from-amber-500 to-orange-600",
+            liveUrl: "/pages/freshBite.html",
+            sourceCode: "https://www.figma.com",
+            isDesign: true,
+        },
+        {
+            id: 26,
+            title: "BlueField Tea Factory POS System Design",
+            description: "Point-of-sale interface design for tea factory retail — dashboard, inventory, billing screens, and staff workflows.",
+            image: blueFieldDesign,
+            category: "design",
+            technologies: ["Figma", "UI/UX", "POS Design", "Design System"],
+            featured: true,
+            color: "from-emerald-500 to-teal-600",
+            liveUrl: "#",
+            sourceCode: "https://www.figma.com",
+            isDesign: true,
+        },
+        {
+            id: 27,
+            title: "Donely — OpenClaw Web Design",
+            description: "Landing page and web app UI design for Donely OpenClaw — clean layout, onboarding flow, and component library.",
+            image: donelyDesign,
+            category: "design",
+            technologies: ["Figma", "UI/UX", "Web Design", "Responsive"],
+            featured: false,
+            color: "from-violet-500 to-indigo-600",
+            liveUrl: "#",
+            sourceCode: "https://www.figma.com",
+            isDesign: true,
+        },
     ];
 
 
@@ -325,7 +368,8 @@ export function Projects() {
         { id: 'all', name: 'All Projects', icon: '🎯' },
         { id: 'web', name: 'Web Apps', icon: '🌐' },
         { id: 'mobile', name: 'Mobile', icon: '📱' },
-        { id: 'enterprise', name: 'Enterprise', icon: '🏢' }
+        { id: 'enterprise', name: 'Enterprise', icon: '🏢' },
+        { id: 'design', name: 'Design', icon: '📱💻' }
     ];
 
     useEffect(() => {
@@ -398,17 +442,21 @@ export function Projects() {
                                         <div className="overlay-content">
                                             <button
                                                 className="view-btn"
-                                                onClick={() => window.open(project.liveUrl, "_blank")}
+                                                onClick={() => {
+                                                    if (project.liveUrl && project.liveUrl !== "#") {
+                                                        window.open(project.liveUrl, "_blank")
+                                                    }
+                                                }}
                                             >
-                                                <span>👁️</span>
-                                                View Live
+                                                <span>{project.isDesign ? "🎨" : "👁️"}</span>
+                                                {project.isDesign ? "View Preview" : "View Live"}
                                             </button>
                                             <button
                                                 className="code-btn"
                                                 onClick={() => window.open(project.sourceCode, "_blank")}
                                             >
-                                                <span>💻</span>
-                                                Source Code
+                                                <span>{project.isDesign ? "📐" : "💻"}</span>
+                                                {project.isDesign ? "Figma File" : "Source Code"}
                                             </button>
                                         </div>
                                     </div>
@@ -449,9 +497,14 @@ export function Projects() {
                                         </div>
                                         <button
                                             className="learn-more-btn"
-                                            onClick={() => window.open("https://github.com/thejan25004", "_blank")}
+                                            onClick={() => {
+                                                const url = project.isDesign
+                                                    ? (project.liveUrl !== "#" ? project.liveUrl : project.sourceCode)
+                                                    : "https://github.com/thejan25004"
+                                                window.open(url, "_blank")
+                                            }}
                                         >
-                                            <span>Learn More</span>
+                                            <span>{project.isDesign ? "View Design" : "Learn More"}</span>
                                             <span className="arrow">→</span>
                                         </button>
 
