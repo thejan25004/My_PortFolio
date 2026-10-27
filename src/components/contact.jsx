@@ -1,5 +1,5 @@
 import { useState } from "react"
-import emailjs from "emailjs-com"
+import emailjs from "@emailjs/browser"
 
 export function Contact() {
     const [formData, setFormData] = useState({
@@ -22,10 +22,10 @@ export function Contact() {
 
         emailjs
             .send(
-                "service_f5hgwhd",
-                "template_lk7wx5z",
+                process.env.REACT_APP_EMAILJS_SERVICE_ID,
+                process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
                 formData,
-                "SAEyIZwCT9yv8H0l6"
+                process.env.REACT_APP_EMAILJS_PUBLIC_KEY
             )
             .then(
                 () => {
@@ -33,8 +33,8 @@ export function Contact() {
                     setFormData({ name: "", email: "", phone: "", subject: "", message: "" })
                 },
                 (error) => {
-                    alert("❌ Failed to send message. Try again.")
-                    console.error(error)
+                    console.error("EmailJS error:", error)
+                    alert(`❌ Failed to send message. Error: ${error.text || error.status || "Unknown error"}. Please try emailing directly at thejanchamod9@gmail.com`)
                 }
             )
     }

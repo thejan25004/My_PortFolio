@@ -62,7 +62,7 @@ export function Hero() {
                             I'm <span className="text-orange">CHAMOD</span>
                         </h1>
                         <p className="subtitle">
-                           Front End Developer & <br />
+                        Software Developer & <br />
                             &emsp;UI / UX  Designer
                         </p>
 
@@ -81,12 +81,12 @@ export function Hero() {
                         <div className="location-text">
                             Based In Sri Lanka
                             <br />
-                            i'm developer and
+                            I'm Software Developer and
                             <br />
                             UI / UX designer
                         </div>
                         <p className="description-text">
-                            I am a passionate FrontEnd Developer and UI/UX Engineer with strong experience in frontend development and UI/UX design, creating responsive and user-friendly web applications. I am also learning and building backend applications using Spring Boot , node JS.                        </p>
+                        I’m a Computing Professional with a completed HND in Software Engineering from IJSE, with knowledge and practical experience in UI/UX Design, Database Management, API Integration, and Software & web Development. Through real-world projects, I’ve gained hands-on experience in UI Design, Application Development, Functionality Improvements, Testing, and Debugging.                        </p>
                         <a href={cvFile} download="Chamod Thejan (2).pdf" className="download-cv">
                             Download CV ↓
                         </a>

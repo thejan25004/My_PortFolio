@@ -1,4 +1,4 @@
-import aboutImg from "../assets/ChatGPT Image May 21, 2026, 03_42_02 PM.png"
+import aboutImg from "../assets/Curly-Haired Professional in Black Suit.png"
 import cvFile from "../assets/cv/Chamod Thejan CV (1).pdf";
 
 
@@ -26,7 +26,9 @@ export function About() {
                         </h2>
 
                         <p className="description-text" style={{ marginBottom: "3rem" }}>
-                            I am a passionate Front End Developer and UI/UX Engineer with strong experience in frontend development and UI/UX design, creating responsive and user-friendly web applications. I am also learning and building backend applications using Spring Boot  and I am eager to expand my full stack skills while contributing to real-world projects.
+                        I’m a passionate Computing Professional with a completed Higher National Diploma (HND) in Software Engineering from IJSE and hands-on experience in web and software application development. I enjoy building user-friendly, responsive, and functional digital solutions while continuously exploring new technologies.
+
+My expertise includes frontend development, UI/UX design, database management, API integration, and software development. I’m passionate about solving problems, improving user experiences, and collaborating with teams to turn ideas into practical solutions..
                         </p>
 
                         <div className="stats-grid">

@@ -108,7 +108,7 @@ export function Navigation() {
             <img src={brandMark} alt="Chamod De Silva" className="nav-glass-brand-img" />
             <div className="nav-glass-brand-text">
               <p className="nav-glass-brand-title">Chamod De Silva</p>
-              <p className="nav-glass-brand-subtitle">Frontend Developer & UI/UX Designer</p>
+              <p className="nav-glass-brand-subtitle">Software Developer & UI/UX Designer</p>
             </div>
           </a>
 
