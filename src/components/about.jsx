@@ -1,5 +1,5 @@
 import aboutImg from "../assets/Curly-Haired Professional in Black Suit.png"
-import cvFile from "../assets/cv/Chamod Thejan CV (1).pdf";
+import cvFile from "../assets/cv/CTSE.pdf";
 
 
 export function About() {
