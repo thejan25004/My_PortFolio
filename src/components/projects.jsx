@@ -9,7 +9,7 @@ import SDP from "../assets/Screenshot 2025-09-06 at 7.33.41 PM.png"
 import library from "../assets/library.png"
 import nodeBack from "../assets/nodeBack.png"
 import seoul from "../assets/433119029-3103938b-e057-46fe-a308-fac459433728.png"
-import reactLesson from "../assets/reactLesson.jpeg"
+// import reactLesson from "../assets/reactLesson.jpeg"
 import parking from "../assets/parking.png"
 import chat from "../assets/chat.png"
 // import orm from "../assets/orm.png"
@@ -38,7 +38,8 @@ const PROJECTS = [
         description: "An AI agent hosting and management platform built around OpenClaw, enabling users to deploy and run AI assistants on secure, managed infrastructure. The platform supports automated workflows, multi-channel integrations, persistent memory, real-time monitoring, and centralized agent management, helping teams run AI agents reliably without managing complex server infrastructure.",
         image: donelyOpenClaw,
         category: "enterprise",
-        technologies: ["OpenClaw", "AI Agents", "LLM Integration", "API Integration", "React", "TypeScript"],            featured: false,
+        technologies: ["OpenClaw", "AI Agents", "LLM Integration", "API Integration", "React", "TypeScript"],
+        featured: false,
         color: "from-violet-500 to-indigo-600",
         liveUrl: "https://donely.ai/openclaw",
         // sourceCode: "https://www.figma.com/proto/5jzc1QNaNS9f6lqJk73xzf/Donely-OpenClaw?node-id=1-256&p=f&t=g1rPeC7cRkHygqsA-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A256",
@@ -50,381 +51,400 @@ const PROJECTS = [
         description: "An AI-powered desktop application that automates repetitive computer tasks using natural language instructions. It interacts with the screen, mouse, and keyboard to perform tasks such as file management, form filling, data transfer, and email-related workflows, helping users save time and improve productivity.",
         image: donelyDesktopApp,
         category: "enterprise",
-        technologies: ["Electron", "React", "TypeScript", "Vite", "UI/UX", "Desktop Development"],            featured: false,
+        technologies: ["Electron", "React", "TypeScript", "Vite", "UI/UX", "Desktop Development"],
+        featured: false,
         color: "from-violet-500 to-indigo-600",
-        liveUrl: "https://www.figma.com/proto/5jzc1QNaNS9f6lqJk73xzf/Donely-OpenClaw?node-id=1-256&p=f&t=gVjetAmkICUwHmuq-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A256",
+        // liveUrl removed
         sourceCode: "https://www.figma.com/proto/jTJgyTYbmPjsn4P5Nr7gby/Donely.Ai?node-id=6373-3439&p=f&t=B59f3QdsLo3lx9pN-0&scaling=min-zoom&content-scaling=fixed&page-id=6373%3A3072",
         isDesign: true,
     },
-        {
-            id: 1,
-            title: "Super Dot Printers",
-            description: " Super Dot Printers is a web application that allows customers to easily place and track bulk printing orders for large companies. The platform streamlines the process of ordering printed materials such as bills, covers, tea bag covers, stickers, books, calendars, and other files. The backend was built with Spring Boot.",
-            image: SDP,
-            category: "enterprise",
-            technologies: ["Spring Boot", "React", "MySQL", "Docker"],
-            featured: true,
-            color: "from-blue-600 to-indigo-700",
-            liveUrl: "https://cinematic-print-visions.vercel.app/",
-            sourceCode: "https://github.com/thejan25004/Super-Dot-Printers"
-        },        {
-            id: 4,
-            title: "HYBRID HUB",
-            description: "HYBRIDHUB is a Car Service Management System built with Spring Boot to simplify and automate car service center operations. It includes features like service booking, customer and technician management, secure login, payment handling, and real-time dashboards through a user-friendly web interface.",
-            image: hybridHub,
-            category: "enterprise",
-            technologies: ["Angular", "Spring Boot", "PostgreSQL", "Docker"],
-            featured: false,
-            color: "from-orange-500 to-red-600",
-            liveUrl: "https://youtu.be/YzddxlsjSGE?si=CW7KgUVTFyp6bMwD",
-            sourceCode: "https://github.com/thejan25004/HybridHub"
-        },
-        {
-            id: 5,
-            title: "Mobile Application Of Travel Planner ",
-            description: "A modern, user-friendly travel planning application that allows users to create personalized itineraries, add destinations, set schedules, and organize activities. Built with a responsive and visually appealing interface, the project demonstrates frontend development skills, UI/UX design, and interactive web application features.",
-            image: mobileBank,
-            category: "mobile",
-            technologies: ["React Native", "Node.js", "MongoDB", "Stripe"],
-            featured: false,
-            color: "from-purple-500 to-pink-600",
-            liveUrl: "https://youtu.be/dWhyCb51Cm0?si=uFMD_kZ_um2Wyu75",
-            sourceCode: "https://github.com/thejan25004/Simple-Travel-Planner"
-        },
-        {
-            id: 7,
-            title: "FUTURE STORE Mobile Center",
-            description: "FutureStore is a Java Servlet–based e-commerce web application with a clean and responsive frontend. The project is developed using Java Servlets for backend logic, along with HTML, CSS, and JavaScript for the user interface, enabling smooth product browsing and user interaction.",
-            image: futureStore,
-            category: "enterprise",
-            technologies: ["React", "Express", "MySQL", "Chart.js"],
-            featured: false,
-            color: "from-teal-500 to-green-600",
-            liveUrl: "https://youtu.be/HApSf4TzHKM?si=oVJV5H3HwjzznuGQ",
-            sourceCode: "https://github.com/thejan25004/FutureStore"
-        },
-
-        {
-            id: 8,
-            title: "Library Club FrontEnd",
-            description: "Library management frontend for book lending and reader tracking.The application allows users to browse, manage, and interact with library resources, including searching for books, managing accounts, and viewing lending history. ",
-            image: library,
-            category: "web",
-            technologies: ["React", "TypeScript", "Tailwind"],
-            featured: false,
-            color: "from-pink-500 to-rose-600",
-            liveUrl: "https://your-live-project-url.com",
-            sourceCode: "https://github.com/thejan25004/Library-Club-FrontEnd"
-        },
-        {
-            id: 9,
-            title: "Backend Node",
-            description: "The backend handles API requests, user authentication, and database interactions using MongoDB, ensuring data integrity and security. The project emphasizes responsive design, modular component architecture, and a smooth user experience, demonstrating skills in both frontend and backend development.",
-            image: nodeBack,
-            category: "backend",
-            technologies: ["Node.js", "Express", "MongoDB"],
-            featured: false,
-            color: "from-yellow-500 to-orange-600",
-            liveUrl: "https://your-live-project-url.com",
-            sourceCode: "https://github.com/thejan25004/Backend-Node"
-        },
-        {
-            id: 11,
-            title: "Smart Parking Management System",
-            description: "A microservices-based application built with Spring Boot and a web frontend. Enables users to register, find and book parking spaces, manage payments, and view history, providing a scalable and user-friendly solution for parking management.",
-            image: parking,
-            category: "enterprise",
-            technologies: ["Java", "Spring Boot", "MySQL"],
-            featured: false,
-            color: "from-cyan-500 to-teal-600",
-            liveUrl: "https://your-live-project-url.com",
-            sourceCode: "https://github.com/thejan25004/Smart-Parking-Management-System"
-        },
-        {
-            id: 12,
-            title: "Chat Application",
-            description: "Real-time chat app with WebSocket and authentication.",
-            image: chat,
-            category: "web",
-            technologies: ["React", "Socket.io", "Node.js"],
-            featured: false,
-            color: "from-lime-500 to-emerald-600",
-            liveUrl: "https://your-live-project-url.com",
-            sourceCode: "https://github.com/thejan25004/ChatApplication"
-        },
-
-        {
-            id: 23,
-            title: "Seoul Car Rental",
-            description: "Car rental system for vehicle reservations and management.",
-            image: seoul,
-            category: "enterprise",
-            technologies: ["JavaFX", "MySQL"],
-            featured: false,
-            color: "from-slate-500 to-gray-700",
-            liveUrl: "https://your-live-project-url.com",
-            sourceCode: "https://github.com/thejan25004/Seuol_car_Rental"
-        },
-        {
-            id: 24,
-            title: "Layered Architecture Project",
-            description: "Java project following layered architecture principles.",
-            image: layered,
-            category: "learning",
-            technologies: ["Java"],
-            featured: false,
-            color: "from-blue-500 to-cyan-700",
-            liveUrl: "https://your-live-project-url.com",
-            sourceCode: "https://github.com/thejan25004/Layered-Architecture-Project"
-        },
-        {
-            id: 26,
-            title: "BlueField Tea Factory POS System Design",
-            description: "Point-of-sale interface design for tea factory retail — dashboard, inventory, billing screens, and staff workflows.",
-            image: blueFieldDesign,
-            category: "design",
-            technologies: ["Figma", "UI/UX", "POS Design", "Design System"],
-            featured: true,
-            color: "from-emerald-500 to-teal-600",
-            liveUrl: "https://www.figma.com/proto/wMuLFEkzUQN2qF1ZzJsUgA/BlueField?node-id=1-4158&p=f&t=Fyr9C4uEW6XGLb9f-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
-            sourceCode: "https://www.figma.com",
-            isDesign: true,
-        },
-        {
-            id: 29,
-            title: "Luminal CRM Deals Dashboard Design",
-            description: "CRM dashboard UI design for Luminal, featuring sales deal tracking, pipeline management, performance analytics, and an intuitive interface for managing business opportunitie",
-            image: luminalCRMDealsDashboard,
-            category: "design",
-            technologies: ["Figma", "UI/UX Design", "CRM Dashboard", "Dashboard Design", "Prototyping"],
-            featured: false,
-            color: "from-emerald-500 to-teal-600",
-            liveUrl: "https://www.figma.com/proto/6yJShREGfBKElvgtHNj08n/CRM-Deals-Dashboard?node-id=2005-364&p=f&t=LkaxXcpaFrY8C3Oc-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
-            sourceCode: "https://www.figma.com/proto/6yJShREGfBKElvgtHNj08n/CRM-Deals-Dashboard?node-id=2005-364&p=f&t=LkaxXcpaFrY8C3Oc-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
-            isDesign: true,
-        },
-        {
-            id: 30,
-            title: "Meridian Wellness Luxury Editorial UI",
-            description: "Luxury wellness website UI design featuring an elegant editorial layout, refined typography, calming visual aesthetics, and a premium user experience.",
-            image: meridianWellnessDesign,
-            category: "design",
-            technologies: ["Figma", "UI/UX Design", "Web Design", "Editorial Design", "Design System"],
-            featured: false,
-            color: "from-emerald-500 to-teal-600",
-            liveUrl: "figma.com/proto/qkmxnrBllQUGzHfXgph6hg/Meridian-Wellness-Luxury-Editorial-UI?node-id=4010-710&t=ULNcQReyYrGIhlou-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&fuid=1331143157105702840",
-            sourceCode: "figma.com/proto/qkmxnrBllQUGzHfXgph6hg/Meridian-Wellness-Luxury-Editorial-UI?node-id=4010-710&t=ULNcQReyYrGIhlou-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&fuid=1331143157105702840",
-            isDesign: true,
-        },
-        {
-            id: 31,
-            title: "Nova E-Commerce App UI Design",
-            description: "Modern e-commerce mobile app UI design focused on seamless product discovery, intuitive navigation, product details, and a smooth shopping experience.",
-            image: novaEcommerceDesign,
-            category: "design",
-            technologies: ["Figma", "UI/UX Design", "Mobile App Design", "Prototyping", "Design System"],
-            featured: false,
-            color: "from-emerald-500 to-teal-600",
-            liveUrl: "https://www.figma.com/proto/fYdQ8j4E59wJUfJLIFUUuw/Nova-E-Commerce-App?node-id=1-870&p=f&t=aij8Opn47aEUpwc3-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A870",
-            sourceCode: "https://www.figma.com/proto/fYdQ8j4E59wJUfJLIFUUuw/Nova-E-Commerce-App?node-id=1-870&p=f&t=aij8Opn47aEUpwc3-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A870",
-            isDesign: true,
-        },
-        {
-            id: 2,
-            title: "FRESHBITE RESTURANTS",
-            description: "Developed a fully responsive restaurant website frontend using HTML, CSS, Bootstrap, and JavaScript, featuring modern UI components for menu display, reservations, and customer engagement. Focused on clean design, mobile responsiveness, and enhanced user experience.",
-            image: freshBite,
-            category: "web",
-            technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
-            featured: false,
-            color: "from-blue-500 to-purple-600",
-            liveUrl: "http://localhost:8000/3..html",
-            sourceCode: "https://github.com/thejan25004/Fresh_Bite"
-        },
-        {
-            id: 3,
-            title: "RAMBO GYM",
-            description: "Rambo Gym  is a responsive, single-page gym web interface built using HTML, CSS, and JavaScript. The project includes multiple views such as home, trainer profiles, meal plans, workout schedules, and user account pages, featuring intuitive navigation and clean design for an engaging user experience.",
-            image: ramboGym,
-            category: "web",
-            technologies: ["Vue.js", "Firebase", "WebRTC", "Three.js"],
-            featured: true,
-            color: "from-green-500 to-teal-600",
-            liveUrl: "https://youtu.be/QJhxlJxhFP8?si=QvOxu812m0Gn-0l6",
-            sourceCode: "https://github.com/thejan25004/Rambo-Gym"
-        },
-
-
-        {
-            id: 6,
-            title: "LOGICAL LOOP AI",
-            description: "AI-powered shopping experience with AR visualization and recommendations.",
-            image: ai,
-            category: "web",
-            technologies: ["Next.js", "Shopify", "GraphQL", "Tailwind"],
-            featured: true,
-            color: "from-indigo-500 to-blue-600",
-            liveUrl: "/pages/logicalLoopAI.html",
-            sourceCode: "https://github.com/thejan25004/LogicLoop-AI"
-        },
-
-        {
-            id: 10,
-            title: "React Lessons",
-            description: "Practice repository for React concepts and examples.",
-            image: reactLesson,
-            category: "learning",
-            technologies: ["React", "JavaScript"],
-            featured: false,
-            color: "from-gray-500 to-slate-600",
-            liveUrl: "https://your-live-project-url.com",
-            sourceCode: "https://github.com/thejan25004/ReactLessons"
-        },
-
-        // {
-        //     id: 13,
-        //     title: "ORM Coursework",
-        //     description: "Coursework on ORM concepts and Hibernate mapping.",
-        //     image: orm,
-        //     category: "learning",
-        //     technologies: ["Java", "Hibernate", "MySQL"],
-        //     featured: false,
-        //     color: "from-red-500 to-rose-600",
-        //     liveUrl: "https://your-live-project-url.com",
-        //     sourceCode: "https://github.com/thejan25004/ORM-CourseWork"
-        // },
-        // {
-        //     id: 14,
-        //     title: "IT Assignment 08",
-        //     description: "JavaScript DOM and events practice assignment.",
-        //     image: a1,
-        //     category: "learning",
-        //     technologies: ["JavaScript", "HTML", "CSS"],
-        //     featured: false,
-        //     color: "from-sky-500 to-indigo-600",
-        //     liveUrl: "https://your-live-project-url.com",
-        //     sourceCode: "https://github.com/thejan25004/IT-Assignment-08"
-        // },
-        {
-            id: 15,
-            title: "POS System",
-            description: "Point of Sale system with Bootstrap UI.",
-            image: pos,
-            category: "web",
-            technologies: ["Bootstrap", "JavaScript"],
-            featured: false,
-            color: "from-amber-500 to-orange-600",
-            liveUrl: "https://your-live-project-url.com",
-            sourceCode: "https://github.com/thejan25004/Pos-System"
-        },
-        // {
-        //     id: 16,
-        //     title: "IT Assignment 10",
-        //     description: "JS-based calculator assignment.",
-        //     image: cal,
-        //     category: "learning",
-        //     technologies: ["JavaScript", "HTML", "CSS"],
-        //     featured: false,
-        //     color: "from-green-500 to-teal-700",
-        //     liveUrl: "https://your-live-project-url.com",
-        //     sourceCode: "https://github.com/thejan25004/IT-Assignment-10"
-        // },
-        // {
-        //     id: 17,
-        //     title: "IT Assignment 09",
-        //     description: "Knight Rider effect animation using JS.",
-        //     image: nightRider,
-        //     category: "learning",
-        //     technologies: ["JavaScript", "CSS"],
-        //     featured: false,
-        //     color: "from-fuchsia-500 to-purple-600",
-        //     liveUrl: "https://your-live-project-url.com",
-        //     sourceCode: "https://github.com/thejan25004/IT-Assignment-09"
-        // },
-        {
-            id: 18,
-            title: "POS System Bootstrap",
-            description: "POS app styled fully with Bootstrap.",
-            image: pos,
-            category: "web",
-            technologies: ["Bootstrap", "JS"],
-            featured: false,
-            color: "from-indigo-500 to-purple-700",
-            liveUrl: "https://your-live-project-url.com",
-            sourceCode: "https://github.com/thejan25004/Pos_system_Boostrap"
-        },
-        // {
-        //     id: 19,
-        //     title: "IT Assignment 04",
-        //     description: "Basic Internet Technology coursework.",
-        //     image: a2,
-        //     category: "learning",
-        //     technologies: ["HTML", "CSS"],
-        //     featured: false,
-        //     color: "from-orange-500 to-yellow-600",
-        //     liveUrl: "https://your-live-project-url.com",
-        //     sourceCode: "https://github.com/thejan25004/Super-Dot-Printers"
-        // },
-        // {
-        //     id: 20,
-        //     title: "ORM Assignment 02",
-        //     description: "Second ORM assignment with Hibernate relations.",
-        //     image: a3 ,
-        //     category: "learning",
-        //     technologies: ["Java", "Hibernate"],
-        //     featured: false,
-        //     color: "from-emerald-500 to-green-700",
-        //     liveUrl: "https://your-live-project-url.com",
-        //     sourceCode: "https://github.com/thejan25004/ORM-Assignment-02"
-        // },
-        // {
-        //     id: 21,
-        //     title: "Assignment 03",
-        //     description: "IJSE class assignment project.",
-        //     image: a4,
-        //     category: "learning",
-        //     technologies: ["Java"],
-        //     featured: false,
-        //     color: "from-violet-500 to-indigo-700",
-        //     liveUrl: "https://your-live-project-url.com",
-        //     sourceCode: "https://github.com/thejan25004/Assignment-03"
-        // },
-        // {
-        //     id: 22,
-        //     title: "ORM Assignment",
-        //     description: "Another ORM coursework repo.",
-        //     image: assignment,
-        //     category: "learning",
-        //     technologies: ["Java", "Hibernate"],
-        //     featured: false,
-        //     color: "from-pink-500 to-fuchsia-700",
-        //     liveUrl: "https://your-live-project-url.com",
-        //     sourceCode: "https://github.com/thejan25004/ORM-Assignment"
-        // },
-
-        {
-            id: 25,
-            title: "FreshBite Restaurant Design",
-            description: "Figma UI/UX design for a modern restaurant platform , Developed a fully responsive restaurant website frontend using HTML, CSS, Bootstrap, and JavaScript, featuring modern UI components for menu display, reservations, and customer engagement. Focused on clean design, mobile responsiveness, and enhanced user experience.",
-            image: freshBiteDesign,
-            category: "design",
-            technologies: ["Figma", "UI/UX", "Wireframes", "Prototyping"],
-            featured: false,
-            color: "from-amber-500 to-orange-600",
-            liveUrl: "https://www.figma.com/proto/kx5Zf4tf7YxRRNm6Fj3qIu/FoodResturant?node-id=1-2",
-            sourceCode: "https://www.figma.com",
-            isDesign: true,
-        },
-  
-
+    {
+        id: 1,
+        title: "Super Dot Printers",
+        description: " Super Dot Printers is a web application that allows customers to easily place and track bulk printing orders for large companies. The platform streamlines the process of ordering printed materials such as bills, covers, tea bag covers, stickers, books, calendars, and other files. The backend was built with Spring Boot.",
+        image: SDP,
+        category: "enterprise",
+        technologies: ["Spring Boot", "React", "MySQL", "Docker"],
+        featured: true,
+        color: "from-blue-600 to-indigo-700",
+        liveUrl: "https://cinematic-print-visions.vercel.app/",
+        sourceCode: "https://github.com/thejan25004/Super-Dot-Printers"
+    },
+    {
+        id: 4,
+        title: "HYBRID HUB",
+        description: "HYBRIDHUB is a Car Service Management System built with Spring Boot to simplify and automate car service center operations. It includes features like service booking, customer and technician management, secure login, payment handling, and real-time dashboards through a user-friendly web interface.",
+        image: hybridHub,
+        category: "enterprise",
+        technologies: ["Angular", "Spring Boot", "PostgreSQL", "Docker"],
+        featured: false,
+        color: "from-orange-500 to-red-600",
+        liveUrl: "https://youtu.be/YzddxlsjSGE?si=CW7KgUVTFyp6bMwD",
+        sourceCode: "https://github.com/thejan25004/HybridHub"
+    },
+    {
+        id: 5,
+        title: "Mobile Application Of Travel Planner ",
+        description: "A modern, user-friendly travel planning application that allows users to create personalized itineraries, add destinations, set schedules, and organize activities. Built with a responsive and visually appealing interface, the project demonstrates frontend development skills, UI/UX design, and interactive web application features.",
+        image: mobileBank,
+        category: "mobile",
+        technologies: ["React Native", "Node.js", "MongoDB", "Stripe"],
+        featured: false,
+        color: "from-purple-500 to-pink-600",
+        liveUrl: "https://youtu.be/dWhyCb51Cm0?si=uFMD_kZ_um2Wyu75",
+        sourceCode: "https://github.com/thejan25004/Simple-Travel-Planner"
+    },
+    {
+        id: 7,
+        title: "FUTURE STORE Mobile Center",
+        description: "FutureStore is a Java Servlet–based e-commerce web application with a clean and responsive frontend. The project is developed using Java Servlets for backend logic, along with HTML, CSS, and JavaScript for the user interface, enabling smooth product browsing and user interaction.",
+        image: futureStore,
+        category: "enterprise",
+        technologies: ["React", "Express", "MySQL", "Chart.js"],
+        featured: false,
+        color: "from-teal-500 to-green-600",
+        liveUrl: "https://youtu.be/HApSf4TzHKM?si=oVJV5H3HwjzznuGQ",
+        sourceCode: "https://github.com/thejan25004/FutureStore"
+    },
+    {
+        id: 8,
+        title: "Library Club FrontEnd",
+        description: "Library management frontend for book lending and reader tracking.The application allows users to browse, manage, and interact with library resources, including searching for books, managing accounts, and viewing lending history. ",
+        image: library,
+        category: "web",
+        technologies: ["React", "TypeScript", "Tailwind"],
+        featured: false,
+        color: "from-pink-500 to-rose-600",
+        // liveUrl removed
+        sourceCode: "https://github.com/thejan25004/Library-Club-FrontEnd"
+    },
+    {
+        id: 9,
+        title: "Backend Node",
+        description: "The backend handles API requests, user authentication, and database interactions using MongoDB, ensuring data integrity and security. The project emphasizes responsive design, modular component architecture, and a smooth user experience, demonstrating skills in both frontend and backend development.",
+        image: nodeBack,
+        category: "backend",
+        technologies: ["Node.js", "Express", "MongoDB"],
+        featured: false,
+        color: "from-yellow-500 to-orange-600",
+        // liveUrl removed
+        sourceCode: "https://github.com/thejan25004/Backend-Node"
+    },
+    {
+        id: 11,
+        title: "Smart Parking Management System",
+        description: "A microservices-based application built with Spring Boot and a web frontend. Enables users to register, find and book parking spaces, manage payments, and view history, providing a scalable and user-friendly solution for parking management.",
+        image: parking,
+        category: "enterprise",
+        technologies: ["Java", "Spring Boot", "MySQL"],
+        featured: false,
+        color: "from-cyan-500 to-teal-600",
+        // liveUrl removed
+        sourceCode: "https://github.com/thejan25004/Smart-Parking-Management-System"
+    },
+    {
+        id: 12,
+        title: "Chat Application",
+        description: "Real-time chat app with WebSocket and authentication.",
+        image: chat,
+        category: "web",
+        technologies: ["React", "Socket.io", "Node.js"],
+        featured: false,
+        color: "from-lime-500 to-emerald-600",
+        // liveUrl removed
+        sourceCode: "https://github.com/thejan25004/ChatApplication"
+    },
+    {
+        id: 23,
+        title: "Seoul Car Rental",
+        description: "Car rental system for vehicle reservations and management.",
+        image: seoul,
+        category: "enterprise",
+        technologies: ["JavaFX", "MySQL"],
+        featured: false,
+        color: "from-slate-500 to-gray-700",
+        // liveUrl removed
+        sourceCode: "https://github.com/thejan25004/Seuol_car_Rental"
+    },
+    {
+        id: 24,
+        title: "Layered Architecture Project",
+        description: "Java project following layered architecture principles.",
+        image: layered,
+        category: "learning",
+        technologies: ["Java"],
+        featured: false,
+        color: "from-blue-500 to-cyan-700",
+        // liveUrl removed
+        sourceCode: "https://github.com/thejan25004/Layered-Architecture-Project"
+    },
+    {
+        id: 26,
+        title: "BlueField Tea Factory POS System Design",
+        description: "Point-of-sale interface design for tea factory retail — dashboard, inventory, billing screens, and staff workflows.",
+        image: blueFieldDesign,
+        category: "design",
+        technologies: ["Figma", "UI/UX", "POS Design", "Design System"],
+        featured: true,
+        color: "from-emerald-500 to-teal-600",
+        liveUrl: "https://www.figma.com/proto/wMuLFEkzUQN2qF1ZzJsUgA/BlueField?node-id=1-4158&p=f&t=Fyr9C4uEW6XGLb9f-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
+        sourceCode: "https://www.figma.com",
+        isDesign: true,
+    },
+    {
+        id: 29,
+        title: "Luminal CRM Deals Dashboard Design",
+        description: "CRM dashboard UI design for Luminal, featuring sales deal tracking, pipeline management, performance analytics, and an intuitive interface for managing business opportunitie",
+        image: luminalCRMDealsDashboard,
+        category: "design",
+        technologies: ["Figma", "UI/UX Design", "CRM Dashboard", "Dashboard Design", "Prototyping"],
+        featured: false,
+        color: "from-emerald-500 to-teal-600",
+        liveUrl: "https://www.figma.com/proto/6yJShREGfBKElvgtHNj08n/CRM-Deals-Dashboard?node-id=2005-364&p=f&t=LkaxXcpaFrY8C3Oc-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
+        sourceCode: "https://www.figma.com/proto/6yJShREGfBKElvgtHNj08n/CRM-Deals-Dashboard?node-id=2005-364&p=f&t=LkaxXcpaFrY8C3Oc-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
+        isDesign: true,
+    },
+    {
+        id: 30,
+        title: "Meridian Wellness Luxury Editorial UI",
+        description: "Luxury wellness website UI design featuring an elegant editorial layout, refined typography, calming visual aesthetics, and a premium user experience.",
+        image: meridianWellnessDesign,
+        category: "design",
+        technologies: ["Figma", "UI/UX Design", "Web Design", "Editorial Design", "Design System"],
+        featured: false,
+        color: "from-emerald-500 to-teal-600",
+        liveUrl: "figma.com/proto/qkmxnrBllQUGzHfXgph6hg/Meridian-Wellness-Luxury-Editorial-UI?node-id=4010-710&t=ULNcQReyYrGIhlou-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&fuid=1331143157105702840",
+        sourceCode: "figma.com/proto/qkmxnrBllQUGzHfXgph6hg/Meridian-Wellness-Luxury-Editorial-UI?node-id=4010-710&t=ULNcQReyYrGIhlou-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&fuid=1331143157105702840",
+        isDesign: true,
+    },
+    {
+        id: 31,
+        title: "Nova E-Commerce App UI Design",
+        description: "Modern e-commerce mobile app UI design focused on seamless product discovery, intuitive navigation, product details, and a smooth shopping experience.",
+        image: novaEcommerceDesign,
+        category: "design",
+        technologies: ["Figma", "UI/UX Design", "Mobile App Design", "Prototyping", "Design System"],
+        featured: false,
+        color: "from-emerald-500 to-teal-600",
+        liveUrl: "https://www.figma.com/proto/fYdQ8j4E59wJUfJLIFUUuw/Nova-E-Commerce-App?node-id=1-870&p=f&t=aij8Opn47aEUpwc3-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A870",
+        sourceCode: "https://www.figma.com/proto/fYdQ8j4E59wJUfJLIFUUuw/Nova-E-Commerce-App?node-id=1-870&p=f&t=aij8Opn47aEUpwc3-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A870",
+        isDesign: true,
+    },
+    {
+        id: 2,
+        title: "FRESHBITE RESTURANTS",
+        description: "Developed a fully responsive restaurant website frontend using HTML, CSS, Bootstrap, and JavaScript, featuring modern UI components for menu display, reservations, and customer engagement. Focused on clean design, mobile responsiveness, and enhanced user experience.",
+        image: freshBite,
+        category: "web",
+        technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
+        featured: false,
+        color: "from-blue-500 to-purple-600",
+        liveUrl: "http://localhost:8000/3..html",
+        sourceCode: "https://github.com/thejan25004/Fresh_Bite"
+    },
+    {
+        id: 3,
+        title: "RAMBO GYM",
+        description: "Rambo Gym  is a responsive, single-page gym web interface built using HTML, CSS, and JavaScript. The project includes multiple views such as home, trainer profiles, meal plans, workout schedules, and user account pages, featuring intuitive navigation and clean design for an engaging user experience.",
+        image: ramboGym,
+        category: "web",
+        technologies: ["Vue.js", "Firebase", "WebRTC", "Three.js"],
+        featured: true,
+        color: "from-green-500 to-teal-600",
+        liveUrl: "https://youtu.be/QJhxlJxhFP8?si=QvOxu812m0Gn-0l6",
+        sourceCode: "https://github.com/thejan25004/Rambo-Gym"
+    },
+    {
+        id: 6,
+        title: "LOGICAL LOOP AI",
+        description: "AI-powered shopping experience with AR visualization and recommendations.",
+        image: ai,
+        category: "web",
+        technologies: ["Next.js", "Shopify", "GraphQL", "Tailwind"],
+        featured: true,
+        color: "from-indigo-500 to-blue-600",
+        // liveUrl removed
+        sourceCode: "https://github.com/thejan25004/LogicLoop-AI"
+    },
+    // {
+    //     id: 10,
+    //     title: "React Lessons",
+    //     description: "Practice repository for React concepts and examples.",
+    //     image: reactLesson,
+    //     category: "learning",
+    //     technologies: ["React", "JavaScript"],
+    //     featured: false,
+    //     color: "from-gray-500 to-slate-600",
+    //     liveUrl: "https://your-live-project-url.com",
+    //     sourceCode: "https://github.com/thejan25004/ReactLessons"
+    // },
+    // {
+    //     id: 13,
+    //     title: "ORM Coursework",
+    //     description: "Coursework on ORM concepts and Hibernate mapping.",
+    //     image: orm,
+    //     category: "learning",
+    //     technologies: ["Java", "Hibernate", "MySQL"],
+    //     featured: false,
+    //     color: "from-red-500 to-rose-600",
+    //     liveUrl: "https://your-live-project-url.com",
+    //     sourceCode: "https://github.com/thejan25004/ORM-CourseWork"
+    // },
+    // {
+    //     id: 14,
+    //     title: "IT Assignment 08",
+    //     description: "JavaScript DOM and events practice assignment.",
+    //     image: a1,
+    //     category: "learning",
+    //     technologies: ["JavaScript", "HTML", "CSS"],
+    //     featured: false,
+    //     color: "from-sky-500 to-indigo-600",
+    //     liveUrl: "https://your-live-project-url.com",
+    //     sourceCode: "https://github.com/thejan25004/IT-Assignment-08"
+    // },
+    {
+        id: 15,
+        title: "POS System",
+        description: "Point of Sale system with Bootstrap UI.",
+        image: pos,
+        category: "web",
+        technologies: ["Bootstrap", "JavaScript"],
+        featured: false,
+        color: "from-amber-500 to-orange-600",
+        // liveUrl removed
+        sourceCode: "https://github.com/thejan25004/Pos-System"
+    },
+    // {
+    //     id: 16,
+    //     title: "IT Assignment 10",
+    //     description: "JS-based calculator assignment.",
+    //     image: cal,
+    //     category: "learning",
+    //     technologies: ["JavaScript", "HTML", "CSS"],
+    //     featured: false,
+    //     color: "from-green-500 to-teal-700",
+    //     liveUrl: "https://your-live-project-url.com",
+    //     sourceCode: "https://github.com/thejan25004/IT-Assignment-10"
+    // },
+    // {
+    //     id: 17,
+    //     title: "IT Assignment 09",
+    //     description: "Knight Rider effect animation using JS.",
+    //     image: nightRider,
+    //     category: "learning",
+    //     technologies: ["JavaScript", "CSS"],
+    //     featured: false,
+    //     color: "from-fuchsia-500 to-purple-600",
+    //     liveUrl: "https://your-live-project-url.com",
+    //     sourceCode: "https://github.com/thejan25004/IT-Assignment-09"
+    // },
+    {
+        id: 18,
+        title: "POS System Bootstrap",
+        description: "POS app styled fully with Bootstrap.",
+        image: pos,
+        category: "web",
+        technologies: ["Bootstrap", "JS"],
+        featured: false,
+        color: "from-indigo-500 to-purple-700",
+        // liveUrl removed
+        sourceCode: "https://github.com/thejan25004/Pos_system_Boostrap"
+    },
+    // {
+    //     id: 19,
+    //     title: "IT Assignment 04",
+    //     description: "Basic Internet Technology coursework.",
+    //     image: a2,
+    //     category: "learning",
+    //     technologies: ["HTML", "CSS"],
+    //     featured: false,
+    //     color: "from-orange-500 to-yellow-600",
+    //     liveUrl: "https://your-live-project-url.com",
+    //     sourceCode: "https://github.com/thejan25004/Super-Dot-Printers"
+    // },
+    // {
+    //     id: 20,
+    //     title: "ORM Assignment 02",
+    //     description: "Second ORM assignment with Hibernate relations.",
+    //     image: a3 ,
+    //     category: "learning",
+    //     technologies: ["Java", "Hibernate"],
+    //     featured: false,
+    //     color: "from-emerald-500 to-green-700",
+    //     liveUrl: "https://your-live-project-url.com",
+    //     sourceCode: "https://github.com/thejan25004/ORM-Assignment-02"
+    // },
+    // {
+    //     id: 21,
+    //     title: "Assignment 03",
+    //     description: "IJSE class assignment project.",
+    //     image: a4,
+    //     category: "learning",
+    //     technologies: ["Java"],
+    //     featured: false,
+    //     color: "from-violet-500 to-indigo-700",
+    //     liveUrl: "https://your-live-project-url.com",
+    //     sourceCode: "https://github.com/thejan25004/Assignment-03"
+    // },
+    // {
+    //     id: 22,
+    //     title: "ORM Assignment",
+    //     description: "Another ORM coursework repo.",
+    //     image: assignment,
+    //     category: "learning",
+    //     technologies: ["Java", "Hibernate"],
+    //     featured: false,
+    //     color: "from-pink-500 to-fuchsia-700",
+    //     liveUrl: "https://your-live-project-url.com",
+    //     sourceCode: "https://github.com/thejan25004/ORM-Assignment"
+    // },
+    {
+        id: 25,
+        title: "FreshBite Restaurant Design",
+        description: "Figma UI/UX design for a modern restaurant platform , Developed a fully responsive restaurant website frontend using HTML, CSS, Bootstrap, and JavaScript, featuring modern UI components for menu display, reservations, and customer engagement. Focused on clean design, mobile responsiveness, and enhanced user experience.",
+        image: freshBiteDesign,
+        category: "design",
+        technologies: ["Figma", "UI/UX", "Wireframes", "Prototyping"],
+        featured: false,
+        color: "from-amber-500 to-orange-600",
+        liveUrl: "https://www.figma.com/proto/kx5Zf4tf7YxRRNm6Fj3qIu/FoodResturant?node-id=1-2",
+        sourceCode: "https://www.figma.com",
+        isDesign: true,
+    },
+    {
+        id: 32,
+        title: "Donely Desktop App Design",
+        description: "Designed a modern and intuitive UI/UX for an AI-powered desktop application specifically for macOS users. Focused on creating a clean, minimal, and user-friendly interface that aligns with Apple's design aesthetics, ensuring seamless navigation, intuitive interactions, and a consistent desktop user experience.",
+        image: donelyDesktopApp,
+        category: "design",
+        technologies: ["Figma", "UI/UX Design", "Wireframing", "Prototyping", "macOS Design"],
+        featured: false,
+        color: "from-amber-500 to-orange-600",
+        // liveUrl removed
+        sourceCode: "https://www.figma.com/proto/jTJgyTYbmPjsn4P5Nr7gby/Donely.Ai?node-id=6373-3439&p=f&t=B59f3QdsLo3lx9pN-0&scaling=min-zoom&content-scaling=fixed&page-id=6373%3A3072",
+        isDesign: true,
+    },
+    {
+        id: 33,
+        title: "Donely OpenClaw  Design",
+        description: "Designed a modern and intuitive UI/UX for an AI-powered web platform, focusing on creating a clean, professional, and user-friendly interface. Developed dashboard layouts, interactive components, and consistent design elements to simplify user workflows and improve overall usability. Focused on visual consistency, intuitive navigation, and a seamless user experience across different screen sizes..",
+        image: donelyOpenClaw,
+        category: "design",
+        technologies: ["Figma", "UI/UX Design", "Wireframing", "Prototyping", "macOS Design"],
+        featured: false,
+        color: "from-amber-500 to-orange-600",
+        sourceCode: "https://www.figma.com/proto/5jzc1QNaNS9f6lqJk73xzf/Donely-OpenClaw?node-id=1-256&p=f&t=gVjetAmkICUwHmuq-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A256",
+        liveUrl: "https://donely.ai/openclaw",
+        isDesign: true,
+    },
 ];
 
 const CATEGORIES = [
-        { id: 'all', name: 'All Projects', icon: '🎯' },
-        { id: 'web', name: 'Web Apps', icon: '🌐' },
-        { id: 'mobile', name: 'Mobile', icon: '📱' },
-        { id: 'enterprise', name: 'Enterprise', icon: '🏢' },
-        { id: 'design', name: 'Design', icon: '📱💻' }
+    { id: 'all', name: 'All Projects', icon: '🎯' },
+    { id: 'web', name: 'Web Apps', icon: '🌐' },
+    { id: 'mobile', name: 'Mobile', icon: '📱' },
+    { id: 'enterprise', name: 'Enterprise', icon: '🏢' },
+    { id: 'design', name: 'Design', icon: '📱💻' }
 ];
 
 export function Projects() {
@@ -499,18 +519,16 @@ export function Projects() {
                                     {/* Project Image Overlay Buttons */}
                                     <div className="image-overlay">
                                         <div className="overlay-content">
-                                            <button
-                                                className="view-btn"
-                                                // onClick={() => {
-                                                //     if (project.liveUrl && project.liveUrl !== "#") {
-                                                //         window.open(project.liveUrl, "_blank")
-                                                //     }
-                                                // }}
-                                                onClick={() => window.open(project.liveUrl, "_blank")}
-                                            >
-                                                <span>{project.isDesign ? "🎨" : "👁️"}</span>
-                                                {project.isDesign ? "View Preview" : "View Live"}
-                                            </button>
+                                            {/* Only show View Live / View Preview when liveUrl exists */}
+                                            {project.liveUrl && (
+                                                <button
+                                                    className="view-btn"
+                                                    onClick={() => window.open(project.liveUrl, "_blank")}
+                                                >
+                                                    <span>{project.isDesign ? "🎨" : "👁️"}</span>
+                                                    {project.isDesign ? "View Preview" : "View Live"}
+                                                </button>
+                                            )}
                                             <button
                                                 className="code-btn"
                                                 onClick={() => window.open(project.sourceCode, "_blank")}
@@ -557,17 +575,11 @@ export function Projects() {
                                         </div>
                                         <button
                                             className="learn-more-btn"
-                                            // onClick={() => {
-                                            //     const url = project.isDesign
-                                            //         ? (project.liveUrl !== "#" ? project.liveUrl : project.sourceCode)
-                                            //         : "https://github.com/thejan25004"
-                                            //     window.open(url, "_blank")
-                                            // }}
-                                            onClick={() => window.open("https://github.com/thejan25004", "_blank")}                                        >
+                                            onClick={() => window.open("https://github.com/thejan25004", "_blank")}
+                                        >
                                             <span>{project.isDesign ? "View Design" : "Learn More"}</span>
                                             <span className="arrow">→</span>
                                         </button>
-
                                     </div>
                                 </div>
                             </div>
